@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <div id="box1"></div>
+    <button>按钮</button>
+    <script>
+        let btn=document.querySelector('button')
+        let box=document.querySelector('div')
+        let ipt=document.querySelector('input')
+        btn.onclick=()=>{
+            let value=ipt.value
+            if(value>=0&&value<6){
+                box.innerHTML='早上'
+            }else if(value>=6&&value<12){
+                box.innerHTML='中午'
+
+            }else if(value>=12&&value<18){
+                box.innerHTML='下午'
+
+            }else if(value>=18&&value<=24){
+                box.innerHTML='晚上'
+
+            }else{
+                alert('违规内容')
+                ipt.value=''
+            }
+
+        }
+    </script>
+</body>
+</html>

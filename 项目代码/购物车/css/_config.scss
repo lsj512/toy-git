@@ -1,0 +1,17 @@
+// 宽度100%
+$wfull:100%;
+.display{
+    display: flex;
+}
+//垂直居中
+.discenter{
+    @extend .display;
+    align-items: center;
+}
+// 字体变色
+.hover{
+    &:hover{
+        color: #e2231a !important;
+        cursor: pointer;
+      }
+}

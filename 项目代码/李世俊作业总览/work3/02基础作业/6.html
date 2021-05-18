@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str="我们的产品全国第一";
+        var starStr=str.substring(0,7);
+        var endStr=starStr +"**";
+        console.log(endStr);
+
+
+        var str1="我们的产品全国第一";
+        document.write(str1.replace(/第一/, "**"));
+
+
+        var str2="我们的产品全国第一";
+        var starStr=str2.replace(/第一/, "**");
+        console.log(starStr);
+
+
+        var str3="我们的产品全国第一";
+        var starStr=str3.slice(0,7);
+        var endStr=starStr+ "**";
+        console.log(endStr);
+    </script>
+</body>
+</html>

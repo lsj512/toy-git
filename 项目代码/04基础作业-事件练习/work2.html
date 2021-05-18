@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      * {
+        list-style: none;
+      }
+      ul {
+        width: 500px;
+        border: 1px solid red;
+      }
+      li {
+        width: 200px;
+      }
+      .mousebox {
+        background-color: red;
+        width: 200px;
+        transition: all 0.5s;
+      }
+      #star-six {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 100px solid red;
+        position: relative;
+        transform: scale(.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: bigsmall .5s linear 0s infinite alternate;
+      }
+      #star-six:after {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-top: 100px solid red;
+        position: absolute;
+        content: "";
+        top: 30px;
+        left: -50px;
+      }
+      @keyframes bigsmall {
+          0%{transform:scale(.5)}
+          50%{transform:scale(1)}
+          100%{transform:scale(.5)}
+      }
+    </style>
+    <ul>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+      <li>gdsfg</li>
+    </ul>
+    <div class="mousebox">我是mousebox</div>
+    <div id="star-six"></div>
+    <script>
+      /*
+       * 2、鼠标事件 mouseover、mouseout
+       */
+      // 2-1、鼠标移入列表中的某项,该项发生2px位移,鼠标离开,该项位置还原。
+      // 2-2、鼠标移入mousebox,添加变宽的过渡效果。
+      // 2-3、一颗跳动(帧动画变大变小)的小星星跟随鼠标移动。
+      $all("li").forEach((item) => {
+        item.onmouseover = function () {
+          item.style.transform = "translateX(2px)";
+        };
+      });
+      $all("li").forEach((item) => {
+        item.onmouseout = function () {
+          item.style.transform = "translateX(-2px)";
+        };
+      });
+
+      $(".mousebox").addEventListener("mouseover", fn);
+      console.log(document.documentElement)
+      document.documentElement.onmousemove = function () {
+        $('#star-six').style.cssText=`left:${event.clientX}px;top:${event.clientY}px;`
+      };
+
+      function fn() {
+        $(".mousebox").style.width = "400px";
+      }
+
+      function $(id) {
+        return document.querySelector(id);
+      }
+      function $all(id) {
+        return document.querySelectorAll(id);
+      }
+    </script>
+  </body>
+</html>

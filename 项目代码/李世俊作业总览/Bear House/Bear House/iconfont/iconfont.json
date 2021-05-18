@@ -1,0 +1,37 @@
+{
+  "id": "2423082",
+  "name": "BearHouse",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "项目P1",
+  "glyphs": [
+    {
+      "icon_id": "2163916",
+      "name": "里程_f",
+      "font_class": "licheng_f",
+      "unicode": "e687",
+      "unicode_decimal": 59015
+    },
+    {
+      "icon_id": "134672",
+      "name": "里程",
+      "font_class": "licheng1",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "11755921",
+      "name": "团队",
+      "font_class": "V",
+      "unicode": "e700",
+      "unicode_decimal": 59136
+    },
+    {
+      "icon_id": "1166105",
+      "name": "电话咨询",
+      "font_class": "iconfontzhizuobiaozhun023134",
+      "unicode": "e688",
+      "unicode_decimal": 59016
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1500px;
+    height: 1000px;
+    margin: 0 auto;
+    background: rgb(249, 247, 241);
+}
+
+.container::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+.wrap{
+    width: 1200px;
+    height: 100px;
+   
+    margin: 0 auto;
+}
+.picture{
+    text-align: center;
+    margin-top: 40px;
+}
+hr{
+    width: 60px;
+    height: 4px;
+    margin: auto;
+    margin-top: 20px;
+    color: dimgray;
+}
+.base{
+    text-align: center;
+    margin-top: 20px;
+    color: dimgray;
+}
+.middle{
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+}
+.up{
+    width: 1000px;
+    height: 230px;
+    margin: 0 auto;
+    margin-top: 55px;
+    position: relative;
+}
+.in{
+    width: 1000px;
+    height: 230px;
+    margin: 0 auto;
+    margin-top: 55px;
+    position: relative;
+}
+.down{
+    width: 1000px;
+    height: 230px;
+    margin: 0 auto;
+    margin-top: 55px;
+    position: relative;
+}
+.up1{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.tu{
+    float: left;
+    position: relative;
+    margin-left: 126px;
+    margin-top: 20px;
+    
+}
+.tu1{
+    float: left;
+    font-size: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: right;  
+}
+.tu3{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+   
+}
+.up2{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    
+}
+.tu4{
+    float: right;
+    position: relative;
+    margin-right: 126px;
+    margin-top: 20px;
+}
+.tu5{
+    float: right;
+    font-size: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px; 
+}
+.tu6{
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.in1{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.tu7{
+    float: left;
+    position: relative;
+    margin-left: 126px;
+    margin-top: 20px;
+}
+.tu8{
+    float: left;
+    font-size: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: right;  
+}
+.tu9{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.in2{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.tu10{
+    float: right;
+    position: relative;
+    margin-right: 126px;
+    margin-top: 20px;
+}
+.tu11{
+    float: right;
+    font-size: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px; 
+}
+.tu12{
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.down1{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+.tu13{float: left;
+    position: relative;
+    margin-left: 126px;
+    margin-top: 20px;}
+.tu14{float: left;
+    font-size: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: right;}
+.tu15{float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;}
+.down2{
+    width: 450px;
+    height: 200px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+.tu16{float: right;
+    position: relative;
+    margin-right: 126px;
+    margin-top: 20px;}
+.tu17{float: right;
+    font-size: 10px;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 50px;}
+.tu18{float: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;}
+
+
+    

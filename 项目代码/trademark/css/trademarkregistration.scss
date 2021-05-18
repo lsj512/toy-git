@@ -1,0 +1,217 @@
+@import "_main";
+@import "personInfo";
+$move: #013d87;
+$commnd: #fff;
+.clearfd{
+    .head-right{
+        .personal-infomation-mation {
+                position: absolute;
+                display: none;
+                flex-direction: column;
+                width: 120px;
+                height: 120px;
+                // position: absolute;
+                top: 71px;
+                right: 8px;
+                background: $commnd;
+                span {
+                  display: block;
+                  height: 40px;
+                  width: 100%;
+                  text-align: center;
+                  line-height: 40px;
+                  font-size: 16px;
+                  color: #666;
+                  position: relative;
+                  z-index: 3;
+                }
+                span:hover {
+                  background: $move;
+                  color: $commnd;
+                }
+                a:nth-child(2) {
+                  border-top: 1px solid #ccc;
+                  border-bottom: 1px solid #ccc;
+                  height: 38px;
+                  line-height: 38px;
+                }
+              }
+    }
+}
+a {
+  text-decoration: none;
+}
+section {
+  .wrop-right {
+    .promptBox {
+      .promptText {
+        color: #F5222D;
+      }
+    }
+    $circleBorderColor:#D9D9D9;
+    .contain {
+      .step {
+        .stepnum {
+          .deshadeColor {
+            border: dashed 1px $circleBorderColor;
+          }
+          .circleBorderColor {
+            border: 1px solid $circleBorderColor;
+            color: $circleBorderColor;
+          }
+          .stepTextColor {
+            color: $circleBorderColor;
+          }
+        }
+      }
+      .contain-userInfo {
+        .botton-line {
+          margin-left: 140px;
+        }
+        .userInfo {
+          margin-left: 372px;
+          .userInfoClause {
+            margin-bottom: 30px;
+
+          
+            span {
+              display: inline-block;
+            }
+           
+            .userInfoClause-name {
+              width: 165px;
+              text-align: right;
+              margin-right: 25px;
+              color: #333333;
+              font-size: 14px;
+              i {
+                vertical-align: top;
+                font-style: normal;
+                color: #F5222D;
+                font-weight: bold;
+                font-size: 20px;
+              }
+            }
+            .userInfoClause-input {
+              display: inline-block;
+              .selects {
+                display: inline-block;
+                position: relative;
+                .selects-box {
+                  position: relative;
+                  .valuelicense{
+                    margin-top: 20px;
+                    margin-left: 15px;
+                    position: relative;
+                    font-size: 14px;
+                    span{
+                        color: #f5222d;
+                        margin-right: 3px;
+                    }
+                    select{
+                      margin-top: -40px;
+                        margin-left: -15px;
+                        appearance: none;
+                        outline: none;
+                        font-size: 14px;
+                        color: #bbbbbb;
+                        border: 1px solid #d9d9d9;
+                        border-radius: 6px;
+                        padding-left: 10px;
+                        width: 154px;
+                        height: 32px;
+                    }
+                    &::after{
+                        position: absolute;
+                        top: 5px;
+                        left: 120px;
+                        pointer-events: none;
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        display: inline-block;
+                        border-top: 8px solid #666666;
+                        border-bottom: 8px solid transparent;
+                        border-left:  5px solid transparent;
+                        border-right:  5px solid transparent;
+                    }
+                }
+                  .square {
+                    pointer-events: none;
+                    top: 50%;
+                    right: 10px;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    width: 0px;
+                    height: 0px;
+                    border-top: 7px solid #666666;
+                    border-right: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                  }
+                  .select {
+                    width: 132px;
+                    font-size: 13px;
+                    border: 1px solid #E2E2E2;
+                    padding: 7px 10px;
+                    border-radius: 5px;
+                    color: #BBBBBB;
+                  }
+                }
+              }
+              .selections {
+                background-color: #fff;
+                position: absolute;
+                display: none;
+                margin-top: -1px;
+                width: 132px;
+                font-size: 13px;
+                border: 1px solid #E2E2E2;
+                padding: 8px 10px;
+                li {
+                  cursor: pointer;
+                  color: #333;
+                  font-size: 14px;
+                  margin: 5px 0;
+                }
+              }
+              
+              input {
+                width: 328px;
+                outline: none;
+                padding: 8px 10px;
+                border: 1px solid #E2E2E2;
+                border-radius: 5px;
+              }
+              input::placeholder {
+                color: #BBBBBB;
+                
+              }
+            }
+            .userInfoClause-tips {
+             
+              .left-tips {
+                margin: 4px 10px 0px;
+                display: inline-block;
+               
+
+              }
+              .right-text {
+                vertical-align: middle;
+                display: inline-block;
+                h6 {
+                  font-size: 10px;
+                  font-weight: normal;
+                  color: $nowColor;
+                }
+
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS数组操作对象作业</title>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <button>点我</button>
+    <br>
+    <div></div>
+    <p>for循环遍历</p>
+    <ul></ul>
+    <br>
+    <p>forEach遍历</p>
+    <ul></ul>
+    <script>
+      var news = [
+        {
+          title: "我是新闻标题",
+          time: "2020-03-31",
+          read: 30,
+          user: [1, 2, 4],
+        },
+        {
+          title: "我是新闻标题2我是新闻标题",
+          time: "2020-03-31",
+          read: 50,
+          user: [2, 5],
+        },
+        {
+          title: "我是新闻标题3",
+          time: "2020-03-31",
+          read: 70005,
+          user: [1, 2, 3, 4, 5],
+        },
+        {
+          title: "我是新闻标题4我是新闻标题",
+          time: "2020-03-31",
+          read: 80,
+          user: [2, 7],
+        },
+        {
+          title: "我是新闻标题5",
+          time: "2020-03-31",
+          read: 100,
+          user: [2, 8, 10],
+        },
+        {
+          title: "我是新闻标题6",
+          time: "2020-04-28",
+          read: 10050,
+          user: [2, 8, 10],
+        },
+      ];
+      /*
+       * 1、使用filter 过滤出阅读数大于50的数据
+       */
+      let greater = news.filter((item) => {
+        return item.read > 50;
+      });
+      console.log(greater);
+      /*
+       * 2、使用filter 过滤出user包含5的数据
+       */
+      let includ = news.filter((item) => {
+        return item.user.indexOf(5) != -1;
+      });
+      console.log(includ);
+      /*
+       * 3、使用filter 过滤出user数量大于3的数据
+       */
+      let num = news.filter((item) => {
+        return item.user.length > 3;
+      });
+      console.log(num);
+      /*
+       * 4、使用map得到一个新数组： 如果title长度大于10，就把title取前10个字符。
+       */
+      let long = news.map((item) => {
+        if (item.title.length > 10) {
+          item.title.substring(0, 10);
+          return item;
+        }
+        return item;
+      });
+      console.log(long);
+      /*
+       * 5、使用map得到一个新数组： 如果阅读数大于10000,就把阅读数设置为1w+、2w+、3w+...。
+       */
+      let read = news.map((item) => {
+        if (item.read > 10000) {
+          item.read = `${parseInt(item.read / 10000)}w+`;
+          return item;
+        }
+        return item;
+      });
+      console.log(read);
+
+      //电器、家用、文具属于一级栏目，后面的属于二级栏目。
+      let newArr = [
+        { 电器: ["冰箱", "电视", "洗衣机"] },
+        { 家用: ["抹布", "镜子", "桌子"] },
+        { 文具: ["笔", "本子", "橡皮"] },
+      ];
+      /*
+       * 6、使用filter 返回二级栏目中有"镜子"的一级栏目。
+       */
+      newArr.forEach((item) => {
+        let keys = Object.keys(item)[0];
+        let mirror = item[keys].filter((value) => {
+          if (value == "镜子") {
+            console.log(`有镜子的一级栏目是：${keys}`);
+            return item;
+          }
+        });
+      });
+      /*
+       * 7、使用for循环嵌套，输出二级列表如图：二级列表.png
+       */
+      let ul1=document.querySelectorAll('ul')[0]
+      let ul2=document.querySelectorAll('ul')[1]
+      let div1=document.querySelectorAll('div')[0]
+      let newArr2 = [
+        { 电器: ["冰箱", "电视", "洗衣机"] },
+        { 家用: ["抹布", "镜子", "桌子"] },
+        { 文具: ["笔", "本子", "橡皮"] },
+      ];
+      for(let i=0;i<newArr2.length;i++){
+        let keys=Object.keys(newArr2[i])[0]
+        let str2=''
+        for(let j=0;j<newArr[i][keys].length;j++){
+          str2+=`<li>${newArr[i][keys][j]}</li>`
+        }
+        let str1=`<ul>${str2}<ul>`
+        let str=`<li>${keys}${str1}</li>`
+        ul1.innerHTML+=str
+      }
+      /*
+       * 8、使用forEach嵌套，输出二级列表如图：二级列表.png
+       */
+      let str2=''
+      newArr.forEach((item) => {
+        let keys = Object.keys(item)[0];
+        let str2=''
+        item[keys].forEach((value) => {
+          str2+=`<li>${value}</li>`
+        });
+        let str1=`<ul>${str2}<ul>`
+        let str=`<li>${keys}${str1}</li>`
+        ul2.innerHTML+=str
+      });
+
+
+      var tag = ["a", "span", "b", "i"];
+      /*
+       * 9、使用join方法把tag的所有项用#连接成一个字符串
+       */
+      tag1 = tag.join("#");
+      console.log(tag1);
+      /*
+       * 10、组起输出到页面，装每项对应的标签对，并一每个标签中间有个<br>。
+       * 10-1、使用map返回一个新数组arr,将标签名称拼接为标签对，如：a => <a></a>, span => <span></span>...
+       * 10-2、使用join把新数组arr拼接为一个字符串str，使用<br>分隔。
+       * 10-3、使用innerHTML把最终的内容输出到页面。
+       */
+      // let temp
+      let newtag=tag.map(item=>{
+        let str=`<${item}>${item}</${item}>`
+        return str
+      })
+      newtag=newtag.join('<br>')
+      div1.innerHTML=newtag
+      console.log(newtag)
+
+      var year = ["1995", "2004", "2014", "2018"];
+      /*
+       * 11、使用push把"2019"添加进year数组。
+       */
+      year.push("2019");
+      console.log(year);
+      /*
+       * 12、使用push把今年的年份作为字符串添加进year数组。（不能直接写2020）。
+       */
+      let nowyear = new Date().getFullYear();
+      year.push(String(nowyear));
+      console.log(year);
+
+      //有一组人(A组)，他们的年龄分别是：18,19,20,21,22
+      var age = [18, 19, 20, 21, 22, 80];
+      /*
+       * 13、使用every判断A组是否全都成年了。
+       */
+      let adult = age.every((item) => {
+        return item >= 18;
+      });
+      console.log(adult);
+      /*
+       * 14、使用some判断A组是否有老年人。
+       */
+      let old = age.some((item) => {
+        return item >= 60;
+      });
+      console.log(old);
+      /*
+       * 15、去界面添加一组checkbox，任意勾选其中的某项或者全部，添加一个按钮，
+       * 点击按钮分别做如下判断：
+       * 15-1、使用every判断checkbox是否全选
+       * 15-2、使用some判断checkbox是否全选
+       */
+      let btn = document.querySelector("button");
+      let ipt = document.querySelectorAll("input");
+      btn.onclick = () => {
+        let arr = [...ipt];
+        let every = arr.every((item) => {
+          return item.checked;
+        });
+        every = every ? "已全选" : "未全选";
+        alert(`every方法的判断：${every}`);
+        let some = arr.some((item) => {
+          return !item.checked;
+        });
+        some = some ? "未全选" : "已全选";
+        alert(`some方法的判断：${some}`);
+      };
+
+      /*
+       * 16、随机数
+       */
+      //* 16-1、创建一个0~10的随机数
+      console.log(Math.random() * 10);
+      //* 16-2、创建一个5~10的随机数
+      function RandomNumBoth(Min, Max) {
+        var num = Min + Math.random() * (Max - Min);
+        return num;
+      }
+      console.log(RandomNumBoth(5, 10));
+      //* 16-3、var letter = "abcdefghijklmnopqrstuvwxyz", 随机生成一个字母。
+
+      //* 16-4、var letter = "abcdefghijklmnopqrstuvwxyz", 随机生成一个2位数的字符串。
+      let letter = "abcdefghijklmnopqrstuvwxyz";
+      let one = Math.floor(RandomNumBoth(0, 26));
+      let two = Math.floor(RandomNumBoth(0, 26));
+      let randomletter = letter.substring(one, +(one + 1));
+      let randomletter2 = letter.substring(two, +(two + 1));
+      console.log("16-3:" + randomletter);
+      console.log(`16-4:${randomletter}${randomletter2}`);
+      /*
+       * 16-4、var letter = "abcdefghijklmnopqrstuvwxyz";
+       * var num = "0123456789";
+       * 随机生成1位字母跟1位数字组成的字符串。
+       */
+      let numrandom = Math.floor(RandomNumBoth(0, 10));
+      console.log(`16-4:${numrandom}${randomletter}`);
+      /*
+       * 16-5、var letter = "abcdefghijklmnopqrstuvwxyz0123456789";
+       * 随机生成一个4位的字符串。
+       */
+      let letter2 = "abcdefghijklmnopqrstuvwxyz0123456789";
+      let fourletter = "";
+      for (let index = 0; index < 4; index++) {
+        let newrandom = Math.floor(RandomNumBoth(0, letter2.length));
+        let newstring = letter2.substring(newrandom, Number(newrandom + 1));
+        fourletter += newstring;
+      }
+      console.log(`16-5:${fourletter}`);
+      //使用正确的数据分别写出下列数据转换的表达式
+
+      // 字符串转数字
+    //   Number();
+      // 字符串转JSON
+    //   JSON.parse();
+      // 字符串转数组
+    //   str.splice();
+      // 数字转字符串
+    //   String();
+      // JSON转字符串
+    //   JSON.stringify();
+      // 数组转字符串
+    //   arr.join();
+    </script>
+  </body>
+</html>

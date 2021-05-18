@@ -1,0 +1,84 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-04-25 20:39:23
+ * @lastEditTime: 2021-04-28 11:04 AM
+ * @lastAuthor: lsj
+ * @Description: In User Settings Edit
+ * @FilePath: \购物车\index.html
+-->
+<!--
+ * @author: LUOCAN
+ * @create: 2021-04-20 10:56 AM
+ * @license: MIT
+ * @lastAuthor: LUOCAN
+ * @lastEditTime: 2021-04-23 17:18 PM
+ * @desc: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>京东购物车</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./iconfont/iconfont.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/index.css.map" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <!-- 商品列表 -->
+        <div class="carshop">
+          <ul>
+           
+          </ul>
+        </div>
+        <!-- 顶部 -->
+        <div class="car">
+          <div class="car-filter display">
+            <div class="filter-left">
+              <span>全部商品</span>
+            </div>
+            <div class="filter-right">
+              <span>配送至：</span>
+              <select name="" id="">
+                <option value="">重庆市渝北区</option>
+                <option value="">重庆市江北区</option>
+              </select>
+            </div>
+          </div>
+          <!-- 顶部详情 -->
+          <div class="car-head discenter">
+            <input type="checkbox" checked  class="allcheck" onclick="allcheck()"/>
+            <span >全选</span>
+            <div class="sp">商品</div>
+            <div class="dj">单价</div>
+            <div class="sl">数量</div>
+            <div class="xj">小计</div>
+            <div class="cz">操作</div>
+          </div>
+          <!-- 购物车列表 -->
+          <div class="car-body">
+           
+         
+          </div>
+          <div class="js display">
+            <div class="js-left discenter">
+              <input type="checkbox" checked = false;  id="" onclick="allcheck()"  />&nbsp;&nbsp;全选
+              <span class="hover" onclick="ddt()">删除选中的商品</span>
+              <article class="hover">移除关注</article>
+              <section class="hover" onclick="ddl()">清理购物车</section>
+            </div>
+            <div class="js-right discenter">
+              已选择<span class="xiaoji">0</span>件商品&nbsp;&nbsp; 总价：<b class="zj" onclick="finallprice()">￥0.00</b>
+              <div class="jiesuan discenter">去结算</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index1.js"></script>
+  </body>
+</html>

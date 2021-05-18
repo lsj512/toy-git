@@ -1,0 +1,40 @@
+// 把公共样式的覆盖
+@import 'login.scss';
+.main {
+  background: url(../img/lodingimg/banner2.jpg);
+  .login {
+    .form {
+      .getcode {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        input {
+          width: 288px;
+        }
+        &-code {
+          width: 130px;
+          height: 50px;
+          background: #999;
+          text-align: center;
+          line-height: 50px;
+          font-size: 14px;
+          color: #fff;
+          margin-top: 4px;
+          border-radius: 4px;
+        }
+        button:hover {
+          cursor: pointer;
+          background: #376eb2;
+        }
+        .login-code:hover {
+          color: #013d87;
+          cursor: pointer;
+        }
+        span:hover {
+          cursor: pointer;
+          color: #013d87;
+        }
+      }
+    }
+  }
+}

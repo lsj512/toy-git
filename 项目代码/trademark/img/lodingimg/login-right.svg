@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="77" viewBox="0 0 320 77">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        font-size: 40px;
+        font-family: YuGothicUI-Bold, Yu Gothic UI;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        font-family: MicrosoftJhengHeiUIBold, Microsoft JhengHei UI;
+        font-weight: 400;
+        font-family: YuGothicUI-Bold, Yu Gothic UI;
+      }
+
+      .cls-3 {
+        font-size: 15px;
+        font-family: SegoeUI, Segoe UI;
+      }
+    </style>
+  </defs>
+  <g id="组_159" data-name="组 159" transform="translate(0.372 -0.192)">
+    <text id="成都商标注册系统" class="cls-1" transform="translate(-0.372 43.192)"><tspan x="0" y="0">成都商</tspan><tspan class="cls-2" y="0">标</tspan><tspan y="0">注册系</tspan><tspan class="cls-2" y="0">统</tspan></text>
+    <text id="Chengdu_Trademark_Registration_System" data-name="Chengdu Trademark Registration System" class="cls-3" transform="translate(-0.372 73.192)"><tspan x="0" y="0">Chengdu Trademark Registration System</tspan></text>
+  </g>
+</svg>

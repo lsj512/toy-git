@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      
+      div{
+          border: 1px solid red;
+          margin-top: 20px;
+          height: 50px;
+      }
+      .keybtn {
+        margin-top: 500px;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        transition: all 0.5s;
+      }
+    </style>
+    <div class="keybtn"></div>
+    <div class="domA">我是盒子DomA</div>
+    <div class="domB">我是盒子DomB</div>
+    <script>
+      /*
+       * 3、按键 keypress
+       */
+      // 3-1、按方向键"上",keybtn盒子向上缓动移动100px,然后缓动回到原始位置。
+      // 3-2、按Ctrl+C把盒子domA里面的内容存储在变量里面copyA,按Ctrl+V把copyA的内容显示到盒子domB里面
+      document.addEventListener("keydown", fn);
+      let copyA=''
+      function fn() {
+          console.log(event)
+          console.log(event.code);
+        if (event.code == 'ArrowUp') {
+          document.querySelector(".keybtn").style.transform =
+            "translateY(-100px)";
+          setTimeout(() => {
+            document.querySelector(".keybtn").style.transform = "translateY(0)";
+          }, 500);
+        }
+        if(event.ctrlKey&&event.key=='c'){
+            // console.log(222222222)
+            copyA=document.querySelector('.domA').innerHTML
+        }
+        if(event.ctrlKey&&event.key=='v'&&copyA!=''){
+            document.querySelector('.domB').innerHTML=copyA
+        }
+      }
+    </script>
+  </body>
+</html>

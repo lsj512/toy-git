@@ -1,0 +1,12 @@
+html,body,ul,li { margin: 0; padding: 0; list-style: none; }
+a {  color: #000;  text-decoration: none;}
+.form {  width: 300px;  padding: 30px;  margin: 50px;  border-radius: 10px;  box-shadow: 0 0 30px rgba(0, 0, 0, .2);}
+.form-note {  border: 1px #f60 solid;  font-size: 12px;  background-color: wheat;  padding: 4px;  margin-bottom: 10px;  transition: all .2s;}
+.form-list li {  margin-bottom: 5px;}
+.form-list .tag {  display: flex;  justify-content: space-between;  line-height: 1.8;  align-items: flex-end;}
+.form-list .tag a {  font-size: 14px;  color: #666;}
+.form-list .tag a:hover {  color: #f30;}
+.form-list .inputbar {  width: 100%;}
+.form-list .input {  width: 100%;  box-sizing: border-box;  padding: 2px 5px;  line-height: 1.8;  color: #999;}
+.fullbtn {  background: #f60;  color: #fff;  display: block;  border: none;  width: 100%;  margin-top: 20px;  border-radius: 3px;  line-height: 2.4;  cursor: pointer;}
+.fullbtn:hover {  background: #f30;}

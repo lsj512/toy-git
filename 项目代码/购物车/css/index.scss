@@ -1,0 +1,307 @@
+@import "./config";
+// 清楚系统样式
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  user-select: none;
+}
+// 版心 通栏
+.container {
+  width: $wfull;
+  .wrap {
+    width: 990px;
+    height: 3000px;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+  }
+}
+// 商品列表
+.carshop {
+  width: $wfull;
+  height: 450px;
+  overflow: auto;
+  margin-bottom: 20px;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    width: 25%;
+    // &:hover {
+    //   transform: translateY(-3px);
+    //   box-shadow: 0 0 5px #d4d3d3;
+    // }
+    transition: all 0.3s;
+    .img {
+      text-align: center;
+    }
+    .title {
+      margin-left: 10px;
+      article {
+        width: 220px;
+        font-size: 12px;
+        margin-bottom: 10px;
+        height: 48px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .tag{
+        font-size: 13px;
+        width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 10px;
+        color: rgb(153, 95, 95);
+      }
+      span {
+        color: #e2231a;
+        font-size: 20px;
+      }
+      .eve b {
+        font-size: 14px;
+        color: #646fb0;
+      }
+      .eve p {
+        display: inline-block;
+        font-size: 14px;
+        color: #c6afbb;
+      }
+      .shopname{
+        font-size: 13px;
+        margin-top: 10px;
+        color: #a09999;
+      }
+      .botton {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 15px;
+        color: #3f3c3c;
+        .a {
+          border: 1px solid #d4d3d3;
+          padding: 3px;
+          &:hover {
+            cursor: pointer;
+            // border-color: #e2231a;
+          }
+        }
+        .b {
+          border: 1px solid #d4d3d3;
+          padding: 3px;
+          span {
+            font-size: 16px;
+          }
+          &:hover {
+            cursor: pointer;
+            // border-color: #e2231a;
+          }
+        }
+        .c {
+          border: 1px solid #d4d3d3;
+          padding: 3px;
+          color: #e2231a;
+          span {
+            font-size: 18px;
+            color: #e2231a;
+          }
+          &:hover {
+            cursor: pointer;
+            // border-color: #e2231a;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 购物车列表
+.car {
+  width: $wfull;
+  // height: 300px;
+  // background-color: darkgray;
+}
+// 顶部
+.car-filter {
+  justify-content: space-between;
+  .filter-left {
+    color: #e2231a;
+    font-size: 17px;
+  }
+  .filter-right {
+    font-size: 13px;
+    color: rgb(145, 135, 135);
+    select {
+      padding: 5px;
+      outline: none;
+    }
+  }
+}
+// 顶部详情
+.car-head {
+  width: $wfull;
+  height: 45px;
+  background-color: #f3f3f3;
+  margin-top: 15px;
+  font-size: 13px;
+  border-bottom: 1px solid #c2c2c2;
+  input {
+    margin-left: 15px;
+  }
+  span {
+    margin-left: 10px;
+  }
+  .sp {
+    margin-left: 70px;
+  }
+  .dj {
+    margin-left: 445px;
+  }
+  .sl {
+    margin-left: 70px;
+  }
+  .xj {
+    margin-left: 100px;
+  }
+  .cz {
+    margin-left: 45px;
+  }
+}
+//购物车列表
+.car-body {
+  width: $wfull;
+  // height: 156px;
+  .body-shop {
+    height: 36px;
+    font-size: 13px;
+    input {
+      margin-left: 15px;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+  .list {
+    width: $wfull;
+    height: 3px;
+    background-color: #aaaaaa;
+  }
+  .shop-data {
+    height: 117px;
+    border: 1px solid #f3f3f3;
+    // background-color: #FFF4E8;
+    .xz {
+      margin-left: 15px;
+      margin-top: 20px;
+    }
+    .data {
+      width: 940px;
+      margin-top: 20px;
+      margin-left: 20px;
+      img{
+        width: 80px;
+        height: 80px;
+      }
+      .data-title {
+        font-size: 12px;
+        width: 208px;
+        height: 50px;
+        margin-left: 10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .data-tag{
+      width: 127px;
+      font-size: 13px;
+      margin-left: 15px;
+      overflow: hidden;
+      white-space: nowrap; 
+      text-overflow: ellipsis;
+    }
+    .price {
+      font-size: 13px;
+      margin-left: 100px;
+    }
+    .num {
+      margin-left: 40px;
+      height: 25px;
+      .NUM {
+        width: 40px;
+        display: block;
+        border-left: none;
+        border-right: none;
+        outline: none;
+        border:1px solid #888484;
+        padding-left: 5px;
+      }
+      button {
+        display: block;
+        width: 20px;
+        height: 25px;
+       
+      }
+    }
+    .xjprice {
+      margin-left: 60px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .bodycz {
+      font-size: 13px;
+      margin-left: 35px;
+    }
+  }
+}
+
+// 结算
+.js {
+  width: $wfull;
+  height: 55px;
+  border: 1px solid #f3f3f3;
+  margin-top: 25px;
+  justify-content: space-between;
+  .js-left {
+    input{
+      margin-left: 10px;
+    }
+    font-size: 13px;
+    span {
+      margin-left: 10px;
+      color: #7c7979;
+    }
+    article {
+      margin-left: 10px;
+      color: #7c7979;
+    }
+    section {
+      margin-left: 10px;
+      font-weight: bold;
+      color: #7c7979;
+    }
+  }
+  .js-right{
+    font-size: 13px;
+    color: #7c7979;
+    span{
+      color:#e2231a;
+    }
+    b{
+      color: #e2231a;
+      font-size: 19px;
+    }
+    .jiesuan{
+      margin-left: 20px;
+      width: 95px;
+      height: $wfull;
+      background: #e2231a;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      justify-content: center;
+      // &:hover{
+      //   cursor: pointer;
+      // }
+    }
+  }
+}

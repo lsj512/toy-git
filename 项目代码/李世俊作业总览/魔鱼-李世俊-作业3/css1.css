@@ -1,0 +1,52 @@
+.waibu{
+    width: 342px;
+    height: 280px;
+    margin: 0 auto;
+    box-shadow: 6px 0px 6px -6px,-5px 0px 5px -5px;
+    position: relative;
+}
+.neibu{
+    width: 303px;
+    height: 230px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 18px;
+    border: 1px solid darkgray;
+    border-bottom: 2px solid red;
+}
+.tp{
+    width: 303px;
+    height: 181px;
+    margin-top: -20px;
+}
+img{
+    width: 303px;
+    height: 181px;
+    margin-top: 19px;
+    margin-left: 0px;
+}
+.zi{
+    width: 168px;
+    height: 11px;
+    font-size: 15px;
+    color: red;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.zi:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.zi1{
+    width: 210px;
+    height: 11px;
+    font-size: 12px;
+    color: darkgray;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.zi1:hover{
+    color: #333;
+    cursor: pointer;
+    text-decoration: underline;
+}

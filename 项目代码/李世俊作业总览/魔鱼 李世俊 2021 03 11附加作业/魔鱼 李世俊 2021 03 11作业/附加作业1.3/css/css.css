@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.container{
+    width: 905px;
+    height: 280px;
+    text-align: center;
+    overflow: hidden;
+    background-color: white;
+}
+.text_top{
+    margin-top: 20px;
+}
+.text_middle{
+    margin-bottom: 10px;
+}
+ul{
+    width: 700px;
+    margin: 0 auto;
+}
+li{
+    width: 20%;
+    float: left;
+}
+.serve{
+    height: 150px;
+    margin: 7px;
+    background-color: #f4f4f4;
+}
+P{
+    font-size: 12px;
+    color: #8F8D8A;
+}

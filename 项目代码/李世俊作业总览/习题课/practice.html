@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组 练习课</title>
+</head>
+<body>
+    
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <button>测试</button>
+    <script>
+        /*
+         * 15、去界面添加一组checkbox，任意勾选其中的某项或者全部，添加一个按钮，
+         * 点击按钮分别做如下判断：
+         * 15-1、使用every判断checkbox是否全选
+         * 15-2、使用some判断checkbox是否全选
+         */
+        // var checkBoxs = document.querySelectorAll("input");
+        // //将NodeList转换成Array，才能使用every 数组API
+        // var checkBoxsArr = [];
+        // for(var i=0; i<checkBoxs.length; i++){
+        //     checkBoxsArr.push(checkBoxs[i]);
+        // }
+        // var btn = document.querySelector("button");
+        // btn.onclick = function (){
+
+        //     // // 15-2
+        //     // var flag = checkBoxsArr.some(function (currentValue){
+        //     //     //只有被勾选，即checked属性为true才满足条件
+        //     //     return currentValue.checked != true;
+        //     // });
+        //     // if(flag){
+        //     //     console.log("没有被全选中");
+        //     // }else{
+        //     //     console.log("被全选中");
+        //     // }
+
+        //     // // 15-1
+        //     // //使用every判断每一个复选框的checked状态
+        //     // var flag = checkBoxsArr.every(function (currentValue){
+        //     //     //只有被勾选，即checked属性为true才满足条件
+        //     //     return currentValue.checked == true;
+        //     // });
+        //     // //当比对结束后，查看flag的值。
+        //     // //如果都被选中，则flag为true，否则为false。
+        //     // //根据flag的值，就可以判断所有按钮的状态
+        //     // if(flag){
+        //     //     console.log("被全选中");
+        //     // }else{
+        //     //     console.log("没有被全选中");
+        //     // }
+        // };
+
+
+        // var arr = [1,2,3,4,5];
+        // var flag = arr.some(function (currentValue){
+        //     console.log(currentValue);
+        //     return currentValue>6;
+        // });
+
+        // var flag = arr.every(function (currentValue){
+        //     console.log(currentValue);
+        //     return currentValue<3;
+        // });
+        // console.log(flag);
+
+
+
+
+
+        /*
+         * 电器、家用、文具属于一级栏目，后面的属于二级栏目。
+         *
+         * 6、使用filter 返回二级栏目中有"镜子"的一级栏目。
+         * 7、使用for循环嵌套，输出二级列表如图：二级列表.png
+         * 8、使用forEach嵌套，输出二级列表如图：二级列表.png
+         */
+        // var level_oneArr = ["电器", "家用", "文具"];
+        // var level_twoArr = [
+        //                         ["电脑","电视","电冰箱"],
+        //                         ["牙膏","镜子","牙刷"],
+        //                         ["笔记本","笔","橡皮"]
+        //                     ];
+
+        //8
+        // foreach 基本语法逻辑
+        // level_oneArr.forEach(function (currentValue){
+        //     console.log(currentValue);
+        // });
+        // for(var i=0; i<level_oneArr.length; i++){
+        //     console.log(level_oneArr[i]);
+        // }
+        // foreach嵌套
+        // level_twoArr.forEach(function (currentValue){
+        //     var tempArr = currentValue;//[电脑，电视，电冰箱]
+        //     tempArr.forEach(function (currentValue1){
+        //         console.log(currentValue1);
+        //     });
+        // });
+            
+
+        // 7
+        // // 由于数组本身有三个元素，因此循环三次
+        //    for(var i=0; i<level_twoArr.length; i++){
+        //     // 每一个数组元素 仍然是一个数组，因此在打印的时候要循环打印
+        //        var tempArr = level_twoArr[i];//[电脑，电视，电冰箱]
+        //        for(var j=0; j<tempArr.length; j++){
+        //            console.log(tempArr[j]);
+        //        }
+        //    }
+                     
+        // 6
+        // // 过滤二级栏目数组，想要得到包含镜子的二级栏目列表
+        // var resultArr = level_twoArr.filter(function (currentValue){
+        //     return currentValue.includes("镜子");
+        // });
+        // // 将过滤的结果中的列表读取出来
+        // var list = resultArr[0];
+        // // 查找在二级栏目数组中，这个拥有镜子的列表的下标序号
+        // var index = level_twoArr.indexOf(list);
+        // // 当获取到包含镜子的列表在二级栏目中的位置后，对应获取一级栏目的名称
+        // console.log(level_oneArr[index]);
+
+
+    </script>
+</body>
+</html>

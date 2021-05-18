@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1000px;
+    height: 360px;
+    margin: 0 auto;
+    padding: 40px;
+    box-shadow: 0 0 5px dimgray;
+    background:  rgb(248, 249, 250);
+}
+.serve{
+    width: 300px;
+    height: 350px;
+    float: left;
+    width: 24%;
+    border-right-color: rgb(241, 241, 18);
+    background: rgb(29, 61, 112);
+    position: relative;
+    box-shadow: 0px 5px 5px yellow;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.iconfont{
+    font-size: 70px;
+    text-align: center;
+    line-height: 150px;
+    position: absolute;
+    color: white;
+    top: 20px;
+    left: 80px;
+}
+.title{
+    width: 120px;
+    height: 30px;
+    color: yellow;
+    position: absolute;
+    left: 80px;
+    top: 150px;
+}
+.introduce{
+    height: 100px;
+    position: absolute;
+    left: 10px;
+    top: 210px;
+}

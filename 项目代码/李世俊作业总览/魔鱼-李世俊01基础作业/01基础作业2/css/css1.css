@@ -1,0 +1,48 @@
+.contraion{
+    width: 187px;
+    height: 736px;
+    border: 1px solid rgb(172, 169, 169);
+    margin: 0 auto;
+    box-shadow: 5px 0px 5px -5px,;
+    border-radius: 5px;
+}
+.zuo{
+    display: inline-block;
+}
+.you{
+    display: inline-block;
+    vertical-align: top;
+}
+.plugin{
+    width: 58px;
+    height: 58px;
+    border-radius: 50px;
+    background-image: url("../img/img.png");
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.plugin:hover{
+     background-position-x: 0px;    
+}
+.plugin1{background-position-x: -100px; background-position-y: 0px;}
+.plugin2{background-position-x: -100px; background-position-y: -200px;}
+.plugin3{background-position-x: -100px; background-position-y: -400px;}
+.plugin4{background-position-x: -100px; background-position-y: -600px;}
+.plugin5{background-position-x: -100px; background-position-y: -800px;}
+.plugin6{background-position-x: -100px; background-position-y: -100px;}
+.plugin7{background-position-x: -100px; background-position-y: -300px;}
+.plugin8{background-position-x: -100px; background-position-y: -500px;}
+.plugin9{background-position-x: -100px; background-position-y: -700px;}
+.plugin10{background-position-x: -100px; background-position-y: -900px;}
+.plug div:nth-child(1){
+   text-align: center;
+   margin-left: 15px;
+   font-size: 1px;
+   width: 100%;
+   text-align: center   ;
+}
+.plug div:nth-child(2){
+    text-align: center;
+    margin-left: 15px;
+    text-align: center;
+ }

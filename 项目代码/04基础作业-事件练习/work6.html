@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>获取焦点</p>
+
+    <input type="text" name="" id="">
+    <div></div>
+    <script>
+        
+        /*
+         * 6、获取焦点 focus 
+         */
+        //请模拟出一个场景，并实现它
+
+        let ipt=document.querySelector('input')
+        let div=document.querySelector('div')
+        ipt.addEventListener('focus',fn)
+        function fn(){
+            div.innerHTML=''
+            div.innerHTML='这里是移动端  键盘弹出'
+        }
+    </script>
+</body>
+</html>

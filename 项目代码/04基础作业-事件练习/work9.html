@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 50px;
+            margin: 0;
+        }
+        div{
+            background-color: yellow;
+            width: 500px;
+        }
+    </style>
+  </head>
+  <body>
+      <p>
+          我是一个logo
+      </p>
+      <div>我是一个导航</div>
+      <ul>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+          <li>123</li>
+      </ul>
+    <script>
+      /*
+       * 9、页面滚动 scroll
+       */
+      // 9-1、上面LOGO，下面一排导航，当滚动条滚动到导航时，将导航设置为fixed的定位属性(吸顶)。(需要页面很长,出现滚动条)
+      let div=document.querySelector('div') 
+      let height=div.offsetTop
+      window.onscroll=function(){
+          console.log(event)
+            if(document.documentElement.scrollTop>=div.offsetTop){
+                div.style.cssText=`position:fixed;left:0;top:0;`
+            }
+            if(document.documentElement.scrollTop<height){
+                console.log('1111111111111111111')
+                div.style.cssText=`position:none;`
+            }
+        }
+    </script>
+  </body>
+</html>

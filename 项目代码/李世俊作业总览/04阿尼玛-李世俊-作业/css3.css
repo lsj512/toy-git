@@ -1,0 +1,113 @@
+.waibu{
+    width: 570px;
+    height: 400px;
+    margin: 0 auto;
+    border:1px solid dimgray;
+}
+.neibu{
+    width: 540px;
+    height: 400px;
+}
+.xx{
+    width: 23px;
+    height: 23px;
+    float: right;
+    margin-right: -5px;
+    margin-top: 10px;
+}
+.xx img{
+    width: 23px;
+    height: 23px;
+}
+.tu{
+    width: 445px;
+    height: 300px;
+}
+img{
+    width: 300px;
+    height: 400px;
+    float: left;
+    margin-left: 0px;
+}
+.zi{
+    width: 210px;
+    float:left;
+    margin-left: 10px;
+    margin-bottom: 0px;
+}
+.dy{
+    width: 210px;
+    height: 60px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 40px;
+}
+.xb{
+   width: 120px;
+   height: 50px;
+   float: left;
+   margin-left: 10px;
+   margin-top: 5px;
+}
+.r{
+    width: 210px;
+    height: 100px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.fm{
+ position: relative;
+ top: 1px;
+
+}
+.fm1{
+    position: relative;
+    top: 9px;
+}
+
+.fm2{
+    width: 100px;
+    position: relative;
+    top: 16px;
+}
+.yzm{
+    background-color:blueviolet;
+    width:90px;
+    float: right;
+    margin-right: 11px;
+    margin-top: 17px;
+}
+.sz button{
+ background-color: blueviolet;
+ padding:1px 16px 1px 18px;
+ letter-spacing: 5px;
+}
+.anniu{
+    background-color: rgb(182, 164, 120);
+    width: 180px;
+    position: relative;
+    top: 25px;
+}
+.anniu1{
+    background-color:black;
+    width: 180px;
+    position: relative;
+    top: 20px;
+}
+.anniu button{
+    background-color: rgb(182, 164, 120);
+    position: relative;
+    top: 0px;
+    left: 55px;
+    border: white;
+    color: white;
+}
+.anniu1 button{
+    background-color: black;
+    position: relative;
+    top: 0px;
+    left: 55px;
+    border: white;
+    color: white;
+}

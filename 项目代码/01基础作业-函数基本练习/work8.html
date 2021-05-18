@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .box{
+            width: 560px;
+            height: 310px;
+            background-color: #E6E6E6;
+            position: relative;
+        }
+        .white{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .wbtn{
+            width: 45px;
+            height: 173px;
+            background-color: #fff;
+        }
+        .wbtn2{
+            height: 193px;
+        }
+        .black{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 35px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .btn{
+            background-color: #000;
+            width: 45px;
+            height: 82px;
+        }
+        .btn2{
+            height: 102px;
+        }
+        .p{
+            position: absolute;
+            bottom: 43px;
+            left: 45px;
+        }
+        .btns{
+            transition: height .5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="white">
+            <div class="btns wbtn"></div>
+            <div class="btns wbtn"></div>
+            <div class="btns wbtn"></div>
+            <div class="btns wbtn"></div>
+            <div class="btns wbtn wbtn2"></div>
+            <div class="btns wbtn"></div>
+            <div class="btns wbtn"></div>
+            <div class="btns wbtn"></div>
+            <div class="btns wbtn"></div>
+            <div class="btns wbtn"></div>
+        </div>
+        <div class="black">
+            <div class="btns btn"></div>
+            <div class="btns btn"></div>
+            <div class="btns btn"></div>
+            <div class="btns btn"></div>
+            <div class="btns btn"></div>
+            <div class="btns btn"></div>
+            <div class="btns btn btn2"></div>
+            <div class="btns btn"></div>
+            <div class="btns btn"></div>
+        </div>
+        <div class="p">点击变长，然后还原</div>
+    </div>
+    <script>
+        let btn=document.querySelectorAll('.btns')
+        btn=[...btn]
+        btn.forEach(item=>{
+            // item.onclick=function(){
+            //     let height=20+item.offsetHeight
+            //     item.style.height=`${height}px`
+            //     setTimeout(() => {
+            //         let height2=item.offsetHeight-20
+            //         item.style.height=`${height2}px`
+            //     }, 500);
+            // }
+            (function(){
+                let height=20+item.offsetHeight
+                item.style.height=`${height}px`
+                setTimeout(() => {
+                    let height2=item.offsetHeight-20
+                    item.style.height=`${height2}px`
+                }, 500);
+            })()
+        })
+    </script>
+</body>
+</html>

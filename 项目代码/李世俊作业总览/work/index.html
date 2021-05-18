@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS基础应用</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="form">
+    <ul class="form-list">
+      <li>
+        <div>
+          用户ID：<span class="userID"></span>
+        </div>
+        <br>
+        <div><b>金币数量：</b></div>
+        <div>
+          用户剩余金币数量：<span class="userGoldCoin">1000</span>
+        </div>
+        <div>
+          用户剩余银币数量：<span class="userSilverCoin">100</span>
+        </div>
+        <div>
+          用户剩余总币金额：<span class="userAllCoin">1100</span>
+        </div>
+        <br>
+        <div>
+          <b>学习过的科目分数：</b>
+        </div>
+        <div>
+          HTML：<span class="htmlScore">100</span>分
+        </div>
+        <div>
+          CSS：<span class="cssScore">100</span>分
+        </div>
+        <div>
+          Javascript：<span class="jsScore">100</span>分
+        </div>
+        <br>
+        <div class="tag"><label>登录名：</label></div>
+        <div class="inputbar"><input type="text" id="username" name="username" class="input" value=""></div>
+      </li>
+      <li>
+        <div class="tag"><label>登录密码：</label></div>
+        <div class="inputbar"><input type="password" id="password" name="password" class="input" value=""></div>
+      </li>
+      <li>
+        <div class="tag"><label>确认登录密码：</label></div>
+        <div class="inputbar"><input type="password" id="queryPassWord" name="queryPassWord" class="input" value="">
+        </div>
+      </li>
+      <li>
+        <input id="sendbtn" class="fullbtn" type="button" value="立即修改">
+      </li>
+    </ul>
+  </div>
+  <script>
+    //1.补齐数据源 
+    var userData = {
+      useID: undefined,  // 用户ID
+      userNmae: undefined, // 用户名
+      password: {
+        userPssWord: undefined,
+        queryPassWord: undefined
+      }, // queryPassWord 填入确认登录密码。
+      coin: [
+        //补齐数组数据
+      ],
+      score: {
+        //补齐对象数据
+        html:undefined,
+        css:undefined,
+        JavaScript:undefined
+      },
+    }
+    //2.补齐业务逻辑代码
+    var username=document.querySelector('#username')
+    var password=document.querySelector('#password')
+    var queryPassWord=document.querySelector('#queryPassWord')
+    var userID=document.querySelector('.userID')
+    var userGoldCoin=document.querySelector('.userGoldCoin')
+    var userSilverCoin=document.querySelector('.userSilverCoin')
+    var userAllCoin=document.querySelector('.userAllCoin')
+    var htmlScore=document.querySelector('.htmlScore')
+    var cssScore=document.querySelector('.cssScore')
+    var jsScore=document.querySelector('.jsScore')
+    var fullbtn=document.querySelector('.fullbtn')
+    var num=document.querySelectorAll('b')[0]
+    var subject=document.querySelectorAll('b')[1]
+    
+    fullbtn.onclick=()=>{
+      if(username.value==1&&password.value==2&&queryPassWord.value==2){
+        userData.userID='007'
+  
+        num.innerHTML=num.innerHTML+1000
+        userGoldCoin.innerHTML=500
+        userSilverCoin.innerHTML=200
+        userAllCoin.innerHTML=700
+        subject.innerHTML=subject.innerHTML+250
+        htmlScore.innerHTML=100
+        cssScore.innerHTML=100
+        jsScore.innerHTML=50
+        userID.innerHTML=userData.userID
+        alert('登录成功')
+      }else{
+        if(username.value!=1){
+          alert('用户名只能为1')
+          return
+        }
+        if(!password.value){
+          alert('请输入密码')
+          return
+        }
+        if(!queryPassWord.value){
+          alert('请确认密码')
+          return
+        }
+        if(password.value!=queryPassWord.value){
+          alert('两次输入的密码不一致')
+          return
+        }
+        if(password.value!=2){
+          alert('密码只能为2')
+          return
+        }
+       
+      }
+    }
+
+
+
+    
+  </script>
+</body>
+</html>

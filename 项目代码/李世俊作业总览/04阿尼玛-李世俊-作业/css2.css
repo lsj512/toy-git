@@ -1,0 +1,51 @@
+.waibu{
+    width: 1100px;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border: 1px solid;
+}
+.neibu{
+    width: 1000px;
+    height: 267px;
+    float: left;
+    margin-left: 50px;
+}
+img{
+    width: 330px;
+    height: 270px;
+    margin-right: 670px;
+    float: right;
+
+}
+.wz{
+    width: 651px;
+    height: 235px;
+    float: right;
+    margin-top: -220px;
+    margin-right: 5px;
+}
+.zi{
+    position: relative;
+    margin-top: -50px;
+}
+.zi1{
+    width: 650px;
+    height: 123px;
+    font-size: 15px;
+    margin-top: 10px;
+    line-height: 25px;
+}
+.zi2{
+    width: 85px;
+    height: 35px;
+    background-color: red;
+    margin-top: 20px;
+    border-radius: 5%;
+}
+.an{
+    color: white;
+    font-size: 17px;
+    padding-top: 5px;
+    padding-left: 5px;
+}

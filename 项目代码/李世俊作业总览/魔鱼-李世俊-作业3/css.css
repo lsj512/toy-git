@@ -1,0 +1,75 @@
+.waibu{
+    width: 302px;
+    height: 403px;
+    margin: 0 auto;
+}
+.neibu{
+    width: 302px;
+    height: 128px;
+
+}
+.neibu:hover .rq{
+     display: block;
+}
+img{
+    width: 302px;
+    height: 128px;
+}
+img:hover{
+    cursor: pointer;
+}
+.rq{
+    width: 64px;
+    height: 65px;
+    background-color: black;
+    float: right;
+    margin-right: 1px;
+    margin-top: -69px;
+    position:relative;
+    display: none;
+}
+.wz{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+    
+}
+.zi{
+    width: 200px;
+    height: 20px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.zi1{
+    width: 128px;
+    height: 15px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.zi1 img{
+    width: 18px;
+    height: 12px;
+}
+.sz{
+    width: 18px;
+    width: 12px;
+    position: relative;
+    margin-top: -20px;
+    margin-left: 120px;
+}
+.zi2{
+    width: 258px;
+    height: 146px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.zi2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}

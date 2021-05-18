@@ -1,0 +1,83 @@
+<!--
+ * @author: SumO
+ * @create: 2021-05-07 09:15 AM
+ * @license: MIT
+ * @lastAuthor: TANG
+ * @lastEditTime: 2021-05-11 10:33 AM
+ * @desc: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/logon.min.css" />
+  </head>
+  <body>
+    <!-- 主体及banner图部分 -->
+    <div class="main">
+      <!-- 遮罩层部分 -->
+      <div class="shadow"></div>
+      <!-- 登陆框部分 -->
+      <div class="login">
+        <a href="../index.html">
+          <div class="logo">
+            <div class="logo-left"></div>
+            <div class="logo-right"></div>
+          </div>
+        </a>
+        <!-- 表单部分 -->
+        <div class="form">
+          <div class="form-wrap">
+            <h3>欢迎您注册！</h3>
+            <!-- 账号及密码输入部分 -->
+            <div class="form-itro">账号</div>
+            <input type="text" placeholder="请输入账号" autocomplete="off" class="RegisterAccount"/>
+            <div class="form-itro">密码</div>
+            <input
+              type="password"
+              placeholder="请输入密码"
+              autocomplete="off"
+              class="RegisterPassword"
+            />
+            <div class="form-itro">确认密码</div>
+            <input
+              type="password"
+              placeholder="请再次输入密码"
+              autocomplete="off"
+              class="reRegisterPassword"
+            />
+            <button class="RegisterLogin">注册</button>
+            <div class="phone-login">
+              <div class="login-code">
+                <a href="./login-phone.html"> 手机验证码登陆</a>
+              </div>
+              <!-- 跳转注册页面部分 -->
+              <div class="urse-no">
+                有账号？
+                <a href="../index.html"><span>立即登陆</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部部分 -->
+    <footer>
+      <div>
+        咨询电话: 028-69000891 / 028- 69000892
+      </div>
+      <div>
+        地址：成都市天府大道南段1632号. 天府新区政务服务中心一楼
+      </div>
+      <div>
+        Copyright&copy;2020 成都商标服务. All rights reserved.
+        <span>ICP:蜀ICP备16003750号@Privacy policy About</span>
+      </div>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/logon.js"></script>
+</html>

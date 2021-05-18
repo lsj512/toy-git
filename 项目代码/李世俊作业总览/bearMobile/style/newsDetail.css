@@ -1,0 +1,146 @@
+.body::before {
+  content: "";
+  display: table;
+}
+.body {
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+}
+.publictitle {
+  font-size: 3.6rem;
+  color: #333333;
+  margin-top: 40px;
+}
+.publicenglishtitle {
+  width: 38.6rem;
+  height: 4.4rem;
+  background-color: #ffffff;
+  border-radius: 2.2rem 0;
+  border: solid 1px #d3d3d3;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #aaaaaa;
+  margin-top: 16px;
+  margin-bottom: 42px;
+  position: relative;
+  z-index: -1;
+  /* overflow: hidden; */
+    white-space: nowrap;
+}
+
+.publicenglishtitle > div {
+  width: 11.9rem;
+  height: 3px;
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #14916a;
+}
+
+.bigtitle {
+  flex-direction: column;
+  width: 100%;
+  /* height: 14.7rem; */
+  background-color: #fafafa;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 3.3rem 0 2.7rem;
+} 
+.title {
+  margin: 0 2.1rem;
+  font-size: 3.6rem;
+  color: #333333;
+  margin-bottom: 3.2rem;
+}
+.data {
+  margin-left: 2.1rem;
+  font-size: 2rem;
+  color: #333;
+}
+.data span {
+  color: #14916a;
+}
+.data .space {
+  margin-left: 8px;
+  margin-right: 25px;
+  color: #333;
+}
+.content {
+  width: 100%;
+}
+.section1 {
+  width: 100%;
+  padding: 0 7.9rem 0 2.3rem;
+  box-sizing: border-box;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  color: #999999;
+  margin-top: 3rem;
+  margin-bottom: 3.9rem;
+  line-height: 3.6rem;
+}
+.section2 {
+  box-sizing: border-box;
+  padding: 0 3.3rem 0 2rem;
+  font-size: 3.6rem;
+  color: #333;
+}
+.s {
+  box-sizing: border-box;
+  padding: 0 3.3rem 0 2rem;
+  font-size: 2.4rem;
+  color: #333;
+  line-height: 3.6rem;
+}
+.section3 {
+  margin: 4.9rem 0;
+}
+.section5 {
+  margin: 4.9rem 0 3.5rem;
+}
+.ibox {
+  margin-bottom: 3.5rem;
+  width: 100%;
+  padding: 0 2.1rem;
+  box-sizing: border-box;
+}
+
+.buttonbox {
+  margin-top: 7.9rem;
+}
+.button {
+  font-size: 2.8rem;
+  color: #ffffff;
+  width: 70.8rem;
+  height: 6rem;
+  background-color: #14916a;
+  border-radius: 3rem 0px 3rem 0px;
+}
+.buttonleft {
+  width: 13.7rem;
+  height: 100%;
+  padding-left: 3.8rem;
+  box-sizing: border-box;
+  border-right: 1px solid #4CAB8D;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.buttoncontent {
+  /* width: 100px; */
+  padding-left: 2rem;
+  box-sizing: border-box;
+  white-space:nowrap; 
+  overflow:hidden;
+  text-overflow:ellipsis;
+
+}
+.b {
+  margin-top: 6rem;
+  margin-bottom: 7.1rem;
+}

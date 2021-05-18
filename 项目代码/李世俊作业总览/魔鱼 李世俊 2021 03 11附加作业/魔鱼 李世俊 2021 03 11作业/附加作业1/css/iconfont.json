@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5300257",
+      "name": "旅游建筑名胜古迹tourism-白宫th",
+      "font_class": "lvyoujianzhumingshenggujitourism-baigongth",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    },
+    {
+      "icon_id": "9559049",
+      "name": "车辆",
+      "font_class": "ziyuan",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "18452309",
+      "name": "飞机",
+      "font_class": "feiji",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    }
+  ]
+}

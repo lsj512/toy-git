@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 700px;
+            height: 35px;
+            font-size: 15px;
+            color: #333;
+            border: 1px solid #E7E7E7;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+        li div:nth-child(2){
+            font-size: 12px;
+            color: #AEAEAE;
+        }
+    </style>
+  </head>
+  <body>
+    <ul id="box3"></ul>
+    <script>
+      let news = [
+        {
+          text:
+            "HTML (超文本标记语言一HyperText Markup Language)是构成Web世界的一砖- -瓦",
+          time: "2019-11-20",
+        },
+        {
+          text:
+            "“超文本”(hypertext) 是指连接单个网站内或多个网站间的网页的链接",
+          time: "2019-11-20",
+        },
+        {
+          text:
+            "HTML使用“标记”(markup) 来注明文本、图片和其他内容,以便于在Web浏览器中显示",
+          time: "2019-11-20",
+        },
+        {
+          text: "HTML元表通过“标签”(tag) 将文本从文档中引出",
+          time: "2019-11-20",
+        },
+        { text: "表单是构成Web世界的重要组成部分", time: "2019-11-20" },
+        { text: "关于怪异模式和标准模式的历史信息", time: "2019-11-20" },
+        {
+          text:
+            "“超文本”(hypertext) 是指连接单个网站内或多个网站间的网页的链接",
+          time: "2019-11-20",
+        },
+        {
+          text:
+            "HTML使用“标记”(markup) 来注明文本、图片和其他内容,以便于在Web浏览器中显示",
+          time: "2019-11-20",
+        },
+      ];
+      let ul = document.querySelector("ul");
+      let Html=''
+      for (let i = 0; i < news.length; i++) {
+        Html += `<li><div>${news[i].text}</div><div>${news[i].time}</div></li>`;
+      }
+      ul.innerHTML=Html
+    </script>
+  </body>
+</html>

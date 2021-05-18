@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 公式推导如下： 斐波那契数列： 1、 1、 2、 3、 5、 8、 13、 21、…… An
+    // 则: a1 = 1, a2 = 1, a3 = 2, a4 = 3, a5 = 5, ……, an。 
+    // 求和： Sn = a1 + a2 +a3 + …… +AnSn 
+    // = 1 + a1 + a2 + a3 + …… +An - 1 因为a2等于1， 
+    // 所以Sn = a2 + a1 + a2 + a3 + …… +An - 1 
+    // 即： Sn = a2 + a1 +a2 + a3 + …… +An - 1 
+    // Sn = a3 + a2 + a3 + …… +An - 1 
+    // Sn = a3 + a2 + a3 + …… +An - 1 
+    // Sn = a4 + a3 + …… +An -1…… 
+    // Sn = An + A(n - 1) + An - 1 
+    // 即： Sn = A(n + 1) + An - 1 = A(n + 2) - 1
+
+    let tie = 0;
+
+    let sum = (n) => {
+      n = n + 2
+      fn = (n) => {
+        if (n <= 3) {
+          if (n == 1) {
+            return 0
+          } else {
+            return 1
+          }
+        } else {
+          return fn(n - 1) + fn(n - 2)
+        }
+      }
+      return fn(n) - 1
+    }
+    console.log(sum(6));
+
+
+    // let sum=(n)=> {
+    //   let fn = (n) => {
+    //     if (n < 2) {
+    //       return n;
+    //     } else {
+    //       return fn(n - 1) + fn(n - 2);
+    //     }
+    //   };
+    //   for (let i = n; i > 0; i--) {
+    //     num += fn(i);
+    //   }
+    //   return num;
+    // }
+  </script>
+</body>
+
+</html>

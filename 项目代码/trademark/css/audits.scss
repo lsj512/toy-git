@@ -1,0 +1,65 @@
+@import "_main";
+@import "_base";
+$noSelectColor:#333333;
+section {
+  .wrop-left-nav {
+    .nav-dss {
+     position: relative;
+     .nav-dss-tips {
+       position: absolute;
+      right: 5px;
+     }
+    }
+  }
+  .wrop-right {
+    padding-top: 20px;
+    .pledgeeInfo {
+      color: #666666;
+      font-size: 18px;
+      display: inline-block;
+      margin: 45px 0 25px 40px;
+
+        span {
+          line-height: 13px;
+          display: inline-block;
+          vertical-align: text-top;
+          margin-left: 10px;
+        }
+      }
+      .pledgeeInfomation {
+       
+        display: inline-block;
+        margin-left: 85px;
+        .catalogue {
+          span {
+            display: inline-block;
+            text-align: right;
+            color: #999999;
+            font-size: 14px;
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 0 10px;
+            
+          }
+          
+          
+        }
+       
+      }
+   }
+
+}
+.wrop-left-bg {
+  background-color:#f7f7f7 ;
+  padding-top: 20px;
+}
+.contain{
+  display: flex;
+  
+  .nextButton {
+    margin-top: 170px;
+    margin-bottom: 40px;
+    color: #fff;
+    background-color: #013D87;
+  }
+}

@@ -1,0 +1,60 @@
+.fbs{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.fbc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fbe{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.fss{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.fsc{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.fse{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.fcs{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.fcc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fce{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.fes{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.fec{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.fee{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .div{
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        .input1{
+             margin-top: 10px;
+             margin-left: 15px;
+        }
+        .input2{
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+        button{
+            margin-top: 10px;
+            margin-left: 80px;
+            background-color: orange;
+        }
+    </style>
+    <div class="div">
+        <input type="text" class="input1" placeholder="输入带有小数点的数字">
+        <input type="text" class="input2" placeholder="输入将要保留几位小数">
+        <button>按钮</button>
+    </div>
+    <script>
+        var input1=document.querySelector(".input");
+        var input2=document.querySelector(".input2");
+        var box=document.querySelector("div");
+        var btn=document.querySelector("button");
+        btn.onclick=()=>{
+            if(!input1.value||!Number(input1.value)){
+                alert('请输入带有小数的数字');
+                return;
+            }
+            if(!input2.value){
+                alert('请输入将要保留的小数位数');
+                return;
+            }
+            box.innerHTML=Number(input1.value).toFixed(input2.value);
+        }
+    </script>
+</body>
+</html>

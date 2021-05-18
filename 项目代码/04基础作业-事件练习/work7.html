@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./img/supercar.png" alt="">
+    <div></div>
+    <script>
+                /*
+         * 7、元素加载、窗口加载 load
+         */
+        // 7-1、图片加载完后输出图片的宽高比
+        let img=document.querySelector('img')
+        img.onload=function(){
+            console.log(event)
+            document.querySelector('div').innerHTML=`图片的宽高比是${event.path[0].width/event.path[0].height}`
+        }
+    </script>
+</body>
+</html>

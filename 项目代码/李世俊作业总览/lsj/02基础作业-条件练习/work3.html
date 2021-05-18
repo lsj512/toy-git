@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p style="font-size: 30px;">优惠一</p>
+
+    <input class="ipt1" placeholder="价格" type="text" name="" id="">
+    <input class="ipt1" placeholder="数量" type="text" name="" id="">
+    <div></div>
+    <button class="btn1">按钮</button>
+
+    <p style="font-size: 30px;">优惠二</p>
+
+    <input class="ipt2" placeholder="价格" type="text" name="" id="">
+    <input class="ipt2" placeholder="数量" type="text" name="" id="">
+    <div></div>
+    <button class="btn1">按钮</button>
+
+    <p style="font-size: 30px;">优惠三</p>
+
+    <input class="ipt3" placeholder="价格" type="text" name="" id="">
+    <input class="ipt3" placeholder="数量" type="text" name="" id="">
+    <div></div>
+    <button class="btn1">按钮</button>
+
+    <p style="font-size: 30px;">优惠四</p>
+
+    <input class="ipt4" placeholder="价格" type="text" name="" id="">
+    <input class="ipt4" placeholder="数量" type="text" name="" id="">
+    <div></div>
+    <button class="btn1">按钮</button>
+
+    <script>
+        let ipt1=document.querySelectorAll('.ipt1')
+        let ipt2=document.querySelectorAll('.ipt2')
+        let ipt3=document.querySelectorAll('.ipt3')
+        let ipt4=document.querySelectorAll('.ipt4')
+        let btn=document.querySelectorAll('button')
+        let box=document.querySelectorAll('div')
+        btn[0].onclick=function(){
+            let price=ipt1[0].value
+            let num=ipt1[1].value
+            let allprice=price*num
+            let content=box[0]
+            if(allprice>=300&&num>=3){
+                allprice-=50
+            }
+            content.innerHTML=allprice
+        }
+        btn[1].onclick=function(){
+            let price=ipt2[0].value
+            let num=ipt2[1].value
+            let allprice=price*num
+            let content=box[1]
+            if(allprice>=500||num>=3){
+                allprice*=.7
+            }
+            content.innerHTML=allprice
+        }
+        btn[2].onclick=function(){
+            let price=ipt3[0].value
+            let num=ipt3[1].value
+            let allprice=price*num
+            let content=box[2]
+            if(allprice>=1000){
+                allprice*=.7
+                if(num>=5){
+                    allprice-=100
+                }
+            }
+            content.innerHTML=allprice
+        }
+        btn[3].onclick=function(){
+            let price=ipt4[0].value
+            let num=ipt4[1].value
+            let allprice=price*num
+            let content=box[3]
+            if(num>=5){
+                allprice*=.8
+                if(allprice>=1500){
+                    allprice-=300
+                }
+            }
+            content.innerHTML=allprice
+        }
+    </script>
+</body>
+</html>

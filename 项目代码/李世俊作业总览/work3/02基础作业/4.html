@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="ipt1">
+    <button>按钮</button>
+    <script>
+        var ipt1=document.querySelector("input");
+        var btn=document.querySelector("button");
+        btn.onclick=()=>{
+            let num=0
+            if(!ipt.value){
+                alert('请输入内容')
+                return
+            }
+            for (let index = 0; index < ipt.value.length; index++) {
+                let isLetter=ipt.value.substring(index,index+1)
+                if((isLetter>='a'&&isLetter<='z')||(isLetter>='A'&&isLetter<='Z')){
+                    num++
+                }
+            }
+            console.log(num)
+            if(num<=0){
+                alert('格式错误')
+            }
+
+        }
+    </script>
+</body>
+</html>

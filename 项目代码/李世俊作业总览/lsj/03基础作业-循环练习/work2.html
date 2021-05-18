@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        display: inline-block;
+        background-color: #fff100;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+      }
+      div{
+        display: flex;
+        justify-content: center;
+        width: 110px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let k = 1;
+      for (let i = 0; i < 4; i++) {
+        document.write('<div>')
+        for (let j = 1; j <= k; j++) {
+          document.write("<span></span>");
+        }
+        k += 2;
+        document.write("</br>");
+        document.write('</div>')
+      }
+      document.write('</br>')
+      let y=7
+      for (let i = 0; i < 4; i++) {
+        document.write('<div>')
+        for (let j = 1; j <= y; j++) {
+          document.write("<span></span>");
+        }
+        y -= 2;
+        document.write("</br>");
+        document.write('</div>')
+      }
+    </script>
+  </body>
+</html>

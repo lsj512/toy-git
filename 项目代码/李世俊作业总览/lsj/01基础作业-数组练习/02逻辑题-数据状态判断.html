@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据状态判断</title>
+</head>
+<body>
+    <script>
+        /*
+         * 1、要求判断一个值在一个数组里面是否存在
+         */
+        var arr = [3, 4, 6, 7, 21];
+        var key = 10;
+        // let one=arr.some(item=>{
+        //     return item==key
+        // })
+        // one=one?'存在':'不存在'
+        // console.log(one)
+        if(arr.indexOf(key)!=-1){
+            console.log('存在')
+        }else{
+            console.log('不存在')
+        }
+        
+
+        //2、要求判断多个值在一个数组里面是否存在
+        /*
+         * 2-1、只要keys中有任何一个值存在就表示存在
+         */
+        var arr = [3, 4, 6, 7, 21];
+        var keys = [5, 6];
+        var state = 0;
+        keys.forEach(item=>{
+            if(arr.includes(item)){
+                state++
+                return
+            }
+        })
+        console.log(state)
+        /*
+         * 2-2、必须keys中有所有值存在才能表示存在
+         */
+        var arr = [3, 4, 6, 7, 21];
+        var keys = [5, 6];
+        var state = 0;
+        keys.forEach(item=>{
+            let newsome=arr.some(value=>{
+                return item==value
+            })
+            if(newsome)state++
+        })
+        state=state==2?1:0
+        console.log(state)
+
+    </script>
+</body>
+</html>

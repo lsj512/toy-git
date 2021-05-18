@@ -1,0 +1,194 @@
+.main{
+    width: 1348px;
+    height: 830px;
+    margin: auto;
+    background-color: gainsboro;
+}
+
+.container{
+    width: 1290px;
+    height: 780px;
+    margin:25px 35px 35px 25px;
+}
+.main::before{
+    content: '';
+    display: table;
+}
+.left{
+    width: 40px;
+    height: 20px;
+    float: left;
+    margin-left: 0px;
+    margin-top: -10px;
+}
+.right{
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-right: 70px;
+    margin-top: -10px;
+}
+.hot{
+    width: 40px;
+    height: 20px;
+    float: right;
+    margin-right: 300px;
+    
+    
+}
+.hot:hover{
+    text-decoration: underline;
+    color: pink;
+}
+.face{
+    width: 90px;
+    height: 20px;
+    float: right;
+    margin-right: 186px;
+    margin-top: -20px;
+}
+.mianmo{
+    width: 40px;
+    height: 20px;
+    float: right;
+    margin-right: 126px;
+    margin-top: -20px;
+}
+.suit{
+    width: 100px;
+    height: 20px;
+    float: right;
+    margin-right: 0;
+    margin-top: -20px;
+}
+.map{
+    width: 1286px;
+    height: 734px;
+    margin: 0;
+    padding-top: 10px;
+} 
+
+.map1{
+    float: left;
+    width: 230px;
+    height: 359px;
+    margin-top: 20px;
+    
+}  
+.mapa{
+    line-height: 40px;
+    margin-top: 20px;
+    
+}
+.mapb{
+    line-height: 40px;
+    margin-top: 20px;
+    
+}
+.mapc{
+    line-height: 40px;
+    margin-top: 20px;
+    
+}
+.mapd{
+    line-height: 40px;
+    margin-top: 20px;
+    
+}
+.mape{
+    line-height: 40px;
+    margin-top: 20px;
+    
+}
+.mapf{
+    line-height: 40px;
+    margin-top: 20px;
+    
+}
+.mapg{
+    line-height: 40px;
+    margin-top: 20px;
+    
+}
+.maps{
+    line-height: 20px;
+    margin-top: 50px;
+    float: left;
+    margin-left: 30px;
+    
+}
+.map2{
+    margin-right: 25px;
+    border: 1px solid darkgrey;
+}
+.map3{
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+.map4{
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+.map5{
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+.map6{
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+.map7{
+    margin-right: 25px;
+    border: 1px solid darkgrey;
+    
+}
+.map8{
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+.map9{
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+.map10{
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+.map11{
+    margin-right: 10px;
+    border: 1px solid darkgrey;
+    
+}
+.yu{
+    width: 230px;
+    height: 170px;
+    float: right;
+    border: 1px solid darkgrey;
+    background-color: white;
+}
+.liulan{
+    width: 230px;
+    height: 170px;
+    float: left;
+    background-color: white;
+    margin-top: 20px;
+}
+.liulan1{
+    
+    width: 70px;
+    height: 30px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.iconfont{
+    float: right;
+    margin-right: 30px;
+    margin-top: -30px;
+}

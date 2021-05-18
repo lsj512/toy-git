@@ -1,0 +1,44 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1004714",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "1629918",
+      "name": "火箭",
+      "font_class": "icon-test",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "2075254",
+      "name": "浏览器-IE",
+      "font_class": "liulanqi-IE",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "10905663",
+      "name": "小程序 (1)",
+      "font_class": "xiaochengxu",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "15783537",
+      "name": "app",
+      "font_class": "app",
+      "unicode": "e51c",
+      "unicode_decimal": 58652
+    }
+  ]
+}

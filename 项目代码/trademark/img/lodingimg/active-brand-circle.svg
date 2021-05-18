@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="163" height="182" viewBox="0 0 163 182">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: 0.09;
+      }
+
+      .cls-1, .cls-2 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        opacity: 0.2;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.185" y1="0.08" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#49c9f2"/>
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="组_175" data-name="组 175" transform="translate(-360 -660)">
+    <path id="交叉_5" data-name="交叉 5" class="cls-1" d="M5.7,182A142.615,142.615,0,0,1,0,141.96C0,63.558,63.248,0,141.267,0A141.675,141.675,0,0,1,163,1.67V174a8,8,0,0,1-8,8Z" transform="translate(523 842) rotate(180)"/>
+    <path id="交叉_4" data-name="交叉 4" class="cls-2" d="M4.719,150A117.1,117.1,0,0,1,135,1.376V142a8,8,0,0,1-8,8Z" transform="translate(495 810) rotate(180)"/>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="">
+    <div id="box2"></div>
+    <button>按钮</button>
+    <script>
+        let ipt=document.querySelector('input')
+        let box=document.querySelector('#box2')
+        let btn=document.querySelector('button')
+        btn.onclick=()=>{
+            let value=ipt.value
+            if(value>=0&&value<1){
+                box.innerHTML='婴儿'
+            }
+            if(value>=1&&value<12){
+                box.innerHTML='儿童'
+            }
+            value>=12&&value<18?box.innerHTML='少年':value>=18&&value<30?box.innerHTML='青年':value>=30&&value<60?box.innerHTML='中年':value>=60&&value<=110?box.innerHTML='老年':box.innerHTML='输入错误'
+        }
+    </script>
+</body>
+</html>

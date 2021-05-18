@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .one{
+            width:100%;
+            display: flex;
+        }
+        .o{
+            width: 50%;
+            height: 200px;
+            background-color: yellowgreen;
+        }
+        .t{
+            width: 50%;
+            height: 200px;
+            background-color: violet;
+        }
+        .bx{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .box{
+            width: 1200px;
+            height: 600px;
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body>
+      <p>8-1</p>
+      <div class="one">
+          <div class="o"></div>
+          <div class="t"></div>
+      </div>
+
+
+      <p style="font-size:30px">8-2</p>
+      <div class="bx">
+          <div class="box"></div>
+      </div>
+    <script>
+      /*
+       * 8、窗口尺寸变化 resize
+       */
+      // 8-1、左大右小两个盒子,窗口尺寸变化时,如果窗口的宽小于1200px就把右侧盒子隐藏,左侧盒子宽变100%。
+      // 8-2、有个宽高比为2:1的盒子，在版心1200px里面沾满一行，当窗口缩小到1200px以下后，版心宽变成100%，盒子宽高比保持一致。
+      let box=document.querySelector('.box')
+        window.onresize=function(){
+            // console.log(event.currentTarget.innerWidth);
+            if(event.currentTarget.innerWidth<1200){
+                document.querySelector('.o').style.width='100%'
+                document.querySelector('.t').style.display='none'
+
+
+                document.querySelector('.bx').style.width='100%'
+                console.log(box.offsetWidth/2);
+                box.style.cssText=`width:100%;height:${box.offsetWidth/2}px`
+                console.log(box.offsetHeight)
+            }
+        }
+    
+    </script>
+  </body>
+</html>

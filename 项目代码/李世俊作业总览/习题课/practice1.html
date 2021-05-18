@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分支 练习课</title>
+</head>
+<body>
+    <input type="text" placeholder="请输入价格" class="priceInput">
+    <input type="text" placeholder="请输入数量" class="numInput">
+    <input type="text" class="finalInput" disabled>
+    <button>计算价格</button>
+    <script>
+        var priceInput = document.querySelector(".priceInput");
+        var numInput = document.querySelector(".numInput");
+        var finalInput = document.querySelector(".finalInput");
+        var btn = document.querySelector("button");
+        btn.onclick = function (){
+            var price = priceInput.value-0;
+            var num = numInput.value-0;
+            var finalPrice = 0;
+
+            // if(num>=5){
+            //     if(num*price>=1500){
+            //         finalPrice = (price * num) * 0.8 - 300;
+            //     }else{
+            //         finalPrice = (price * num) * 0.8;
+            //     }
+            // }else{
+            //     finalPrice = price * num;
+            // }
+
+            // //判断：满300且满3件，减50元
+            // if(price*num>=500 || num>=3){
+            //     finalPrice = (price * num) * 0.7;
+            // }else{
+            //     finalPrice = price * num;
+            // }
+            //加载到页面上
+            finalInput.value = finalPrice;
+        };
+
+        var num = 0;
+        // 最外层循环是1元的张数
+        for(var i=0; i<21; i++){
+            // 中层循环是2元的张数
+            for(var j=0; j<11; j++){
+                // 内层循环是5元的张数
+                for(var k=0; k<5; k++){
+                    //只要i,j,k数量的钞票凑够20元即可
+                    if(i*1 + j*2 + k*5 == 20){
+                        console.log(i, j, k);
+                        num++;
+                    }    
+                }
+            }
+        }
+        console.log(num);
+
+
+
+    </script>
+</body>
+</html>

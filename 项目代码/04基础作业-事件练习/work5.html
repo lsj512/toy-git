@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <p>输入年龄 18-100为合法</p>
+      <input type="text">
+      <div></div>
+    <script>
+      /*
+       * 5、失去焦点 blur
+       */
+      //页面中添加一个输入框，用来输入年龄
+      //当输入完毕后，判断年龄是否合法，如果合法在输入框下面使用绿色小字提示合法
+      //如果不合法，在输入框下面使用红色小子提示不合法
+        let div=document.querySelector('div')
+        document.querySelector('input').onblur=function(){
+            let value=document.querySelector('input').value
+            if(value>18&&value<100){
+                div.innerHTML='合法'
+                div.style.color='green'
+            }else{
+                div.innerHTML='不合法'
+                div.style.color='red'
+            }
+        }
+
+
+    </script>
+  </body>
+</html>

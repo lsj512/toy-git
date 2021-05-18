@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS条件和循环</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .wrap {
+        margin: 40px;
+      }
+      .list {
+        margin-bottom: 20px;
+      }
+      .list li {
+        padding: 10px 0;
+        line-height: 20px;
+        border-bottom: 1px #dedede solid;
+        color: #333;
+        vertical-align: middle;
+      }
+      .list li:hover {
+        background: #f3f3f3;
+      }
+      .list li .checkbox {
+        margin: -1px 5px 0 0;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+      }
+      .list span {
+        color: #f00;
+        margin-left: 10px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0 20px;
+        line-height: 2;
+        background: #f60;
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <ul class="list" id="list"></ul>
+      <a class="btn" id="buybtn" href="javascript:;">购买(全场折扣)</a>
+      <a class="btn" id="buybtn2" href="javascript:;">购买(电子产品折扣)</a>
+      <div id="payment">0</div>
+    </div>
+    <script>
+      //sort: 1家居用品,2电器产品,3食品
+      var products = [
+        { id: 1, sort: 1, title: "记忆枕头", price: 120 },
+        { id: 2, sort: 1, title: "床上四件套", price: 380 },
+        { id: 3, sort: 2, title: "高压锅", price: 250 },
+        { id: 4, sort: 2, title: "电磁炉", price: 320 },
+        { id: 5, sort: 2, title: "吹风机", price: 190 },
+        { id: 6, sort: 2, title: "电饭煲", price: 290 },
+        { id: 7, sort: 3, title: "有友凤爪", price: 18 },
+        { id: 8, sort: 3, title: "旺旺大礼包", price: 120 },
+        { id: 9, sort: 3, title: "坚果派", price: 220 },
+      ];
+      //根据数据生成列表到页面
+      var productHTML = "";
+      for (let i = 0; i < products.length; i++) {
+        productHTML += `<li><input class="checkbox" type="checkbox" value="${products[i].id}">${products[i].title}<span>${products[i].price}</span></li>`;
+      }
+      var listBox = document.querySelector("#list");
+      listBox.innerHTML = productHTML;
+      //价格显示区域
+      var paymentBox = document.querySelector("#payment");
+      /*
+            一、全部产品满减活动
+            凡购买产品
+            1、满300减50
+            2、满500减100
+            3、满1000减200
+         */
+      //购买按钮
+      var buyBtn = document.querySelector("#buybtn");
+      buyBtn.onclick = function () {
+        //获取所有被选中
+        let checkboxList = document.querySelectorAll(".checkbox:checked");
+        //总价默认0
+        var totalPrice = 0;
+        /*
+         * 1、通过对象遍历和数据遍历计算出总价
+         * 请写你的代码
+         */
+
+        checkboxList = [...checkboxList];
+        checkboxList.forEach((item) => {
+          let id = item.value;
+          totalPrice += products[+id - 1].price;
+        });
+        //////////////////总价代码区域END
+        //默认最终售价为总价
+        var salePrice = totalPrice;
+        /*
+         * 2、根据总价、折扣计算出最终卖价
+         * 请写你的代码
+         */
+
+        if (totalPrice >= 300 && totalPrice < 500) {
+          salePrice = totalPrice - 50;
+        }
+        if (totalPrice >= 500 && totalPrice < 1000) {
+          salePrice = totalPrice - 100;
+        }
+        if (totalPrice >= 1000) {
+          salePrice = totalPrice - 200;
+        }
+
+        //////////////////最终卖价代码区域END
+        //输出价格到页面
+        paymentBox.innerHTML = `原价：${totalPrice} 元，卖价：${salePrice} 元`;
+      };
+      /*
+            电子产品满减活动
+            凡购买“电子产品”（只电子产品打折，其他产品不打折）
+            1、满300打9折
+            2、满500打8折
+            3、满1000打7折
+         */
+      //购买按钮
+      var buybtn2 = document.querySelector("#buybtn2");
+      buybtn2.onclick = function () {
+        //获取所有被选中
+        let checkboxList = document.querySelectorAll(".checkbox:checked");
+        //总价默认0
+        var totalPrice = 0;
+        /*
+         * 1、通过对象遍历和数据遍历计算出总价
+         * 请写你的代码
+         */
+        checkboxList = [...checkboxList];
+        checkboxList.forEach((item) => {
+          let id = item.value;
+          totalPrice += products[+id - 1].price;
+        });
+        //////////////////总价代码区域END
+        //默认最终售价为总价
+        var salePrice = totalPrice;
+        /*
+         * 2、根据总价、折扣计算出最终卖价
+         * 请写你的代码
+         */
+        let dzPrice=0
+        let qtPrice=0
+        checkboxList.forEach(item=>{
+            let id = item.value
+            if(products[+id-1].sort==2){
+                dzPrice+=products[+id-1].price
+            }else{
+                qtPrice+=products[+id-1].price
+            }
+        })
+        if(dzPrice>=300&&dzPrice<500){
+            dzPrice*=0.9
+        }
+        if(dzPrice>=500&&dzPrice<1000){
+            dzPrice*=0.8
+        }
+        if(dzPrice>=1000){
+            dzPrice*=0.7
+        }
+        salePrice=qtPrice+dzPrice
+        if (salePrice >= 300 && salePrice < 500) {
+            salePrice = salePrice - 50;
+        }
+        if (salePrice >= 500 && salePrice < 1000) {
+            salePrice = salePrice - 100;
+        }
+        if (salePrice >= 1000) {
+          salePrice = salePrice - 200;
+        }
+        //////////////////最终卖价代码区域END
+        //输出价格到页面
+        paymentBox.innerHTML = `原价：${totalPrice} 元，卖价：${salePrice} 元`;
+      };
+    </script>
+  </body>
+</html>

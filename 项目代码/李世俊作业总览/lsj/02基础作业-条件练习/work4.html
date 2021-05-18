@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮</button>
+    <div></div>
+    <script>
+        let btn=document.querySelector('button')
+        let box=document.querySelector('div')
+        btn.onclick=()=>{
+            let h=new Date().getHours()
+            if(h>0&&h<=11){
+                box.innerHTML='早上'
+            }else if(h>11&&h<=13){
+                box.innerHTML='中午'
+            }else if(h>13&&h<=18){
+                box.innerHTML='下午'
+            }else if(h>18&&h<=24){
+                box.innerHTML='晚上'
+            }
+        }
+    </script>
+</body>
+</html>

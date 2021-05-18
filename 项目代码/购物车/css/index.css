@@ -1,0 +1,374 @@
+.display, .discenter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.discenter {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hover:hover {
+  color: #e2231a !important;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container {
+  width: 100%;
+}
+
+.container .wrap {
+  width: 990px;
+  height: 3000px;
+  margin: auto;
+  background-color: white;
+}
+
+.carshop {
+  width: 100%;
+  height: 450px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.carshop ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.carshop li {
+  width: 25%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.carshop li .img {
+  text-align: center;
+}
+
+.carshop li .title {
+  margin-left: 10px;
+}
+
+.carshop li .title article {
+  width: 220px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  height: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.carshop li .title .tag {
+  font-size: 13px;
+  width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  color: #995f5f;
+}
+
+.carshop li .title span {
+  color: #e2231a;
+  font-size: 20px;
+}
+
+.carshop li .title .eve b {
+  font-size: 14px;
+  color: #646fb0;
+}
+
+.carshop li .title .eve p {
+  display: inline-block;
+  font-size: 14px;
+  color: #c6afbb;
+}
+
+.carshop li .title .shopname {
+  font-size: 13px;
+  margin-top: 10px;
+  color: #a09999;
+}
+
+.carshop li .title .botton {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #3f3c3c;
+}
+
+.carshop li .title .botton .a {
+  border: 1px solid #d4d3d3;
+  padding: 3px;
+}
+
+.carshop li .title .botton .a:hover {
+  cursor: pointer;
+}
+
+.carshop li .title .botton .b {
+  border: 1px solid #d4d3d3;
+  padding: 3px;
+}
+
+.carshop li .title .botton .b span {
+  font-size: 16px;
+}
+
+.carshop li .title .botton .b:hover {
+  cursor: pointer;
+}
+
+.carshop li .title .botton .c {
+  border: 1px solid #d4d3d3;
+  padding: 3px;
+  color: #e2231a;
+}
+
+.carshop li .title .botton .c span {
+  font-size: 18px;
+  color: #e2231a;
+}
+
+.carshop li .title .botton .c:hover {
+  cursor: pointer;
+}
+
+.car {
+  width: 100%;
+}
+
+.car-filter {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.car-filter .filter-left {
+  color: #e2231a;
+  font-size: 17px;
+}
+
+.car-filter .filter-right {
+  font-size: 13px;
+  color: #918787;
+}
+
+.car-filter .filter-right select {
+  padding: 5px;
+  outline: none;
+}
+
+.car-head {
+  width: 100%;
+  height: 45px;
+  background-color: #f3f3f3;
+  margin-top: 15px;
+  font-size: 13px;
+  border-bottom: 1px solid #c2c2c2;
+}
+
+.car-head input {
+  margin-left: 15px;
+}
+
+.car-head span {
+  margin-left: 10px;
+}
+
+.car-head .sp {
+  margin-left: 70px;
+}
+
+.car-head .dj {
+  margin-left: 445px;
+}
+
+.car-head .sl {
+  margin-left: 70px;
+}
+
+.car-head .xj {
+  margin-left: 100px;
+}
+
+.car-head .cz {
+  margin-left: 45px;
+}
+
+.car-body {
+  width: 100%;
+}
+
+.car-body .body-shop {
+  height: 36px;
+  font-size: 13px;
+}
+
+.car-body .body-shop input {
+  margin-left: 15px;
+}
+
+.car-body .body-shop span {
+  margin-left: 10px;
+}
+
+.car-body .list {
+  width: 100%;
+  height: 3px;
+  background-color: #aaaaaa;
+}
+
+.car-body .shop-data {
+  height: 117px;
+  border: 1px solid #f3f3f3;
+}
+
+.car-body .shop-data .xz {
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.car-body .shop-data .data {
+  width: 940px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.car-body .shop-data .data img {
+  width: 80px;
+  height: 80px;
+}
+
+.car-body .shop-data .data .data-title {
+  font-size: 12px;
+  width: 208px;
+  height: 50px;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.car-body .shop-data .data-tag {
+  width: 127px;
+  font-size: 13px;
+  margin-left: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.car-body .shop-data .price {
+  font-size: 13px;
+  margin-left: 100px;
+}
+
+.car-body .shop-data .num {
+  margin-left: 40px;
+  height: 25px;
+}
+
+.car-body .shop-data .num .NUM {
+  width: 40px;
+  display: block;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  border: 1px solid #888484;
+  padding-left: 5px;
+}
+
+.car-body .shop-data .num button {
+  display: block;
+  width: 20px;
+  height: 25px;
+}
+
+.car-body .shop-data .xjprice {
+  margin-left: 60px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.car-body .shop-data .bodycz {
+  font-size: 13px;
+  margin-left: 35px;
+}
+
+.js {
+  width: 100%;
+  height: 55px;
+  border: 1px solid #f3f3f3;
+  margin-top: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.js .js-left {
+  font-size: 13px;
+}
+
+.js .js-left input {
+  margin-left: 10px;
+}
+
+.js .js-left span {
+  margin-left: 10px;
+  color: #7c7979;
+}
+
+.js .js-left article {
+  margin-left: 10px;
+  color: #7c7979;
+}
+
+.js .js-left section {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #7c7979;
+}
+
+.js .js-right {
+  font-size: 13px;
+  color: #7c7979;
+}
+
+.js .js-right span {
+  color: #e2231a;
+}
+
+.js .js-right b {
+  color: #e2231a;
+  font-size: 19px;
+}
+
+.js .js-right .jiesuan {
+  margin-left: 20px;
+  width: 95px;
+  height: 100%;
+  background: #e2231a;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=index.css.map */

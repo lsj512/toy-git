@@ -1,0 +1,122 @@
+.wrap{ 
+    width:800px; 
+    height: 80px;
+    margin: 0 auto; 
+    border: 1px solid blue;
+    background: #ffc0c0;
+}
+.about{ padding: 30px;  
+    z-index: -10;
+}
+ .btn{ 
+     background: #f60; color: #fff; padding: 5px 10px;
+     border-radius: 5px; text-decoration: none; position: relative; 
+}
+.btn:hover::after{
+      display: none;
+}
+ .btn::before{ 
+     content: ""; display: none; width: 0px; height: 0px; 
+     position: absolute;
+     bottom: -10px; left: 20px;
+     border: 5px solid #333;
+     border-color: #333 transparent transparent transparent; 
+}
+ .btn::after{
+    content: ""; display: block; width: 0px; height: 0px; 
+    position: absolute;
+    top: -10px; left: 20px;
+    border: 5px solid #f60;
+     border-color: transparent transparent #f60 transparent; 
+}
+.two{
+    margin-top: -50px;
+    margin-left: 100px;
+}
+
+.btn2{ 
+    background: #f60; color: #fff; padding: 5px 10px;
+    border-radius: 5px; text-decoration: none; position: relative; 
+}
+.btn2:hover::before{
+    display: none;
+}
+.btn2::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
+    border: 5px solid #f60;
+    border-color: #f60 transparent transparent transparent;
+}
+.three{
+    margin-top: -20px;
+    margin-left: 220px;
+}
+.btn3{
+    background: #f60; color: #fff; padding: 5px 10px;
+    border-radius: 5px; text-decoration: none; position: relative;
+}
+.btn3:hover::before{
+    display: none;
+}
+.btn3::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    border: 5px solid #f60;
+    border-color: transparent #f60 transparent transparent;
+}
+.four{
+    margin-top: -20px;
+    margin-left: 340px;
+
+}
+.four:hover{
+    text-decoration: underline;
+}
+.btn4{
+    background: #f60; color: #fff; padding: 5px 10px;
+    border-radius: 5px; text-decoration: none; position: relative; 
+    z-index: 9999;
+    
+}
+.btn4:hover::before{
+    display: none;
+}
+.btn4::after{
+    content: ""; display: block; width: 0px; height: 0px; 
+    position: absolute;
+    top: -10px; left: 20px;
+    border: 5px solid #f60;
+     border-color: transparent transparent #f60 transparent; 
+    z-index: -1;
+}
+.btn4::before{
+    content: ""; display: block; width: 110px; height: 120px; 
+    position: absolute;
+    background-color: darkgrey;
+    top: -81px;
+    left: -42px;
+    z-index: -100;
+    
+}
+.five{
+    margin-top: -20px;
+    margin-left: 420px;
+}
+.five:hover{
+    text-decoration: underline;
+}
+
+.btn5{
+    background: #f60; color: #fff; padding: 5px 10px;
+    border-radius: 5px; text-decoration: none; position: relative;
+}

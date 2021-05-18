@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70.679" height="92.959" viewBox="0 0 70.679 92.959">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.075" y1="0.031" x2="0.931" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.349"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path id="交叉_6" data-name="交叉 6" class="cls-1" d="M2217.2-1396l-54.071-77.222a10,10,0,0,1,2.455-13.928,10,10,0,0,1,13.927,2.456L2232-1409.734V-1404a8,8,0,0,1-8,8Z" transform="translate(-2161.321 1488.959)"/>
+</svg>

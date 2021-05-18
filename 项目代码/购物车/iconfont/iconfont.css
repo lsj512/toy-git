@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1618916477591'); /* IE9 */
+  src: url('iconfont.eot?t=1618916477591#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAP8AAsAAAAACDAAAAOvAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqEFINTATYCJAMMCwgABCAFhG0HOhsdB1GULUqS7KcmT1uiwb47AmLLKkAgifIAlgl4AMACAADi4WuJe393r+QupbtElSrj+/ioWlUAibBBgcQiNONxCINFdyNuaH/v3Qc8QM3ye3GQG5G2JEenNa/M2RMLW6FO8opQoR12QF267uCeFeT1Ps/l9EaJz29ZLmNt2tOPegHGAQU65iQrkAS9YeyClriZQGeRLni4vz6grTB7BeIl9C1oZ2xKQ2VohbpiYhGfVNr0IR0DH4Pvx3/zaJNUmTnw6HnnwvKX2R+r/B+qXXoE+XQesGlkbAEKcV3pO1WLkluwOlVXby6sFSFNFRkGApmmqa0/PJIgamb5KFhDluSi5I6QxB8rxVXLH657jQZfse4Wm3hDH4KXKinItMnkGGTtInDhQvnyMgg9t9i+pJ6fBwyd6fLOzlYineX8h8+1zs/V2lHh5GWQcPFS5eIiEGlYtw0RCBYu8mhIR00ndQydFAb1SjooXXqRHtVq7xf5d60kUmBHB9IGAMXlVLdTe8BBO4WQ2q2mI4SGzEhCe7Yo1aug0+KQfq22KdC9iW5LeyTULlHUu2aLcovM1Myi09VTdHLQPx7pdsstPVo7UgGT1dQajzEJ09HUDNUxScBkDofvGFrhucAtudkmfH/yg1nlMIKg5hvlnHi+Rjmg2VF8cfxO6K3qjYcRWeV+UN9T6yg4iZcUfOGtBeJNbGa8Eo+o+jqmCwHL86zTbM4PRdcBXxvePlGba2Vji2+mfybs21Sq9/xkF/2VsJdp+1ySzJlztvXMDJBoNiy8xnAysfMsbHhhcpndVtPMZvdzl8ictlKH9Sim53OaVZtUi1SLwzjFWBJu5wiYAMNXHskEyLfVqV/8Gy9fFl1jZH5LLeDn2HlFEBy+CuieaiWY/IfKO9YUTWnac1FkjszIZO81XpdVp+n9xmqY9jA8MAckntByOUTSWEDWWiILewuV3jZqrR10NjlN783IVRNlBBsaAMKkRSTjviGbdEIW9j0q8z5Qm4waOsfBXbC3EmHXTshSctH+Yehw5tlO7YaVN/LLxJK0MuC8SIowgjN9w3zmQBnJFEOKtz9X9dATTnEPtqMkYcyFI3J0HKjmi4lBYtWbxg6n0HVAEIsiLhTrB6VwsIznNVbdwudviK+UsEgDoyr6QkQhbB0Z0WfYgTzosk6MW7kmz5tvLp/yoESCpZAj8JDESjKUXd0uQhxqLHlAPLdggOoldtWNlzek77cJOubqOVLkKKq78Btm7SQuP6UTEAAA') format('woff2'),
+  url('iconfont.woff?t=1618916477591') format('woff'),
+  url('iconfont.ttf?t=1618916477591') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1618916477591#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  /* font-size: 16px; */
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-aixin:before {
+  content: "\e83f";
+}
+
+.icon-gouwuche:before {
+  content: "\e635";
+}
+

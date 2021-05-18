@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    height: 0;
+}
+.container{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid dimgrey;
+    position: relative;
+}
+.imgs{
+    width: 400px;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 100px;
+    border-radius: 50%;
+    border: 10px solid rgb(250, 151, 153);
+}
+img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+.ear-left{
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgb(250, 151, 153);
+    border-radius: 20%;
+    position: absolute;
+    top: 110px;
+    left: 110px;
+    z-index: -1;
+    animation: ear-left 2s linear infinite;
+}
+@keyframes ear-left{
+    /* 0%{ transform: rotate(0deg); }
+    25%{ transform: rotate(-30deg);}
+    50%{ transform: rotate(0deg); }
+    75%{ transform: rotate(30deg); }
+    100%{ transform: rotate(0deg); } */
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
+.ear-right{
+    width: 100px;
+    height: 100px;
+    border: 10px solid rgb(250, 151, 153);
+    border-radius: 20%;
+    position: absolute;
+    top: 110px;
+    right: 100px;
+    z-index: -1;
+    animation: ear-right 2s linear infinite;
+}
+@keyframes ear-right{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
+.hand-left{
+    width: 60px;
+    height: 6px;
+    background-color: rgb(250, 151, 153);
+    position: absolute;
+    left: 50px;
+    bottom: 250px;
+    transform-origin: right;
+    animation: hand-left 1s linear infinite;
+}
+@keyframes hand-left{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-30deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(30deg);}
+    100%{transform: rotate(0deg);}
+}
+.hand-right{
+    width: 60px;
+    height: 6px;
+    background-color: rgb(250, 151, 153);
+    position: absolute;
+    right: 30px;
+    bottom: 250px;
+    transform-origin: left;
+    animation: hand-right 1s linear infinite;
+}
+@keyframes hand-right{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(30deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-30deg);}
+    100%{transform: rotate(0deg);}
+}
+.below{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(250, 151, 153);
+    border-radius: 50%;
+    position: absolute;
+    left: 300px;
+    bottom: 20px;
+    transform-origin:0 -200px;
+    animation: below 2s linear infinite;
+}
+@keyframes below{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(30deg);}
+    50%{transform: rotate(0deg);}
+    75%{transform: rotate(-30deg);}
+    100%{transform: rotate(0deg);}
+}

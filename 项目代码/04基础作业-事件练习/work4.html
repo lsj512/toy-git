@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text">
+
+
+
+
+    <script>
+      /*
+       * 4、改变 change
+       */
+      //页面中添加一个输入框，内部添加关键词，多个关键词使用单一空格隔开
+      //当每次输入完毕后，在控制台输出所有关键词构成的数组
+
+        let ipt=document.querySelector('input')
+
+
+        ipt.addEventListener('change',fn)
+
+
+        function fn(){
+            let arr
+            arr=ipt.value.split(' ')
+            console.log(arr)
+        }
+
+
+
+    </script>
+  </body>
+</html>

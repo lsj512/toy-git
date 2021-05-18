@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            /* position: absolute;
+            left: 0;
+            top: 0; */
+        }
+    </style>
+    <div></div> -->
+    <!-- <input type="text"> -->
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+
+    <script>
+        $("ul").onclick = function (){
+            console.log(event.target.innerHTML);
+            // console.log(event.currentTarget);
+        };
+
+
+
+
+        // var div = $("div");
+        // div.onclick = function (){
+        //     console.log(event);
+        // };
+        // div.click();
+
+        // document.onmousemove = function (){
+        //     console.log(event);
+        //     div.style.left = event.clientX + "px";
+        //     div.style.top = event.clientY + 'px';
+        // };
+        // $("input").onkeypress = function (){
+        //     console.log("键盘被按下");
+        //     console.log(event);
+        // };
+        // $("input").onblur = function (){
+        //     console.log("失去焦点");
+        // };
+        // $("input").focus();
+        
+
+        /*
+            0.事件委托（思想）
+            描述：事件在当前节点上发生时，并不在当前节点添加事件监听
+                  而是在当前节点的父级节点添加事件监听
+                  并利用事件传递机制以及event.target，来在父级的事件监听中对事件统一处理的做法
+            例子：
+                $("ul").onclick = function (){
+                    console.log(event.target.innerHTML);
+                    // console.log(event.currentTarget);
+                };
+
+            1.事件（对象）
+            描述：事件是一个过程，一个抽象的概念。看不见，摸不到。但具有特征。
+            语法：event
+            说明：event事件对象中包括了事件发生时的所有特征，这些特征构成了事件本身
+            例子：
+                btn.onclick = function (eve){
+                    console.log(event);
+                    console.log(eve);
+                };
+
+            2.事件监听
+            描述：对元素节点添加一个任务（观察某件事情是否发生），当这个事情发生后
+                 对应执行绑定的回调函数。
+            语法：
+                (1)HTMl级 事件监听（html事件）
+                    语法：<button onclick="fn()">按钮</button>
+                    缺陷：高耦合性，不利于维护。模块化开发。
+
+                (2)DOM0级 事件监听（dom0事件）
+                    语法：节点名.on事件名 = function (){};
+                    弊端：对同一个节点添加同一个事件的事件监听，同时只能添加一个。
+
+                (3)DOM2级 事件监听（dom2事件）
+                    语法：
+                        添加事件监听
+                            节点名.addEventListener(事件类型，外部函数名，是否采用捕获(可选));
+                        移除事件监听
+                            节点名.removeEventListener(事件类型，外部函数名，是否采用捕获);
+                    注意：
+                        1)可以对同一个节点同一个事件类型，添加多个监听，互不影响
+                        2)如果DOM2事件监听添加的时候，没有使用外部函数名，则该事件监听无法移除
+                        3)如果DOM2事件监听想要被移除，则添加时怎么写，移除时参数必须完全一致。
+                    例子：
+                        btn.addEventListener("click", fn);
+                        btn.removeEventListener("click", fn);
+                        function fn (){
+                            console.log("这是dom2测试用函数");
+                        }
+            3.事件类型（只要不主动声明，都是采用冒泡传递）
+                类型：
+                    鼠标事件
+                        click 点击事件
+                        dblclick 双击事件
+                        mouseup 鼠标抬起事件
+                        mousedown 鼠标按下事件
+                        mouseenter 鼠标进入事件
+                        mouseleave 鼠标离开时事件
+                        mouseover 鼠标进入事件
+                        mouseout 鼠标离开事件
+                        mousemove 鼠标移动事件
+                    键盘事件
+                        keydown 键盘按下事件
+                        keyup 键盘抬起事件
+                        keypress 键盘按下事件（注意和keydown的区别）
+                    焦点事件
+                        ps:焦点，就是在DOM Tree正在和用户发生交互的节点。
+                        focus 获得焦点事件
+                        blur 失去焦点事件
+                    加载事件
+                        load
+                    尺寸事件
+                        resize
+                注意：
+                    事件分主动触发与机械触发两种
+                    主动触发：事件名();
+                    机械触发：由用户操作，导致事件发生，从而触发监听的回调函数。
+
+            4.事件传递
+                描述：事件当发生的时候，并不仅和当前事件的触发节点发生交互
+                        而是会沿着dom Tree逐级向上传递
+                        并沿途与经过的每一个节点发生交互
+                        直到document节点为止。
+                分类：
+                      event bubble（事件冒泡）
+                        事件由触发者节点开始，向document逐级传递
+                      event capture（事件捕获）
+                        事件由document开始，逐级向下传递，直到事件触发者节点为止
+                例子：
+                    // div.onclick = function (){ console.log("div 被点击") };
+                    // document.body.onclick = function (){ console.log("body 被点击") };
+                    // document.documentElement.onclick = function (){ console.log("html 被点击") };
+                    // document.onclick = function (){ console.log("document 被点击") };
+
+                    // div.addEventListener("click", function (){ console.log("div 被点击"); }, true);
+                    // document.body.addEventListener("click", function (){ console.log("body 被点击"); }, true);
+                    // document.documentElement.addEventListener("click", function (){ console.log("html 被点击"); }, true);
+                    // document.addEventListener("click", function (){ console.log("document 被点击"); }, true);
+        */ 
+        // 工具函数-用来选中页面元素
+        function $(selName){
+            return document.querySelector(selName);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+.waibu{
+    width: 409px;
+    height: 598px;
+    margin: auto;
+    padding-top: 25px;
+    box-shadow: rgb(92, 91, 91) 0 0 6px;
+}
+.neibu{
+    padding:40px;
+    margin: auto;
+    height: 350px;
+    width: 280px;
+    background-color:rgb(13, 212, 192);
+    box-shadow: rgb(110, 109, 109) 0 0 6px;
+}
+.wz{
+    color:rgb(168, 164, 164);
+    line-height: 25px;
+    font-size: 15px 5px;
+}
+.wz:hover{
+    color: #fff;
+}
+img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin: auto;
+    position:relative;
+    top: -50px;
+    left: 39%;
+    float: left;
+}
+.wb{
+    width: 365px;
+    height: 150px;
+     margin: auto;
+    text-align: center; 
+    box-shadow: rgb(153, 150, 150); 
+    margin: 0 0 0 20px;
+    margin: 0 auto;
+    
+     
+}
+.wb:hover{
+    box-shadow: 5px 0px 5px -5px;
+}
+.he{
+    width: 335px;
+    height: 50px;
+    /* margin: 0 auto;  */
+    padding-top: 60px;
+} 
+.he span{
+    font-size: 15px;
+    display: block;
+    position: relative;
+    padding:10px 52px 16px 50px;
+    text-align: center;
+    color: black;
+}
+.he p{
+    font-size: 11px;
+    display: block;
+    color: rgb(165, 162, 162);
+}
+
+
+
+
+
+
+

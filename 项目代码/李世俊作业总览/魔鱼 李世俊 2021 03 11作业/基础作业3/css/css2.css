@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    width: 1200px;
+    height: 565px;
+    margin: 0 auto;
+    
+    padding: 10px;
+    position: relative;
+}
+
+
+.nav li{
+    font-size: 20px;
+}
+.nav3 a:hover{
+    color: rgb(255, 228, 220);
+}
+.nav2 .nav3:hover+.text{
+    display: block;
+}
+.nav2{
+    border: 1px solid orange;
+    width: 280px;
+}
+
+.text{
+    width: 900px;
+    height: 530px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    display: none;
+    border: 1px solid rgb(43, 29, 4);
+    
+}
+.text1{
+    width: 600px;
+    height: 505px;
+    position: absolute;
+    top: 0px;
+    overflow: auto;
+    padding-top: 20px;
+    padding-left: 25px;
+}
+article{
+   color: rgb(22, 20, 20);
+   font-size: 20px;
+   margin: 10px;
+   display: block;
+}
+ul{
+    width: 380px;
+    margin: 10px;   
+}
+.text2 ul li{
+    line-height: 30px;
+}
+
+.text3{
+    width: 236px;
+    height: 505px;
+   position: absolute;
+   top: 40px;
+   right: -20px;
+}
+.love{
+    font-size: 16px;
+    color: rgb(22, 20, 20);
+    text-align: center;
+    padding: 10px;
+}
+.text4{
+    width: 227px;
+     height: 438px;
+     
+}
+.text4 img{
+    width: 97px;
+    height: 97px;
+}
+.ts1{
+    float: left;
+    width: 50%;
+
+}
+.ts1::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.ts2{
+    float: left;
+    width: 50%;
+}
+.introduce{
+    width: 188px;
+    height: 512px;
+    margin-top: 20px;
+}
+.introduce li{
+    line-height: 40px;
+    font-size: 17px;
+    text-align: center;
+}

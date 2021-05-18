@@ -1,0 +1,61 @@
+.waibu{
+    width: 459px;
+    height: 376px;
+    background-color: teal;
+    padding-top: 34px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px -10px;
+}
+.neibu{
+    width: 408px;
+    height: 205px;
+    margin: auto;
+    padding-top: 34px;
+    background-color: lightblue;
+    box-shadow: 0px 0px 5px -10px;
+}
+.zi{
+    text-align: center;
+    font-size: 16px;
+}
+.zi1{
+    padding: 15px 16px 30px 25px ;
+    font-size: 15px;
+    margin: auto;color:dimgrey;
+}
+
+.triangle{
+    width: 0px;
+    height: 0px;
+    border: 15px solid transparent;
+    border-top-color: teal;
+    position: relative;
+    left: 67px;
+    right: 348px;
+    top: 1px;
+}
+.yuan{
+    width: 70px;
+    height: 70px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 60px;
+}
+.yuan2{
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-top: 2.5px;
+    margin-left: 3px;
+}
+img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.zi2{
+    position: relative;
+    margin-left: 147px;
+    margin-top: -65px;
+}
