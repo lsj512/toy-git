@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div></div>
+    <button>点我</button>
+
+    <div>
+      <p>我是倒计时</p>
+      <p class="djs"></p>
+    </div>
+
+    <script>
+            let div = document.querySelector("div");
+            let btn = document.querySelector("button");
+            let djs = document.querySelector('.djs')
+
+            btn.onclick = function () {
+              let end = new Date(2021, 07, 01).getTime();
+              let now = new Date().getTime();
+              let timestamp = end - now;
+              let MM=Math.floor(timestamp/1000/60/60/24/30)
+              let DD=Math.floor((timestamp/1000/60/60/24)%30)
+              let hh=Math.floor((timestamp/1000/60/60)%24)
+              let mm=Math.floor((timestamp/1000/60)%60)
+              let ss=Math.floor((timestamp/1000)%60)
+              // console.log(MM)
+              // console.log(DD)
+              // console.log(hh)
+              // console.log(mm)
+              // console.log(ss)
+              div.innerHTML=`${MM}月${DD}天${hh}小时${mm}分钟${ss}秒钟`
+              console.log(`${MM}月${DD}天${hh}小时${mm}分钟${ss}秒钟`)
+            };
+            function timefunction() {
+              let end = new Date(2021, 07, 01).getTime();
+              let now = new Date().getTime();
+              let timestamp = end - now;
+              let MM=Math.floor(timestamp/1000/60/60/24/30)
+              let DD=Math.floor((timestamp/1000/60/60/24)%30)
+              let hh=Math.floor((timestamp/1000/60/60)%24)
+              let mm=Math.floor((timestamp/1000/60)%60)
+              let ss=Math.floor((timestamp/1000)%60)
+              djs.innerHTML=`${MM}月${DD}天${hh}小时${mm}分钟${ss}秒钟`
+              console.log(MM == DD == hh == mm == ss== 0)
+                if(+MM == +DD == +hh == +mm == +ss== 0){
+                    console.log(MM==DD==hh)
+                    console.log(MM,+MM)
+                    clearInterval(timers) 
+                }
+            };
+            let timers=setInterval(function(){
+                timefunction()
+            },1000)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function People(pname,page,pgender){
+            this.peoName=pname;
+            this.peoAge=page;
+            this.peoGender=pgender;
+        }
+       People.prototype.introduce = function(){
+           console.log(this.peoName,this.peoAge,this.peoGender);
+       }
+       function Man(muscle,k){
+        //    People.call(this,k.pname,k.page,k.pgender)
+           this.peMuscle=muscle;
+       }
+       Man.prototype=new People('lsj',18,'male');
+       Man.prototype.showlove = function(wname){
+           console.log("一名叫"+this.peoName+','+"肌肉"+this.peMuscle,"的男孩子向"+wname+"表白");
+       }
+       function Woman(smart){
+           this.peSmart = smart;
+       }
+       Woman.prototype=new People('dlrb',17,'female');
+       Woman.prototype.refused = function(mname){
+            console.log("一名叫"+this.peoName+','+"智慧"+this.peSmart,"的女孩子拒绝了"+mname+"的表白");
+       }
+       var lsj = new Man("无", {
+             pname:"lsj",
+             page:18,
+             pgender:"male"
+         });
+         console.log(lsj)
+       lsj.introduce();
+       lsj.showlove("迪丽热巴");
+
+       var dlrb= new Woman("很多", {
+             pname:"迪丽热巴",
+             page:17,
+             pgender:"female"
+         });
+        dlrb.refused("lsj");
+        console.log(dlrb);
+
+    </script>
+</body>
+</html>

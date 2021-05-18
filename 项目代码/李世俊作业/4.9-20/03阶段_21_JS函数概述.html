@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 函数与事件(上)</title>
+</head>
+<body>
+    <script>
+        /*
+            1.函数概述
+            描述：函数是【具有某些特定功能的】【能够重复调用的】【闭合的】代码块。
+            语法：
+                  声明语法（定义语法）
+                    function 函数名(函数参数1, 函数参数2, ...){
+                        函数体
+                    }
+                  调用语法（使用函数语法）
+                    函数名(函数参数1, 函数参数2, ...);
+            说明：
+                  1）函数名命名规则等同于变量名，以字母、数字、下划线_和美元符号$任意组合而成，不能以数字开头
+                  2）函数语法分为声明和调用两个部分，只声明不调用则函数等于不存在
+                  3）定义函数时的参数个数，与调用时的参数个数允许不相同（不建议）
+            名词：
+                  1）形式参数（形参）
+                     形参是指函数在定义的时候，写在小括号内部，用来表示函数将要参与运算的临时变量名称。
+                  2）实际参数（实参）
+                     实参是指函数在调用的时候，写在小括号内部，真实参与函数运算的数据
+                  3）返回值
+                     描述：在函数内部，通过return关键词定义的，用来在函数执行结束后，返回到函数调用的位置
+                           替代函数调用语句的结果，称为返回值。  
+                     注意：return除了用来定义返回值之外，还表示函数执行结束。
+                     eg:
+                        function sum(num1, num2){
+                            var result = num1 + num2;
+                            return result;
+                            console.log("测试代码");
+                        }
+
+                        var re = sum(100, 37);
+                        console.log(re);
+                  4）不定参函数与arguments对象
+                     描述：arguments对象是JavaScript提供的，一个用来在函数内部使用的
+                          用来获取函数在执行时的所有真实参数的对象
+                     说明：可以像使用数组一样来使用arguments对象，以便获取所有的参数
+                     例子：
+                        function sum(){
+                            var sum = 0;
+                            for(var i=0; i<arguments.length; i++){
+                                sum += arguments[i];
+                            }
+                            return sum;
+                        }
+
+                        var result = sum(10, 20, 30, 40, 50, 60);
+                        console.log(result);
+            例子：
+                function baozi_machine(cailiao1, cailiao2){
+                    console.log("使用"+cailiao1+",和"+cailiao2+"做好了一个包子");
+                }
+                baozi_machine("面粉", "韭菜鸡蛋");
+            扩展：
+                【内变外不变】与【内变外也变】问题
+                （【值传递与地址传递】）
+                eg:
+                【内变外不变】
+                 当函数调用时传入的实际参数是基本数据类型的时候，会发生。
+                    var num = 1;
+                    function change(_num){
+                        _num = _num + 100;
+                    }
+                    change(num);
+                    console.log(num);    
+                【内变外也变】
+                当函数调用时传入的实际参数是复杂数据类型的时候，会发生
+                    var arr = [1,2,3,4,5];
+                    function change(_arr){
+                        _arr[0] = 1000;
+                    }
+                    change(arr);
+                    console.log(arr);
+            
+            
+            2.函数类型
+            1）普通函数
+            描述：使用function声明的函数
+            变形：使用变量名替代函数名
+                  eg：
+                    var fn = function (){
+                        console.log("haha");
+                    };
+                    fn();
+            扩展：变量提升与函数提升
+                    a.一等公民：函数在JavaScript世界中为一等公民，具有和变量同等地位。
+                               只要变量可以合理使用的地方，就可以使用函数。
+                    b.变量提升：使用var定义的变量，可以先调用，后声明。
+                               其声明语句会被提升至其所在作用域的代码头部。
+                    c.函数提升：使用function定义的函数，可以先调用，后声明。
+                               其声明语句会被提升至其所在作用域的代码头部。
+            例子：
+                    console.log(fn);
+                    var fn = function (){
+                        console.log("haha");
+                    };
+
+            2）回调函数
+            描述：函数在定义后，代码执行时不执行。直到满足某个特定条件后才会回来调用的函数。
+            例子：
+                <button>点击</button>
+                //
+                var btn = document.querySelector("button");
+                btn.onclick = function (){
+                    console.log("按钮被点击");
+                };
+            
+            3）匿名函数
+            描述：函数定义的时候没有名字的函数，称为匿名函数
+            说明：匿名函数大都不直接使用，而是会配合其他写法构成其他类型函数
+            语法：function (){}
+
+            4）立即执行函数（IIFE，Immediately Invoked Function Expression）
+            描述：函数在定义后直接执行的函数
+            语法：(function (){})();
+            例子：
+                (function (temp){
+                    console.log("这是立即执行函数输出内容");
+                    console.log(temp);
+                })(13);
+
+            5）递归函数
+            描述：函数内部再次调用自己的函数，被称为递归函数
+            说明：
+                 a.递归函数必须拥有三个要素
+                    递归变量赋初值
+                    递归终止条件
+                    递归变量向着递归终止条件发生的变化趋势
+                 b.循环的本质是递归函数
+            例子：
+                var times = 0;
+                function tellStory(_times){
+                    if(_times == 3){
+                        return;
+                    }
+                    console.log("从前有座山");
+                    console.log("山里有座庙");
+                    console.log("庙里有个老和尚");
+                    console.log("老和尚在讲故事");
+                    console.log("讲的什么故事呢");
+                    _times++;
+
+                    tellStory(_times);
+                }
+                tellStory(times);
+            扩展：
+                求阶乘、求父子级数据、求父级元素节点、数组排序...
+                eg:
+                    // 要求定义函数，求N的阶乘    
+                    // function jiecheng(num){
+                    //     if(num == 1){
+                    //         return 1;
+                    //     }
+                    //     return num * jiecheng(num-1);
+                    // }
+                    // var result = jiecheng(5);
+                    // console.log(result);
+
+            6）箭头函数   
+            描述：ES6中对于定义函数的新语法，与ES5中function定义函数作用相同
+            语法：() => {};
+            例子：
+                function sum(num1, num2){
+                    return num1+num2;
+                }
+                var sum = (num1, num2) => console.log(num1 + num2);
+                sum(3, 7);
+            扩展：this会在箭头函数中保持永恒不变
+        */ 
+
+    </script>
+</body>
+</html>

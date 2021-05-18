@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点我</button>
+    <script>
+        let btn=document.querySelector('button')
+        btn.onclick=function(){
+            let hours=new Date().getHours()
+            if(hours>=0&&hours<6){
+                console.log('凌晨')
+            }
+            if(hours>=6&&hours<12){
+                console.log('上午')
+            }
+            if(hours>=12&&hours<18){
+                console.log('下午')
+            }
+            if(hours>=18&&hours<0){
+                console.log('晚上')
+            }
+        }
+
+
+
+    </script>
+</body>
+</html>

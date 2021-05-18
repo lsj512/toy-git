@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.wrap{
+    width: 1700px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    flex-wrap: wrap;
+}
+.box{
+    border: 1px solid #DDDDDD;
+    padding: 5px;
+}
+h2{
+    text-align: center;
+    color: #337ab7;
+    margin-top: 20px;
+}
+h2:hover{
+    color: #555;
+     cursor: pointer;
+}
+.subhead{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #777;
+    margin-top: 5px;
+}
+.essay{
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    line-height: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:1200px){
+    .wrap{
+        width: 60%;
+    }
+    /* .box{
+        width: 300px;
+    } */
+}
+@media screen and (max-width:992px){
+    .wrap{
+        width: 40%;
+    }
+    /* .box{
+        width: 300px;
+    } */
+}
+@media screen and (max-width:768px){
+    .wrap{
+        width: 20%;
+    }
+    /* .box{
+        width: 300px;
+    } */
+}

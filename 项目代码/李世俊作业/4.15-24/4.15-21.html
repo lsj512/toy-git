@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font_2489004_rd8qxa6mt3o/iconfont.css">
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .search {
+            width: 550px;
+            height: 35px;
+            margin: 100px auto;
+            display: flex;
+        }
+
+        .search input {
+            width: 492px;
+            height: 31px;
+            border: 2px solid #f10215;
+            outline-style: none;
+            /*消除原来的边框默认属性*/
+            /* float: left; */
+            color: #888;
+            padding-left: 20px;
+            /*文字搜素的时候距边框的边距为4px*/
+        }
+
+        .search button {
+            width: 50px;
+            height: 35px;
+            background-color: #f10215;
+            font-family: "iconfont";
+            /* float: left; */
+            color: white;
+        }
+
+        .sn {
+            position: relative;
+        }
+
+        span {
+            font-family: "iconfont";
+            font-size: 26px;
+            position: absolute;
+            top: 5px;
+            right: 30px;
+        }
+    </style>
+
+    <div class="search">
+        <div class="sn">
+            <input type="text" placeholder="手机" />
+            <span>&#xe60f;</span>
+        </div>
+
+        <button>&#xe612;</button>
+        <!-- <div></div> -->
+    </div>
+
+    <script>
+        let arr = ["青春心愿单","海信真空","网络机顶盒","打印纸","行车记录仪"];
+        let btn = document.querySelector("button");
+        let ipt = document.querySelector("input");
+        ipt.onkeyup = function(){
+            if(ipt.value=="" ||ipt.value.as()==""){
+                
+            }
+        }
+        // let keyword = "手机";//搜索框默认的搜索词为手机
+        // window.onload = function () {
+        //     let btnsearch = document.getElementById("search").getElementsByTagName("button")[0];
+        //     //得到搜索框的对象
+        //     let txt = document.getElementById("search").getElementsByTagName("input")[0];
+        //     //为搜索框注册焦点事件
+        //     txt.onfocus = function () {
+        //         //当在焦点上时让搜索框文字变成黑色
+        //         txt.style.color = "black";
+        //         //如果搜索框为关键字的时候,注册焦点就让搜索框为空
+        //         if (txt.value == keyword) {
+        //             txt.value = "";
+        //         }
+        //     }
+        //     //为搜索框注册失去焦点事件
+        //     txt.onblur = function () {
+        //         //在失去焦点的时候如果搜索框内容为空,就让搜索框显示默认关键字
+        //         if (txt.value == "") {
+        //             this.value = keyword;
+        //             this.style.color = "#888";
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    用户名：<input class="ipt1" type="text"><br>
+    密码：<input class="ipt2" type="text"><br>
+    <button>点我</button>
+    <div></div>
+
+    <script>
+        let ipt1=document.querySelector('.ipt1')
+        let ipt2=document.querySelector('.ipt2')
+        let btn=document.querySelector('button')
+        let div=document.querySelector('div')
+        btn.onclick=function(){
+            let obj={
+                ipt1:'',
+                ipt2:''
+            }
+            console.log(ipt1.value)
+            obj.ipt1=ipt1.value
+            obj.ipt2=ipt2.value
+            console.log(obj)
+            div.innerHTML=JSON.stringify(obj)
+        }
+
+    </script>
+</body>
+</html>

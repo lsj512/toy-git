@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        grid-area: 1/1/2/6;
+      }
+      .b1 {
+        background-color: tomato;
+        margin: 4px;
+        /* display: grid; */
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" class="" id="" name="" /><br />
+    <button class="b1">+</button>
+    <button class="b1">-</button>
+    <button class="b1">*</button>
+    <button class="b1">/</button>
+    <button class="b1">=</button>
+    <script>
+      let ipt = document.querySelector("input");
+      let button = document.querySelectorAll(".b1");
+      let str = "+,-,*,/,=";
+      let arr = str.split(",");
+      console.log(arr);
+      button.forEach((item, index) => {
+        item.onclick = function () {
+          if (index == 21) {
+            ipt.value = eval(ipt.value);
+            return;
+          }
+          if (index == 0) {
+            ipt.value = Math.round(eval(ipt.value));
+            return;
+          }
+          if (index == 2) {
+            ipt.value = "";
+            return;
+          }
+          if (index == 3) {
+            ipt.value = Math.pow(eval(ipt.value));
+            return;
+          }
+          if (index == 8) {
+            ipt.value = Math.pow(eval(ipt.value), 3);
+            return;
+          }
+          if (index == 13) {
+            ipt.value = Math.sqrt(eval(ipt.value));
+            return;
+          }
+          if (index == 18) {
+            ipt.value = Math.ceil(eval(ipt.value));
+            return;
+          }
+          if (index == 23) {
+            ipt.value = Math.floor(eval(ipt.value));
+            return;
+          }
+          item.style.backgroundColor = "beig";
+          ipt.value += [index];
+          setTimeout(() => {
+            item.style.backgroundColor = "antiquewhite";
+          }, 100);
+        };
+      });
+    </script>
+  </body>
+</html>

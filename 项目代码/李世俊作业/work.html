@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button>搜索</button>
+    <div></div>
+    <script>
+        let ipt = document.querySelector('input')
+        let btn = document.querySelector('button')
+        let div=document.querySelector('div')
+        let arr=['海南省长回应三亚海胆事件','海南小明回应三亚海胆事件','海南省长回应四亚海胆事件','中国建免疫屏障或需10亿人打疫苗','郭美美售有毒减肥药案75人被抓','五一多条热门航线机票价格上涨','高速路口3分钟违章27人']
+        ipt.onkeyup=function(){
+            if(ipt.value==''||ipt.value.trim()==''){
+                return
+            }//ipt.value==""是获取ipt里面的属性
+            div.innerHTML=''
+            let newarr=ipt.value.trim().split(' ')
+            let info=[]//定义一个新数组
+            arr.forEach(item=>{
+                let now=newarr.every(value=>{
+
+                    return item.indexOf(value)!=-1
+                })
+                if(now){
+                    newarr.forEach(it=>{
+                        item=item.replace(it,`<span>${it}</span>`)
+                    })
+                    info.push(item)
+                }
+            })
+            info.forEach(item=>{
+                div.innerHTML+=`<div>${item}</div>`
+            })
+        }
+    </script>
+</body>
+</html>

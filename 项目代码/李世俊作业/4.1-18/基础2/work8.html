@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button>点我</button>
+    <script>
+        let ipt=document.querySelector('input')
+        let btn=document.querySelector('button')
+
+        btn.onclick=function(){
+            let a='操蛋'
+            let iptv=ipt.value
+            let num=iptv.indexOf(a)
+            let first=iptv.substring(0,1)
+            if(Number(first)){
+                console.log('输入格式有误')
+                return
+            }
+            if(num!=-1){
+                iptv=`${iptv.substring(0,num)}**${iptv.substring(Number(num+2))}`
+                
+            }
+
+            console.log(iptv.trim())
+        }
+
+
+    </script>
+</body>
+</html>

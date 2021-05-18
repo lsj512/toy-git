@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .box{
+            width: 250px;
+            height: 250px;
+            border: 1px solid blue;
+            /* padding: 20px; */
+        }
+        input{
+            width: 200px;
+            height: 30px;
+            margin-top: 20px;
+            margin-left: 20px;
+            opacity: 0.5;
+        }
+        button{
+            width: 210px;
+            height: 35px;
+            margin-top: 40px;
+            margin-left: 20px;
+            background-color: blue;
+            color: white;
+            font-size: 20px;
+        }
+        article{
+            color: tomato;
+            font-size: 12px;
+        }
+        .bo{
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+    </style>
+    <div class="box">
+        <div class="bo"></div>
+        <input type="text" placeholder="手机/邮箱/用户名">
+        <input type="password" placeholder="密码">
+        <button>登录</button>
+    </div>
+    <script>
+        let ipt = document.querySelectorAll("input");
+        let btn = document.querySelector("button");
+        let bo = document.querySelector(".bo");
+         let username = "lsj";
+        let password = "12345";
+        btn.onclick = function(){
+            let uname = username;
+            let psword = password;
+            console.log(uname);
+            console.log(psword);
+            console.log(username);
+            console.log(password);
+            if(uname!=username||psword!=password){
+                bo.innerHTML = "<article>用户名或密码错误，请重新输入</article>";
+            }
+            if(uname==username||psword==password){
+                bo.innerHTML = "<article>登录成功</article>"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        Array.prototype.addMap = function(fn){
+            let oldArr = this;
+            let tArr = [];
+            for(let i =0;i<oldArr.length;i++){
+                tArr.push(fn(oldArr[i]));
+            }
+            return tArr;
+        };
+        let arr = [1,2,3,4,5];
+        let newArr = arr.addMap(function(currentValue){
+            console.log(currentValue);
+            return currentValue+2;
+        });
+        console.log(newArr);
+    </script>
+</body>
+</html>

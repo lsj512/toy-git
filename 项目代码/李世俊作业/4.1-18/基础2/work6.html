@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let forbid='第一'
+
+        let s='我们的广告全国第一'
+        let b='我们是第一名'
+        // ***********************
+        function change(text){
+            let num=text.indexOf(forbid)
+            
+            console.log(`${text.substring(0,num)}**${text.substring(Number(num+2))}`)
+        }
+        change(b)
+        // ***********************
+
+        let c = b.replace('第一','**')
+        console.log(c)
+        // ***********************
+
+        function change2(text){
+            let num=text.search(forbid)
+            console.log(`${text.slice(0,num)}**${text.slice(Number(num+2))}`)
+        }
+        change2(b)
+
+    </script>
+</body>
+</html>

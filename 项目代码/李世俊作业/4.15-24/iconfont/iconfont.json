@@ -1,0 +1,24 @@
+{
+  "id": "2489004",
+  "name": "jd",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "485766",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      
+      "icon_id": "1463622",
+      "name": "相机",
+      "font_class": "camera",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    }
+  ]
+}
