@@ -1,0 +1,215 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-06 11:20:33
+ * @lastEditTime: 2021-05-14 16:55 PM
+ * @lastAuthor: jie
+ * @Description: In User Settings Edit
+ * @FilePath: /成都商标注册系统/html/brand_register_step1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务中心-商标后续</title>
+    <link rel="stylesheet" href="../css/brand_register_step1.css.map">
+    <link rel="stylesheet" href="../css/brand_register_step1.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <!-- 整体布局 -->
+    <div class="box">
+        <!-- header -->
+        <div class="header">
+            <ul>
+                <!-- logo -->
+                <li class="logobox">
+                    <a href="../center.html">
+                        <h1 class="logo">
+                            <img src="../img/logo_01.png" />
+                            <img src="../img/logo_02.png" />
+                        </h1>
+                    </a>
+                </li>
+                <!-- 顶部菜单,show表示当前菜单项  -->
+                <li class="show"><a href="brand_subsequent.html">业务中心</a></li>
+                <li><a href="audit_active.html">我的业务</a></li>
+                <!-- 顶部右侧客户头像 -->
+                <li class="userbox">
+                    <i>
+                        <a href="javascript:;"><span class="user"></span>欢迎您<img src="../img/user.png" alt="" /></a>
+                        <ul class="header_userinfor">
+                            <li><a href="brand_subsequent.html">基本信息</a></li>
+                            <li><a href="brand_password.html">密码管理</a></li>
+                            <li><a href="../index.html">退出登录</a></li>
+                        </ul>
+                    </i>
+                </li>
+            </ul>
+        </div>
+        <!-- left -->
+        <div class="left">
+            <ul>
+                <!-- 客户项,show表示当前选择项 -->
+                <li class="userPort">
+                    <a href="brand_password.html">
+                        <span>
+                            <img src="../img/user.png" alt=" " />
+                            <i class="user" style="font-weight: onrmal;"></i>
+                        </span>
+                    </a>
+                </li>
+                <!-- 其它项 -->
+                <li class="show">
+                    <a href="./brand_register_step1.html">
+                        <i style="background: url(../img/brand_01_show.png) no-repeat;background-size: 100% 100%;"></i>
+                        商标注册
+                    </a>
+                </li>
+                <li>
+                    <a href="brand_subsequent.html">
+                        <i style="background: url(../img/brand_02.png) no-repeat;background-size: 100% 100%;"></i>
+                        商标后续
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i style="background: url(../img/brand_03.png) no-repeat;background-size: 100% 100%;"></i>
+                        马德里申请
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- right -->
+        <div class="right">
+            <div class="main">
+                <section>
+                    <!-- 上边提示条 -->
+                    <!-- 步骤1 警告条 -->
+                    <div class="prompt_bar prompt_step1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <g id="组_82" data-name="组 82" transform="translate(-1199.636 -443.636)">
+                                <rect id="矩形_34" data-name="矩形 34" width="20" height="20"
+                                    transform="translate(1199.636 443.636)" fill="none" />
+                                <path id="路径_65" data-name="路径 65"
+                                    d="M138.6,79.463a2.533,2.533,0,0,1-5.052,0H138.6m-.842-13.7a1.689,1.689,0,0,0-3.368,0v.244a6.224,6.224,0,0,0-4.21,5.822v2.152s0,3.081-.842,3.13a.785.785,0,0,0-.842.783.819.819,0,0,0,.842.783h13.473a.785.785,0,1,0,0-1.566c-.842,0-.842-3.13-.842-3.13V71.832a6.127,6.127,0,0,0-4.21-5.822v-.244"
+                                    transform="translate(1073.33 380.655)" fill="#f5222d" />
+                            </g>
+                        </svg>
+                        <div class="prompt_content">
+                            带有*的填写项为必须填写内容若用户没有填写则无法进行下一步操作
+                        </div>
+                    </div>
+                    <!-- 中间内容区 -->
+                    <div class="content">
+                        <div class="content_nav">
+                            当前位置：首页 &gt; 业务中心 &gt; 商标注册 &gt; 请上传必要的证明文件
+                        </div>
+                        <div class="content_infro">
+                            <div class="content_infor_wrap">
+                                <!-- 步骤导航栏 -->
+                                <div class="infor_step_bar">
+                                    <div class="step step_bar1">
+                                        <div class="circle">1</div>
+                                        <div class="step1_content procedure">
+                                            步骤一<br>
+                                            请上传必要的证明文件
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step step_bar2">
+                                        <div class="circle">2</div>
+                                        <div class="step2_content procedure">
+                                            步骤二<br>
+                                            请完善和更正必填信息
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step step_bar3">
+                                        <div class="circle">3</div>
+                                        <div class="step3_content procedure">
+                                            步骤三<br>
+                                            请填写申请业务信息
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 步骤1 -->
+                                <div class="infor_detail_step1">
+                                    <form action="">
+                                        <!-- 申请类型 -->
+                                        <div class="application_type">
+                                            <div class="form_text">
+                                                <span class="asterisk">*</span>
+                                                <span>申请人类型：</span>
+                                            </div>
+                                            <div class="select">
+                                                <p class="enterprise">企业/单位申请</p>
+                                                <div class="option_all">
+                                                    <div class="option options">企业/单位申请</div>
+                                                    <div class="option options1">自然人</div>
+                                                    <div class="option options2">其他</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 有效执照 -->
+                                        <div class="limited_licence">
+                                            <div class="form_text">
+                                                <span class="asterisk">*</span>
+                                                <span>有效执照：</span>
+                                            </div>
+                                            <div class="select">
+                                                <p class="license">身份证</p>
+                                                <div class="option_all">
+                                                    <div class="option optio">身份证</div>
+                                                    <div class="option optio1">营业执照</div>
+                                                    <div class="option optio2">其他</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 有效照片   -->
+                       
+                                        <div class="aptitude_photo">
+                                            <div class="form_text">
+                                                <span class="asterisk">*</span>
+                                                <span>申请人类型：</span>
+                                            </div>
+                                            <div class="aptitude_photo_right">
+                                                <div class="aptitude_photo_right_top">
+                                                    <div class="upload_photo">
+                                                        <input type="file">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            viewBox="0 0 16 16">
+                                                            <path id="联合_1" data-name="联合 1"
+                                                                d="M-99-1730v-7h-7v-2h7v-7h2v7h7v2h-7v7Z"
+                                                                transform="translate(106 1746)" fill="#d9d9d9" />
+                                                        </svg>
+                                                        <div class="upload_photo_text">上传图像</div>
+                                                    </div>
+                                                    <div class="photo_example">
+                                                        <div class="photo_example_text">示例图：</div>
+                                                        <img src="../img/brand_register_step1_sample2.png" alt="">
+                                                        <img src="../img/brand_register_step1_sample1.png" alt="">                                                    
+                                                    </div>
+                                                </div>
+                                                <div class="aptitude_photo_right_bottom">
+                                                    请上传 营业执照或身份证正反面清晰图片，图片大小不能超过500k，企业选择 法人身份证 或 营业执照
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- <a href="./brand_register_step2.html"> -->
+                                        <button>下一页</button>
+                                    <!-- </a> -->
+                                </div>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="../js/brand_register_step1.js" type="module"></script>
+    <script src="../js/user.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+@import "./_reset.scss";
+@import "./_public.scss";
+// 右侧整体布局
+.right {
+  overflow: auto;
+  .right-info {
+    margin: 20px;
+    height: 50px;
+    line-height: 50px;
+    background: #ffefea;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #ff6633;
+    padding-left: 50px;
+    position: relative;
+    i {
+      position: absolute;
+      width: 16px;
+      height: 18px;
+      background: url(../img/right_info.png) no-repeat 100% 100%;
+      top: 50%;
+      left: 22px;
+      transform: translateY(-50%);
+    }
+  }
+}
+// 商标注册申请书
+.right-bottom{
+    padding-bottom: 220px;
+    margin-bottom: 130px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    background-color: #fff;
+    .right-2{
+        margin-left: 10px;
+        margin-top: 27px;
+    }
+}
+.right-bottom a{
+    position: absolute;
+    bottom: 40px;
+    width: 120px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #013D87;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+}

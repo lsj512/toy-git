@@ -1,0 +1,379 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-06 15:45:37
+ * @lastEditTime: 2021-05-14 15:30 PM
+ * @lastAuthor: jie
+ * @Description: In User Settings Edit
+ * @FilePath: /成都商标注册系统11/html/brand_register_step3.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务中心-商标后续步骤三</title>
+    <link rel="stylesheet" href="../css/brand_register_step3.css.map">
+    <link rel="stylesheet" href="../css/brand_register_step3.css">
+  </head>
+  <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 整体布局 -->
+    <div class="box">
+      <!-- header -->
+      <div class="header">
+        <ul>
+          <!-- logo -->
+          <li class="logobox">
+            <a href="../center.html">
+              <h1 class="logo">
+                <img src="../img/logo_01.png" />
+                <img src="../img/logo_02.png" />
+              </h1>
+            </a>
+          </li>
+          <!-- 顶部菜单,show表示当前菜单项  -->
+          <li class="show"><a href="brand_subsequent.html">业务中心</a></li>
+          <li><a href="audit_active.html">我的业务</a></li>
+          <!-- 顶部右侧客户头像 -->
+          <li class="userbox">
+            <i>
+              <a href="javascript:;"
+                ><span class="user"></span>欢迎您<img src="../img/user.png" alt=""
+              /></a>
+              <ul class="header_userinfor">
+                <li><a href="brand_subsequent.html">基本信息</a></li>
+                <li><a href="brand_password.html">密码管理</a></li>
+                <li><a href="../index.html">退出登录</a></li>
+            </ul>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!-- left -->
+      <div class="left">
+        <ul>
+            <!-- 客户项,show表示当前选择项 -->
+          <li class="userPort">
+            <a href="brand_password.html">
+              <span>
+                <img src="../img/user.png" alt=" " />
+                <i class="user" style="font-weight: onrmal;"></i>
+              </span>
+            </a>
+          </li>
+          <!-- 其它项 -->
+          <li class="show">
+            <a href="./brand_register_step1.html">
+              <i style="background: url(../img/brand_01_show.png) no-repeat;background-size: 100% 100%;"></i>
+              商标注册
+            </a>
+          </li>
+          <li>
+            <a href="brand_subsequent.html">
+              <i style="background: url(../img/brand_02.png) no-repeat;background-size: 100% 100%;"></i>
+              商标后续
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i style="background: url(../img/brand_03.png) no-repeat;background-size: 100% 100%;"></i>
+              马德里申请
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- right -->
+      <div class="right">
+        <div class="main">
+        <section>
+            <!-- 上边提示条 -->
+            <!-- 步骤2/3 警告条 -->
+            <div class="prompt_bar prompt_step2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g id="组_82" data-name="组 82" transform="translate(-1199.636 -443.636)">
+                        <rect id="矩形_34" data-name="矩形 34" width="20" height="20"
+                            transform="translate(1199.636 443.636)" fill="none" />
+                        <path id="路径_65" data-name="路径 65"
+                            d="M138.6,79.463a2.533,2.533,0,0,1-5.052,0H138.6m-.842-13.7a1.689,1.689,0,0,0-3.368,0v.244a6.224,6.224,0,0,0-4.21,5.822v2.152s0,3.081-.842,3.13a.785.785,0,0,0-.842.783.819.819,0,0,0,.842.783h13.473a.785.785,0,1,0,0-1.566c-.842,0-.842-3.13-.842-3.13V71.832a6.127,6.127,0,0,0-4.21-5.822v-.244"
+                            transform="translate(1073.33 380.655)" fill="#f5222d" />
+                    </g>
+                </svg>
+                <div class="prompt_content">
+                    带有*的填写项为必须填写内容，没带有*是选填内容，选填内容没有填写，不会影响正常流程！
+                </div>
+            </div>
+            <!-- 中间内容区 -->
+            <div class="content">
+                <div class="content_nav">
+                    当前位置： <a href="../center.html"><span style="color: #333;">首页</span></a> &gt; <a href="../html/brand_register_step1.html"><span style="color: #333;">业务中心</span></a> &gt; <a href="../html/brand_register_step2.html"><span style="color: #333;">商标注册</span></a> &gt; 请上传必要的证明文件
+                </div>
+                <div class="content_infro">
+                    <div class="content_infor_wrap">
+                        <!-- 步骤导航栏 -->
+                        <div class="infor_step_bar">
+                            <div class="step step_bar1">
+                                <div class="circle">1</div>
+                                <div class="step1_content procedure">
+                                    步骤一<br>
+                                    请上传必要的证明文件
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step step_bar2">
+                                <div class="circle">2</div>
+                                <div class="step2_content procedure">
+                                    步骤二<br>
+                                    请完善和更正必填信息
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step step_bar3">
+                                <div class="circle">3</div>
+                                <div class="step3_content procedure">
+                                    步骤三<br>
+                                    请填写申请业务信息
+                                </div>
+                            </div>
+                        </div>
+                        <div class="infor_detail_step3">
+                            <div class="form">
+                                 <div class="infor_detail_up">
+                                     <div class="linkman_name">
+                                         <div class="linkman_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>联系人姓名：</span>
+                                         </div>
+                                         <div class="input_value">
+                                             <input type="text" placeholder="请输入联系人姓名" value="" class="contacts">
+                                             <div class="point_out contact">示例：张三</div>
+                                         </div>
+                                     </div>
+                                     <div class="agency_name">
+                                         <div class="agency_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>代理机构名称：</span>
+                                         </div>
+                                         <div class="input_value">
+                                             <input type="text" placeholder="请输入代理机构名称" value="" class="organization">
+                                             <div class="point_out organizations">示例：成都商标受理窗口</div>
+                                         </div>
+                                     </div>
+                                     <div class="foreign_name">
+                                         <div class="foreign_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>外国申请人的国内接收人：</span>
+                                         </div>
+                                         <div class="input_value">
+                                             <input type="text" placeholder="请输入外国申请人的国内接收人" value="" class="recipient">
+                                             <div class="point_out recipients">示例：李四</div>
+                                         </div>
+                                     </div>
+                                     <div class="foreign_name">
+                                        <div class="foreign_key key">
+                                            <span class="asterisk">*</span>
+                                            <span>国内接收人地址：</span>
+                                        </div>
+                                        <div class="input_value">
+                                            <input type="text" placeholder="请输入国内接收人地址" value="" class="recip">
+                                            <div class="point_out recips">示例：北京市xx区xx街xx号</div>
+                                        </div>
+                                    </div>
+                                     <div class="display_country_name">
+                                         <div class="display_country_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>申请/展出国/地区：</span>
+                                         </div>
+                                         <div class="input_value">
+                                             <input type="text" placeholder="请输入申请/展出国家/地区" value="" class="region">
+                                             <div class="point_out regions">示例：中国</div>
+                                         </div>
+                                     </div>
+                                     <div class="apply_date_name">
+                                         <div class="apply_date_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>申请/展出日期：</span>
+                                         </div>
+                                         <div class="input_value">
+                                             <input type="datetime-local" placeholder="请输入申请/展出日期" id="startCreatetime" value="" class="date" max="">
+                                             <div class="point_out dates">示例：2020-04-21 15:30:00</div>
+                                         </div>
+                                     </div>
+                                     <div class="trademark_name">
+                                         <div class="trademark_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>商标申请声明：</span>
+                                         </div>
+                                         <div class="input_value">
+                                             <div class="check_box1">
+                                                 <div class="community_trademark_radio">
+                                                     <input type="radio" name="trademark" class="radio_left" checked>
+                                                     <div class="radio_value">集体商标</div>
+                                                 </div>
+                                                 <div class="community_trademark_checkbox">
+                                                     <input type="checkbox">
+                                                     <div class="check_box_value">以三维商标申请商标注册</div>
+                                                 </div>
+                                                 <div class="community_trademark_checkbox">
+                                                     <input type="checkbox">
+                                                     <div class="check_box_value">以颜色组合申请商标注册</div>
+                                                 </div>
+                                             </div>
+                                             <div class="check_box2">
+                                                 <div class="prove_trademark_radio">
+                                                     <input type="radio" name="trademark" class="radio_right">
+                                                     <div class="radio_value">证明商标</div>
+                                                 </div>
+                                                 <div class="prove_trademark_checkbox">
+                                                     <input type="checkbox">
+                                                     <div class="check_box_value">以声音标志申请商标证明</div>
+                                                 </div>
+                                                 <div class="prove_trademark_checkbox">
+                                                     <input type="checkbox">
+                                                     <div class="check_box_value">两个以上申请人共同申请注册同一商标</div>
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="infor_detail_middle_line"></div>
+                                 <!-- 分割线以下部分 -->
+                                 <div class="infor_detail_bottom">
+                                     <div class="trademark_sample">
+                                         <div class="trademark_sample_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>商标样图：</span>
+                                         </div>
+                                         <div class="input_value_right">
+                                             <div class="trademark_sample_up">
+                                                 <div class="trademark_smaple_upload">
+                                                     <input type="file">
+                                                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="42" viewBox="0 0 48 42">
+                                                         <g id="组_99" data-name="组 99" transform="translate(-710 -525)">
+                                                           <text id="上传图像" transform="translate(734 564)" fill="#a9a9a9" font-size="12" font-family="YuGothicUI-Regular, Yu Gothic UI"><tspan x="-24" y="0">上</tspan><tspan y="0" font-family="MicrosoftJhengHeiUIRegular, Microsoft JhengHei UI">传图</tspan><tspan y="0">像</tspan></text>
+                                                           <path id="联合_1" data-name="联合 1" d="M-99-1730v-7h-7v-2h7v-7h2v7h7v2h-7v7Z" transform="translate(832 2271)" fill="#d9d9d9"/>
+                                                         </g>
+                                                     </svg>      
+                                                 </div>
+                                                 <div class="trademark_example">
+                                                     <div class="trademark_example_up_text">示例图：</div>
+                                                     <div class="trademark_logo_list">
+                                                         <img src="../img/brand_register_step3_sample1.png" alt="">               
+                                                         <img src="../img/brand_register_step3_sample2.png" alt="">               
+                                                         <img src="../img/brand_register_step3_sample3.png" alt="">
+                                                         <img src="../img/brand_register_step3_sample4.png" alt="">              
+                                                     </div>
+                                                     <div class="trademark_bottom_text">
+                                                         <div class="trademark_sample_color">颜色图样</div>
+                                                         <div class="trademark_3D_sample">三维形状图样</div>
+                                                         <div class="trademark_voice_sample">声音图样</div>
+                                                     </div>
+                                                       
+                                                 </div>
+                                             </div>
+                                             <div class="point_out">
+                                                 提醒：左框为商标图样粘贴处。图样应当不大于10×10cm，不小于5×5cm。 以颜色组合或者着色图样申请商标注册的，应当提交着色图样并提交黑白稿1份；不指定颜色的，应当提交黑白图样。 以三维标志申请商标注册的，应当提交能够确定三维形状的图样，提交的商标图样应当至少包含三面视图。 以声音标志申请商标注册的，应当以五线谱或者简谱对申请用作商标的声音加以描述并附加文字说明； 无法以五线谱或者简谱描述的，应当使用文字进行描述；商标描述与声音样本应当一致。
+                                             </div>
+                                         </div>
+                                     </div>
+                                     <div class="confirmation">
+                                         <div class="confirmation_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>确认书：</span>
+                                         </div>
+                                         <div class="confirmation_right">
+                                             <div class="confirmation_upload">
+                                                 <input type="file">
+                                                 <svg xmlns="http://www.w3.org/2000/svg" width="48" height="43" viewBox="0 0 48 43">
+                                                     <g id="组_99" data-name="组 99" transform="translate(-710 -525)">
+                                                       <text id="上传图像" transform="translate(734 564)" fill="#a9a9a9" font-size="12" font-family="PingFang SC Regular, PingFang SC"><tspan x="-24" y="0">上传图像</tspan></text>
+                                                       <path id="联合_1" data-name="联合 1" d="M-99-1730v-7h-7v-2h7v-7h2v7h7v2h-7v7Z" transform="translate(832 2271)" fill="#d9d9d9"/>
+                                                     </g>
+                                                   </svg>                                                      
+                                             </div>
+                                             <div class="confirmation_text">请点此<a href="">下载确认书模板</a>，填写并盖章后上传</div>
+                                         </div>
+                                     </div>
+                                     <div class="trademark_explain">
+                                         <div class="trademark_sample_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>商标说明：</span>
+                                         </div>
+                                         <textarea name="" id="" cols="30" rows="10" placeholder="请输入商标说明" value=""></textarea>
+                                     </div>
+                                     <div class="trademark_genre_number">
+                                         <div class="trademark_genre_number_key key">
+                                             <span class="asterisk">*</span>
+                                             <span>商标类别编号：</span>
+                                         </div>
+                                         <div class="trademark_genre_right">
+                                             <input type="text" placeholder="请输入商标类别编号" value="" class="number">
+                                             <div class="trademark_genre_text">请点此下载 <a href="">商标说明书</a> ，查到相应的商标编号并填写</div>
+                                         </div>
+                                     </div>
+                                     <div style="color: #FF6633; margin-left: 180px; font-size: 12px;" class="mark1"></div>
+                                 </div> 
+                            </div>
+                            <button>提交并审核</button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+     </div>
+     </div>
+     <div class="black_veil">
+        <div class="point_out_window1">
+            <div class="point_out_window_top">
+                <div class="red_point_out">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
+                        <g id="组_82" data-name="组 82" transform="translate(-1199.636 -443.636)">
+                          <rect id="矩形_34" data-name="矩形 34" width="15" height="15" transform="translate(1199.636 443.636)" fill="none"/>
+                          <path id="路径_65" data-name="路径 65" d="M135.271,75.13a1.693,1.693,0,0,1-3.386,0h3.386m-.564-9.808a1.129,1.129,0,0,0-2.257,0V65.5a4.438,4.438,0,0,0-2.821,4.169v1.541s0,2.206-.564,2.241a.543.543,0,0,0-.564.561.566.566,0,0,0,.564.561h9.029a.561.561,0,1,0,0-1.121c-.564,0-.564-2.241-.564-2.241V69.665a4.369,4.369,0,0,0-2.821-4.169v-.175" transform="translate(1073.33 380.655)" fill="#f5222d"/>
+                        </g>
+                    </svg>
+                    <div class="red_point_out_text">选择你想去办理的网点</div>  
+                </div>
+                <div class="lattice_point">
+                    <div class="lattice_point_key key">
+                        <span class="asterisk">*</span>
+                        <span>选择网点：</span>
+                    </div>
+                    <div class="select">
+                        <div class="select_content">请选择网点</div>
+                        <div style="color: #F5222D;" class="cls"></div>
+                        <div class="option_all">
+                            <div class="option op">成都市双流区某某街道××号</div>
+                            <div class="option op1">成都市武侯区某某街道xx号</div>
+                            <div class="option op2">成都市高新区某某街道xx号</div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="point_out_window_bottom">
+                <button class="affirm">确认</button>
+                <button class="cancel">取消</button>
+            </div>
+        </div>
+        <div class="point_out_window2">
+            <div class="point_out_top">
+                <h4>温馨提示</h4>
+                <p>您的信息已提交，工作人员将在3-5日内对你的信息审核，审核通过后即可预约业务，审核结果将通过短信的方式发送给你。</p>
+            </div>
+            <button class="confirm">确认</button>
+        </div>
+    </div>
+    <div class="black_veil1">
+        <div class="point_out_window3">
+            <div class="point_out_top4">
+                <h4 class="h4">温馨提示</h4>
+                <p>您所注册的信息格式错误或不完整，请重新输入。</p>
+            </div>
+            <button class="confirm1">确认</button>
+        </div>
+    </div>
+     <script src="../js/brand_register_step3.js"></script>
+     <script src="../js/user.js" type="module"></script>
+   </body>
+ </html>

@@ -1,0 +1,125 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-05 09:18:14
+ * @lastEditTime: 2021-05-13 10:33 AM
+ * @lastAuthor: kate
+ * @Description: In User Settings Edit
+ * @FilePath: \成都商标注册系统\html\audit_fail_upd.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的业务-审核失败</title>
+    <link rel="stylesheet" href="../css/audit_fail_upd.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <!-- 整体布局 -->
+    <div class="box">
+      <!-- header -->
+      <div class="header">
+        <ul>
+          <!-- logo -->
+          <li class="logobox">
+            <a href="../center.html">
+              <h1 class="logo">
+                <img src="../img/logo_01.png" />
+                <img src="../img/logo_02.png" />
+              </h1>
+            </a>
+          </li>
+          <!-- 顶部菜单,show表示当前菜单项  -->
+          <li><a href="brand_subsequent.html">业务中心</a></li>
+          <li class="show"><a href="audit_active.html">我的业务</a></li>
+          <!-- 顶部右侧客户头像 -->
+          <li class="userbox">
+            <i>
+              <a href="javascript:;"
+                ><span class="user"></span>欢迎您<img
+                  src="../img/user.png"
+                  alt=""
+              /></a>
+              <ul class="header_userinfor">
+                <li><a href="brand_subsequent.html">基本信息</a></li>
+                <li><a href="brand_password.html">密码管理</a></li>
+                <li><a href="../index.html">退出登录</a></li>
+              </ul>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!-- left -->
+      <div class="left">
+        <ul>
+          <!-- 客户项,show表示当前选择项 -->
+          <li class="userPort">
+            <a href="brand_password.html">
+              <span>
+                <img src="../img/user.png" alt=" " />
+                <i class="user" style="font-weight: normal"></i>
+              </span>
+            </a>
+          </li>
+          <!-- 其它项 -->
+          <li>
+            <a href="audit_active.html">
+              <i
+                style="
+                  background: url(../img/audit_active.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核中
+              <span>0</span>
+            </a>
+          </li>
+          <li>
+            <a href="audit_success.html">
+              <i
+                style="
+                  background: url(../img/audit_success.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核成功
+              <span>0</span>
+            </a>
+          </li>
+          <li class="show">
+            <a href="audit_fail.html">
+              <i
+                style="
+                  background: url(../img/audit_fail_show.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核失败
+              <span id="fail">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="audit_appointment_active.html">
+              <i
+                style="
+                  background: url(../img/audit_appointment_active.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              预约成功
+              <span>0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- right -->
+      <div class="right">
+        <!-- 右侧内容 -->
+      </div>
+    </div>
+    <script src="../js/audit_fail_upd.js"></script>
+    <script src="../js/user.js" type="module"></script>
+  </body>
+</html>

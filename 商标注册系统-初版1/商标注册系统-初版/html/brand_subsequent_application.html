@@ -1,0 +1,118 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-05 07:44:19
+ * @lastEditTime: 2021-05-14 16:34 PM
+ * @lastAuthor: Kate-sy
+ * @Description: In User Settings Edit
+ * @FilePath: \成都商标注册系统\html\brand_subsequent_application.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务中心-商标后续</title>
+    <link rel="stylesheet" href="../css/brand_subsequent_application.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <!-- 整体布局 -->
+    <div class="box">
+      <!-- header -->
+      <div class="header">
+        <ul>
+          <!-- logo -->
+          <li class="logobox">
+            <a href="../center.html">
+              <h1 class="logo">
+                <img src="../img/logo_01.png" />
+                <img src="../img/logo_02.png" />
+              </h1>
+            </a>
+          </li>
+          <!-- 顶部菜单,show表示当前菜单项  -->
+          <li class="show"><a href="brand_subsequent.html">业务中心</a></li>
+          <li><a href="audit_active.html">我的业务</a></li>
+          <!-- 顶部右侧客户头像 -->
+          <li class="userbox">
+            <i>
+              <a href="javascript:;"
+                ><span class="user"></span>欢迎您<img
+                  src="../img/user.png"
+                  alt=""
+              /></a>
+              <ul class="header_userinfor">
+                <li><a href="brand_subsequent.html">基本信息</a></li>
+                <li><a href="brand_password.html">密码管理</a></li>
+                <li><a href="../index.html">退出登录</a></li>
+              </ul>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!-- left -->
+      <div class="left">
+        <ul>
+          <!-- 客户项,show表示当前选择项 -->
+          <li class="userPort">
+            <a href="brand_password.html">
+              <span>
+                <img src="../img/user.png" alt=" " />
+                <i class="user" style="font-weight: normal"></i>
+              </span>
+            </a>
+          </li>
+          <!-- 其它项 -->
+          <li>
+            <a href="brand_register_step1.html">
+              <i
+                style="
+                  background: url(../img/brand_01.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              商标注册
+            </a>
+          </li>
+          <li class="show">
+            <a href="brand_subsequent.html">
+              <i
+                style="
+                  background: url(../img/brand_02_show.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              商标后续
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i
+                style="
+                  background: url(../img/brand_03.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              马德里申请
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- right -->
+      <div class="right">
+        <!-- right--提示文字 -->
+        <div class="right-info">
+          <i></i>
+          若审核已通过，可点击 “审核成功选项卡” 去预约相关业务
+        </div>
+        <div class="right-bottom">
+          <img src="../img/taf.png" alt="" />
+          <img src="../img/ta.png" class="right-2" />
+          <a href="brand_subsequent.html">返回上一页</a>
+        </div>
+      </div>
+    </div>
+    <script src="../js/user.js" type="module"></script>
+  </body>
+</html>

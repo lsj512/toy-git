@@ -1,0 +1,132 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-04-30 14:30:56
+ * @lastEditTime: 2021-05-12 17:01 PM
+ * @lastAuthor: LUOCAN
+ * @Description: In User Settings Edit
+ * @FilePath: /Trademark Registration System/html/acount_login.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>账号登录</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrap">
+        <div class="alert">
+          <div class="alert-text">提示：</div>
+          <div class="alert-tx">账号应由字母数字或下划线组成</div>
+        </div>
+        <div class="content">
+          <div class="logo"></div>
+
+          <!-- 普通登录方式 -->
+          <div class="form_login">
+            <form action="">
+              <label for="" class="welc">欢迎您的登录！</label>
+              <div class="account_number">
+                <h6>账号</h6>
+                <input type="text" placeholder="请输入账号" class="username" autocomplete="additional-name" />
+              </div>
+              <div class="account_password">
+                <h6>密码</h6>
+                <input
+                  type="password"
+                  placeholder="请输入密码"
+                  class="password"
+                  autocomplete="current-password"
+                />
+              </div>
+              <div class="password_other">
+                <div class="remember_password">
+                  <input type="checkbox" id="ckb" />
+                  <label for="ckb">
+                    <p>记住密码</p>
+                  </label>
+                </div>
+                <div class="forget_password"><a href="">忘记密码?</a></div>
+              </div>
+              <div class="btnd">登录</div>
+              <div class="acount_regis">
+                <p class="phone_login phone-re">手机验证登录</p>
+                <p>
+                  <span>没有账号？</span
+                  ><span class="immediate_regis"
+                    ><a href="register.html" name="reg">立即注册</a></span
+                  >
+                </p>
+              </div>
+            </form>
+          </div>
+          <!-- 手机号码登录 -->
+          <div class="form_phone_login">
+            <form action="">
+              <label for="" class="p-welc">欢迎您的登录！</label>
+              <div class="telephone_number">
+                <h6>手机号码</h6>
+                <input
+                  type="text"
+                  placeholder="请输入手机号码"
+                  class="phone_num"
+                />
+              </div>
+              <div class="phone_QR">
+                <h6>验证码</h6>
+                <div class="id_qr">
+                  <input
+                    type="password"
+                    placeholder="请输入验证码"
+                    class="code"
+                  />
+                  <div class="get_QR">获取验证码</div>
+                </div>
+              </div>
+              <div class="password_other">
+                <div class="remember_password">
+                  <input type="checkbox" id="pkn" />
+                  <label for="pkn">
+                    <p class="rember">记住密码</p>
+                  </label>
+                </div>
+                <div class="forget_password">
+                  <a href="" name="forget">忘记密码?</a>
+                </div>
+              </div>
+              <div class="phone_login_btn">登录</div>
+              <div class="acount_regis">
+                <p class="phone_login user_login">账号登录</p>
+                <p>
+                  <span>没有账号？</span
+                  ><span class="immediate_regis"
+                    ><a href="register.html" name="regis">立即注册</a></span
+                  >
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <footer>
+          <div class="basic_information">
+            <tel>咨询电话:028-6900089 / 028-69000892</tel><br />
+            <address>
+              地址: 成都市天府大道南段1632号,天府新区政务服中心一楼
+            </address>
+          </div>
+          <div class="copy_right">
+            Copyright&#169; 成都商标服务 All rights
+            reserved.&nbsp;&nbsp;ICP:蜀ICP备16003750号@Privacy policy About
+          </div>
+        </footer>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

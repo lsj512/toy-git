@@ -1,0 +1,393 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-06 13:58:15
+ * @lastEditTime: 2021-05-14 15:59 PM
+ * @lastAuthor: jie
+ * @Description: In User Settings Edit
+ * @FilePath: /成都商标注册系统/html/brand_register_step2.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务中心-商标后续步骤二</title>
+    <link rel="stylesheet" href="../css/brand_register_step2.css.map">
+    <link rel="stylesheet" href="../css/brand_register_step2.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <!-- 整体布局 -->
+    <div class="box">
+        <!-- header -->
+        <div class="header">
+            <ul>
+                <!-- logo -->
+                <li class="logobox">
+                    <a href="../center.html">
+                        <h1 class="logo">
+                            <img src="../img/logo_01.png" />
+                            <img src="../img/logo_02.png" />
+                        </h1>
+                    </a>
+                </li>
+                <!-- 顶部菜单,show表示当前菜单项  -->
+                <li class="show"><a href="brand_subsequent.html">业务中心</a></li>
+                <li><a href="audit_active.html">我的业务</a></li>
+                <!-- 顶部右侧客户头像 -->
+                <li class="userbox">
+                    <i>
+                        <a href="javascript:;"><span class="user"></span>欢迎您<img src="../img/user.png" alt="" /></a>
+                        <ul class="header_userinfor">
+                            <li><a href="brand_subsequent.html">基本信息</a></li>
+                            <li><a href="brand_password.html">密码管理</a></li>
+                            <li><a href="../index.html">退出登录</a></li>
+                        </ul>
+                    </i>
+                </li>
+            </ul>
+        </div>
+        <!-- left -->
+        <div class="left">
+            <ul>
+                <!-- 客户项,show表示当前选择项 -->
+                <li class="userPort">
+                    <a href="brand_password.html">
+                        <span>
+                            <img src="../img/user.png" alt=" " />
+                            <i class="user" style="font-weight: onrmal;"></i>
+                        </span>
+                    </a>
+                </li>
+                <!-- 其它项 -->
+                <li class="show">
+                    <a href="./brand_register_step1.html">
+                        <i style="background: url(../img/brand_01_show.png) no-repeat;background-size: 100% 100%;"></i>
+                        商标注册
+                    </a>
+                </li>
+                <li>
+                    <a href="brand_subsequent.html">
+                        <i style="background: url(../img/brand_02.png) no-repeat;background-size: 100% 100%;"></i>
+                        商标后续
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <i style="background: url(../img/brand_03.png) no-repeat;background-size: 100% 100%;"></i>
+                        马德里申请
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- right -->
+        <div class="right">
+            <div class="main">
+                <section>
+                    <!-- 步骤2/3 警告条 -->
+                    <div class="prompt_bar prompt_step2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                            <g id="组_82" data-name="组 82" transform="translate(-1199.636 -443.636)">
+                                <rect id="矩形_34" data-name="矩形 34" width="20" height="20"
+                                    transform="translate(1199.636 443.636)" fill="none" />
+                                <path id="路径_65" data-name="路径 65"
+                                    d="M138.6,79.463a2.533,2.533,0,0,1-5.052,0H138.6m-.842-13.7a1.689,1.689,0,0,0-3.368,0v.244a6.224,6.224,0,0,0-4.21,5.822v2.152s0,3.081-.842,3.13a.785.785,0,0,0-.842.783.819.819,0,0,0,.842.783h13.473a.785.785,0,1,0,0-1.566c-.842,0-.842-3.13-.842-3.13V71.832a6.127,6.127,0,0,0-4.21-5.822v-.244"
+                                    transform="translate(1073.33 380.655)" fill="#f5222d" />
+                            </g>
+                        </svg>
+                        <div class="prompt_content">
+                            带有*的填写项为必须填写内容，没带有*是选填内容，选填内容没有填写，不会影响正常流程！
+                        </div>
+                    </div>
+                    <!-- 中间内容区 -->
+                    <div class="content">
+                        <div class="content_nav">
+                            当前位置： <a href="../center.html"><span style="color: #333;">首页</span></a> &gt; <a href="../html/brand_register_step1.html"><span style="color: #333;">业务中心</span></a> &gt; <a href=""><span style="color: #333;">商标注册</span></a> &gt; 请上传必要的证明文件
+                        </div>
+                        <div class="content_infro">
+                            <div class="content_infor_wrap">
+                                <!-- 步骤导航栏 -->
+                                <div class="infor_step_bar">
+                                    <div class="step step_bar1 ">
+                                        <div class="circle">1</div>
+                                        <div class="step1_content procedure">
+                                            步骤一<br>
+                                            请上传必要的证明文件
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step step_bar2">
+                                        <div class="circle">2</div>
+                                        <div class="step2_content procedure">
+                                            步骤二<br>
+                                            请完善和更正必填信息
+                                        </div>
+                                    </div>
+                                    <div class="line"></div>
+                                    <div class="step step_bar3">
+                                        <div class="circle">3</div>
+                                        <div class="step3_content procedure">
+                                            步骤三<br>
+                                            请填写申请业务信息
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="infor_detail_step2">
+                                    <form action="">
+                                        <div class="required">
+                                            <div class="user_name">
+                                                <div class="user_name key_title">
+                                                    <span class="asterisk">*</span>
+                                                    <span>主体名称/申请人姓名：</span>
+                                                </div>
+                                                <input type="text" placeholder="请输入主体名称/申请人姓名" value="" class="proposer">
+                                                <!-- 右侧提示 -->
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="路径_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content proposers">
+                                                        提醒：主体名称：公司名称<br>
+                                                        示例：北京市×××网络科技有限公司/张三
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="id_type">
+                                                <div class="id_type key_title">
+                                                    <span class="asterisk">*</span>
+                                                    <span>证件类型：</span>
+                                                </div>
+                                                <div class="select id_type_select">
+                                                    <p class="credentials">身份证</p>
+                                                    <div class="option_all">
+                                                        <div class="option op">身份证</div>
+                                                        <div class="option op1">营业执照</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="id_number">
+                                                <div class="id_number key_title">
+                                                    <span class="asterisk">*</span>
+                                                    <span>证件号码/证件编号：</span>
+                                                </div>
+                                                <input type="text" placeholder="请输入证件号码/证件编号" value="" class="papers">
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="路径_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content pointcontent">
+                                                        证件号码：身份证号码：5113251987112343<br>
+                                                        证件编号：营业执照编号: 610103100025511
+                    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="address_infor">
+                                                <div class="address_infor key_title">
+                                                    <span class="asterisk">*</span>
+                                                    <span>地址信息：</span>
+                                                </div>
+                                                <input type="text" placeholder="请输入地址信息" value="" class="site">
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="路径_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content sites">
+                                                        提醒： XX省+营业执照地址-致<br>
+                                                        示例：北京市xx区xx街xx号
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="phone_number">
+                                                <div class="phone_number key_title">
+                                                    <span class="asterisk">*</span>
+                                                    <span>电话号码：</span>
+                                                </div>
+                                                <input type="text" placeholder="请输入电话号码" value="" class="contact">
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="路径_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content contacts">
+                                                        提醒： 请填写 手机号 或 座机号<br>
+                                                        示例：13135256570
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="provice_city">
+                                                <div class="provice_name">
+                                                    <div class="provice_name key_title">
+                                                        <span class="asterisk">*</span>
+                                                        <span>所属省份：</span>
+                                                    </div>
+                                                    <div class="select provice_select">
+                                                        <p class="province">省份/直辖市</p>
+                                                        <div class="option_all option_all_left">
+                                                            <div class="option opt option_left">四川省</div>
+                                                            <div class="option opt1 option_left">湖北省</div>
+                                                            <div class="option opt2 option_left">陕西省</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="city_name">
+                                                    <div class="city_name_title">
+                                                        <span class="asterisk">*</span>
+                                                        <span>所属城市：</span>
+                                                    </div>
+                                                    <div class="select city_select">
+                                                        <p class="city">选择城市</p>
+                                                        <div class="option_all option_all_right">
+                                                            <div class="option opti2 option_right"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="middle_line"></div>
+                                        <div class="norequired">
+                                            <div class="english_name">
+                                                <div class="english_name key_title">
+                                                    英文名称：
+                                                </div>
+                                                <input type="text" placeholder="请输入英文名称" value="" class="username">
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="路径_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content designation">
+                                                        提醒：申请人若无中文名，请填写<br>
+                                                        示例：Michael
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="represeentative">
+                                                <div class="represeentative key_title">
+                                                    企业法人代表：
+                                                </div>
+                                                <input type="text" placeholder="请输入企业法人代表" value="" class="representative">
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="link_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content representatives">
+                                                        提醒：申请公司，请填写公司法人<br>
+                                                        示例：Michael
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="english_address">
+                                                <div class="english_address key_title">
+                                                    英文地址：
+                                                </div>
+                                                <input type="text" placeholder="请输入英文地址" value="" class="address">
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="link_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content addres">
+                                                        Xx Street xx in Beijing xx District
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="apply_person_nationality">
+                                                <div class="apply_person_nationality key_title">
+                                                    申请人国籍/地区：
+                                                </div>
+                                                <input type="text" placeholder="请输入申请人国际/地区" value="" class="nationality">
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="link_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content nationalitys">
+                                                        示例：中国
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="zip_code">
+                                                <div class="zip_code key_title">
+                                                    邮政编码：
+                                                </div>
+                                                <input type="text" placeholder="请输入邮政编码" value="" class="postcode">
+                                                <div class="point_out">
+                                                    <div class="point_out_logo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                            viewBox="0 0 10 10">
+                                                            <path id="link_72" data-name="路径 72"
+                                                                d="M73.45,66.282c-.142-.125-.808.333-.417.733,2.042,1.733,2.075,3.358,0,5.141-.308.292.108.85.417.733A3.668,3.668,0,0,0,73.45,66.282Zm-.517,4.924a2.03,2.03,0,0,0,0-3.141c-.375-.225-.617.525-.617.525s.958,1.208,0,2.091C72.125,70.932,72.483,71.44,72.933,71.207ZM71.084,73.9c0,1.075-.825.525-.825.525l-3.567-3h-.55a.624.624,0,0,1-.617-.633V68.274a.617.617,0,0,1,.617-.625H66.8l3.458-2.941s.825-.558.825.525Z"
+                                                                transform="translate(-65.525 -64.564)" fill="#f5222d" />
+                                                        </svg>
+                                                    </div>
+                                                    <div class="point_out_content postcodes">
+                                                        示例：610000
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- <a href="./brand_register_step3.html"> -->
+                                        <button type="button">下一页</button>
+                                    <!-- </a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="black_veil">
+            <div class="point_out_window1">
+                <div class="point_out_top">
+                    <h4>温馨提示</h4>
+                    <p>您所注册的信息格式错误或不完整，请重新输入。</p>
+                </div>
+                <button class="confirm">确认</button>
+            </div>
+        </div>
+    <script src="../js/brand_register_step2.js" type="module"></script>
+    <script src="../js/user.js" type="module"></script>
+</body>
+
+</html>

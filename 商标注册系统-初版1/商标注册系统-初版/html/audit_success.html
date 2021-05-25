@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的业务-审核成功</title>
+    <link rel="stylesheet" href="../css/audit_success.css" />
+    <link rel="stylesheet" href="../css/audit_success.css.map" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <!-- 整体布局 -->
+    <div class="box">
+      <!-- header -->
+      <div class="header">
+        <ul>
+          <!-- logo -->
+          <li class="logobox">
+            <a href="../center.html">
+              <h1 class="logo">
+                <img src="../img/logo_01.png" />
+                <img src="../img/logo_02.png" />
+              </h1>
+            </a>
+          </li>
+          <!-- 顶部菜单,show表示当前菜单项  -->
+          <li><a href="brand_subsequent.html">业务中心</a></li>
+          <li class="show"><a href="audit_active.html">我的业务</a></li>
+          <!-- 顶部右侧客户头像 -->
+          <li class="userbox">
+            <i>
+              <a href="javascript:;"
+                ><span class="user"></span>欢迎您<img
+                  src="../img/user.png"
+                  alt=""
+              /></a>
+              <ul class="header_userinfor">
+                <li><a href="brand_subsequent.html">基本信息</a></li>
+                <li><a href="brand_password.html">密码管理</a></li>
+                <li><a href="../index.html">退出登录</a></li>
+              </ul>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!-- left -->
+      <div class="left">
+        <ul>
+          <!-- 客户项,show表示当前选择项 -->
+          <li class="userPort">
+            <a href="brand_password.html">
+              <span>
+                <img src="../img/user.png" alt=" " />
+                <i class="user" style="font-weight: normal"></i>
+              </span>
+            </a>
+          </li>
+          <!-- 其它项 -->
+          <li>
+            <a href="audit_active.html">
+              <i
+                style="
+                  background: url(../img/audit_active.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核中
+              <span>0</span>
+            </a>
+          </li>
+          <li class="show">
+            <a href="audit_success.html">
+              <i
+                style="
+                  background: url(../img/audit_success_show.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核成功
+              <span class="suc">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="audit_fail.html">
+              <i
+                style="
+                  background: url(../img/audit_fail.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核失败
+              <span>0</span>
+            </a>
+          </li>
+          <li>
+            <a href="audit_appointment_active.html">
+              <i
+                style="
+                  background: url(../img/audit_appointment_active.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              预约成功
+              <span>0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- right -->
+      <div class="right">
+        <!-- right--提示文字 -->
+        <div class="right-info">
+          <i></i>
+          若审核已通过，可点击 “审核成功选项卡” 去预约相关业务
+        </div>
+        <!-- right--数据表格 -->
+        <!-- right--数据表格 -->
+        <div class="tabbox">
+          <div class="serial">
+            <div class="check">
+              <input type="checkbox" class="gouxuan" id="allche" />
+            </div>
+            <div class="sernumber">
+              <p>序号</p>
+            </div>
+            <div class="oddnum">
+              <p>单号</p>
+            </div>
+            <div class="applicantType">
+              <p>申请人类型</p>
+            </div>
+            <div class="appliName">
+              <p>申请人姓名</p>
+            </div>
+            <div class="businesstype">
+              <p>业务类型</p>
+            </div>
+            <div class="status">
+              <p>审核状态</p>
+            </div>
+            <div class="operate">
+              <p>操作</p>
+            </div>
+          </div>
+        </div>
+        <!-- right--分页 -->
+        <div class="pagebox">
+          <div class="page-bg">
+            <div class="page-del" id="chedel">删除</div>
+            <div class="page-del thoroughly" id="alldel">彻底删除</div>
+            <ul class="page">
+              <li>共<i class="allpage"></i>页</li>
+              <li>
+                <div class="page-items">
+                  <span class="items number">每页10条</span> <i></i>
+                  <p class="number1">
+                    <a href="javascript:;" class="ber1">每页10条</a>
+                    <a href="javascript:;" class="ber2">每页20条</a>
+                    <a href="javascript:;" class="ber3">每页50条</a>
+                  </p>
+                </div>
+              </li>
+              <li class="pagebtn hpage">&#171;</li>
+              <li class="pagebtn pageup">&lt;</li>
+              <li class="pagebtn num">1</li>
+              <li class="pagebtn pagenext">&gt;</li>
+              <li class="pagebtn pageend">&#187;</li>
+              <li>
+                跳转
+                <input type="text" placeholder="确认回车" class="page-num" />
+                页
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 选择预约时间 -->
+    <div class="mb-allbox choosetime">
+      <div class="mb-box">
+        <h1>选择预约时间</h1>
+        <div class="mb-info">
+          <img
+            src="../img/right_info.png"
+            alt=""
+          />若当天预约名额已达上限，请选择其他时间段
+        </div>
+        <div class="mb-inpbox">
+          <input type="datetime-local" id="startCreatetime" max="" />
+
+          &nbsp;&nbsp; &nbsp; 至 &nbsp; &nbsp;&nbsp;
+          <input type="datetime-local" id="endCreatetime" max="" />
+        </div>
+        <div class="tips">
+          <span class="tips1"></span>
+          <span class="tips2"></span>
+        </div>
+        <div class="mb-btn">
+          <button class="mb-btn-sub">确认</button>
+          <button class="mb-btn-res">取消</button>
+        </div>
+      </div>
+    </div>
+    <!-- 预约成功 -->
+    <div class="mb-allbox yy-success">
+      <div class="mb-box">
+        <form>
+          <h1>预约成功</h1>
+          <i class="sucnumber">23</i>
+          <p class="plac">
+            请您<span class="success-time"></span>，下午<span class="ptime"
+              >13:00</span
+            >—<span class="ptime1">15:00</span>
+            到四川成都武侯区某某街道办理业务！
+          </p>
+          <p class="note">
+            备注：请您带好您办理业务时的身份证，企业营业执照等等!
+          </p>
+          <button class="yy-success-sub" type="button">确认</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 单条删除 -->
+    <div class="mb-allbox batch-del" id="del-cover">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p id="del-pls">确定删除这条数据吗？</p>
+        <div class="batch-del-btnbox">
+          <button class="batch-del-on" id="batchon">确认</button>
+          <button class="batch-del-off" id="batchoff">取消</button>
+        </div>
+      </div>
+    </div>
+    <!-- 判断是否选择 -->
+    <div class="mb-allbox batch-del" id="del-coform">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p id="del-pls">至少选中一条</p>
+        <div
+          class="batch-del-btnbox"
+          style="display: flex; justify-content: center"
+        >
+          <button class="batch-del-on" id="batcoform">确认</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 批量删除 -->
+    <div class="mb-allbox batch-del" id="del-covere">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p id="del-pls">确定批量删除数据吗？</p>
+        <div class="batch-del-btnbox">
+          <button class="batch-del-on" id="batchone">确认</button>
+          <button class="batch-del-off" id="batchoffe">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 判断分页 -->
+    <div class="mb-allbox batch-del" id="del-fenye">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p id="del-fy"></p>
+        <div
+          class="batch-del-btnbox"
+          style="display: flex; justify-content: center"
+        >
+          <button class="batch-del-on" id="fycoform">确认</button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/audit_success.js" type="module"></script>
+    <script src="../js/user.js" type="module"></script>
+  </body>
+</html>

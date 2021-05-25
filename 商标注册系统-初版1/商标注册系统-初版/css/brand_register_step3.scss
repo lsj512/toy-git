@@ -1,0 +1,620 @@
+@import "./_reset.scss";
+@import "./_public.scss";
+
+.right{
+    overflow: auto;
+}
+.main {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    box-sizing: border-box;
+    background: rgb(247, 247, 247);
+    margin-bottom: 40px;
+    section {
+      display: block;
+      flex-grow: 1;
+      padding: 20px;
+      //! 中间部分顶部的警告条
+      .prompt_bar {
+        height: 50px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding-left: 10px;
+        display: flex;
+        align-content: center;
+        svg {
+          margin: 15px 10px;
+        }
+        .prompt_content {
+          line-height: 50px;
+          font-size: 14px;
+        }
+      }
+      .prompt_step2 {
+        background-color: #ffe5e5;
+        color: #f5222d;
+      }
+      //! 中间主体内容
+      .content {
+        margin: 20px 0 40px 0;
+        min-height: calc(100vh - 230px);
+        border-radius: 8px;
+        background: #fff;
+        .content_nav {
+          height: 75px;
+          border-bottom: rgba($color: #000000, $alpha: 0.16) 1px solid;
+          padding-left: 20px;
+          box-sizing: border-box;
+          line-height: 75px;
+          // border: 1px solid red;
+        }
+        .content_infor_wrap {
+          width: 970px;
+          margin: 0 auto;
+          min-height: calc(100vh - 305px);
+          box-sizing: border-box;
+          //!步骤条
+          .infor_step_bar {
+            height: 188px;
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+            box-sizing: border-box;
+            .step {
+              position: relative;
+              .circle {
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                border: 1px solid #d9d9d9;
+                line-height: 30px;
+                text-align: center;
+                color: #d9d9d9;
+              }
+              .procedure {
+                position: absolute;
+                text-align: center;
+                height: 22px;
+                width: 80px;
+                font-size: 8px;
+                left: -24px;
+                top: 35px;
+                color: #d9d9d9;
+              } 
+              .step3_content {
+                color: #ff6633;
+              }
+              .step1_content{
+                color: #333;
+            }
+            .step2_content{
+              color: #333;
+          }
+            }
+
+            .step_bar3 {
+              .circle {
+                border-color: #ff6633;
+                color: #ff6633;
+              }
+            }
+            .step_bar1{
+              .circle{
+                  border-color: #333;
+                  color: #333;
+              }
+          }
+          .step_bar2{
+            .circle{
+                border-color: #333;
+                color: #333;
+            }
+        }
+            .line {
+              width: 300px;
+              border-top: 1px dashed #333333;
+            }
+          }
+          .infor_detail_step3 {
+            padding-top: 12px;
+            padding-bottom: 80px;
+            font-size: 14px;
+            display: block;
+            box-sizing: border-box;
+            position: relative;
+            .form {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              padding-bottom: 80px;
+            }
+            .asterisk {
+              color: #f5222d;
+            }
+            .key {
+              width: 180px;
+              height: 20px;
+              color: #333333;
+              display: flex;
+              justify-content: flex-end;
+            }
+            input[type="text"] {
+              height: 32px;
+              width: 350px;
+              border: 1px solid #e2e2e2;
+              border-radius: 4px;
+              outline: none;
+              padding-left: 10px;
+              color: #333333;
+              font-size: 14px;
+            }
+            input[type="datetime-local"] {
+              height: 32px;
+              width: 350px;
+              border: 1px solid #e2e2e2;
+              border-radius: 4px;
+              outline: none;
+              padding-left: 10px;
+              color: #333333;
+              font-size: 14px;
+            }
+            input[type="text"]:hover {
+              border: 1px solid #ff6633;
+              // box-shadow: 0 0 3px #ff6633;
+            }
+            .input_value {
+              position: relative;
+              margin: 20px 0;
+              .point_out {
+                position: absolute;
+                top: 40px;
+                left: 0;
+                font-size: 10px;
+                color: #ff6633;
+              }
+            }
+            //! 分割线以上部分
+            .linkman_name {
+              display: flex;
+              align-items: center;
+            }
+            .agency_name {
+              display: flex;
+              align-items: center;
+            }
+            .foreign_name {
+              display: flex;
+              align-items: center;
+            }
+            .display_country_name {
+              display: flex;
+              align-items: center;
+            }
+  
+            .apply_date_name {
+              display: flex;
+              align-items: center;
+            }
+            //! 商标申请声明
+            .trademark_name {
+              display: flex;
+              margin-top: 20px;
+              .input_value {
+                display: flex;
+                margin: 0;
+                .check_box1 {
+                  .community_trademark_radio {
+                    display: flex;
+                    align-items: center;
+                    .radio_value {
+                      margin-left: 5px;
+                      color: #666666;
+                    }
+                  }
+                  .community_trademark_checkbox {
+                    display: flex;
+                    font-size: 10px;
+                    color: #999999;
+                    line-height: 20px;
+                    align-items: center;
+                    .check_box_value {
+                      margin-left: 5px;
+                    }
+                  }
+                }
+                .check_box2 {
+                  margin-left: 20px;
+                  .prove_trademark_radio {
+                    display: flex;
+                    font-size: 14px;
+                    align-items: center;
+                    color: #666666;
+                    input {
+                      border: 1px solid #666666;
+                    }
+                    .radio_value {
+                      margin-left: 5px;
+                    }
+                  }
+                  .prove_trademark_checkbox {
+                    display: flex;
+                    font-size: 10px;
+                    color: #999999;
+                    line-height: 20px;
+                    align-items: center;
+                    .check_box_value {
+                      margin-left: 5px;
+                    }
+                  }
+                }
+              }
+            }
+            .infor_detail_middle_line {
+              width: 1200px;
+              margin: 20px 0;
+              height: 1px;
+              border-top: 1px dashed #d9d9d9;
+              position: absolute;
+              top: 450px;
+              left: -230px;
+            }
+            //! 分隔线以下部分
+            .infor_detail_bottom {
+              margin-top: 40px;
+              //! 商标样图
+              .trademark_sample {
+                display: flex;
+                .input_value_right {
+                  .trademark_sample_up {
+                    display: flex;
+                    .trademark_smaple_upload {
+                      width: 110px;
+                      height: 110px;
+                      border: 1px dashed #707070;
+                      position: relative;
+                      input{
+                        position: absolute;
+                        width: 110px;
+                        height: 110px;
+                        opacity: 0;
+
+                      }
+                      svg{
+                        margin: 37px  0 0 31px;
+                    }
+                    }
+                    .trademark_example {
+                      width: 332px;
+                      height: 110px;
+                      margin-left: 20px;
+                      background-color: #dddddd;
+                      padding: 10px;
+                      box-sizing: border-box;
+                      .trademark_example_up_text {
+                        font-size: 12px;
+                        color: #727472;
+                      }
+                      .trademark_logo_list {
+                        margin-top: 5px;
+                      }
+                      .trademark_bottom_text {
+                        display: flex;
+                        font-size: 12px;
+                        color: #727472;
+                        .trademark_sample_color {
+                          margin-left: 30px;
+                        }
+                        .trademark_3D_sample {
+                          margin-left: 50px;
+                        }
+                        .trademark_voice_sample {
+                          margin-left: 47px;
+                        }
+                      }
+                    }
+                  }
+                  .point_out {
+                    width: 550px;
+                    font-size: 10px;
+                    color: #ff6633;
+                    margin-top: 8px;
+                  }
+                }
+              }
+              //! 确认书
+              .confirmation {
+                display: flex;
+                margin-top: 30px;
+                .confirmation_right {
+                  display: flex;
+                  align-items: flex-end;
+                  .confirmation_upload {
+                    width: 110px;
+                    height: 110px;
+                    border: 1px dashed #707070;
+                    position: relative;
+                    input{
+                      position: absolute;
+                      opacity: 0;
+                      width: 110px;
+                      height: 110px;
+
+                    }
+                    svg {
+                      margin: 34px 0 0 31px;
+                    }
+                  }
+                  .confirmation_text {
+                    font-size: 12px;
+                    color: #a0a3a5;
+                    margin-left: 10px;
+                    a {
+                      color: #3685ff;
+                      text-decoration: none;
+                    }
+                  }
+                }
+              }
+              //! 商标说明
+              .trademark_explain {
+                margin-top: 30px;
+                display: flex;
+                textarea {
+                  width: 350px;
+                  height: 100px;
+                  font-size: 14px;
+                  color: #333333;
+                  padding: 10px;
+                  border: 1px solid #e2e2e2;
+                  border-radius: 4px;
+                }
+                textarea:hover{
+                    outline: 1px solid #ff6633;
+                    // box-shadow: 0 0 3px #ff6633;
+                    
+                }
+              }
+              //! 商标类别编号
+              .trademark_genre_number {
+                display: flex;
+                margin-top: 30px;
+                align-items: center;
+                .trademark_genre_right {
+                  display: flex;
+                  align-items: flex-end;
+                  input {
+                    width: 250px;
+                  }
+                  .trademark_genre_text {
+                    font-size: 12px;
+                    margin-left: 10px;
+                    color: #a0a3a5;
+                    a {
+                      color: #3685ff;
+                      text-decoration: none;
+                    }
+                  }
+                }
+              }
+            }
+            //! 底部提交按钮
+            button {
+              width: 120px;
+              height: 32px;
+              border: none;
+              border-radius: 4px;
+              background-color: #999999;
+              font-size: 14px;
+              color: white;
+              display: block;
+              margin: 0 auto;
+            }
+            button:hover{
+                background-color: #2C9DFC;
+                cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+}
+
+
+
+
+
+//! 黑色遮罩
+.black_veil {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.16);
+    z-index: 990;
+    display: none;
+    button {
+      width: 80px;
+      height: 32px;
+      border-radius: 4px;
+      color: white;
+      outline: none;
+      border: none;
+    }
+    .point_out_window1 {
+      width: 450px;
+      height: 270px;
+      border-radius: 8px;
+      background-color: #fff;
+      padding: 30px;
+      margin: 30vh auto;
+      display: flex;
+      // visibility: hidden;
+      flex-direction: column;
+      justify-content: space-between;
+      .point_out_window_top {
+        .red_point_out {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          color: #f5222d;
+          .red_point_out_text {
+            margin-left: 5px;
+          }
+        }
+        .lattice_point {
+          display: flex;
+          margin-top: 30px;
+          font-size: 14px;
+          color: #333333;
+          align-items: center;
+          .asterisk {
+            color: #f5222d;
+          }
+          .select {
+            width: 250px;
+            height: 32px;
+            border-radius: 4px;
+            font-size: 14px;
+            border: 1px solid #d9d9d9;
+            line-height: 32px;
+            padding-left: 10px;
+            color: #666666;
+            position: relative;
+            .option_all{
+              width: 250px;
+              position: absolute;
+              top: 33px;
+              left: 0;
+              border-radius: 4px;
+              background-color: white;
+              display: none;
+              z-index: 5;
+              .option {
+                line-height: 32px;
+                height: 32px;
+                width: 250px;
+                font-size: 14px;
+                padding-left: 10px;
+              }
+              .option:nth-of-type(odd) {
+                background-color: #fafafa;
+              }
+              .option:nth-of-type(even) {
+                background-color: white;
+              }
+              .option:hover {
+                background-color: #fff6f0;
+                border-radius: 4px;
+              }
+            }
+          }
+          .select::before {
+            content: "";
+            border: 5px solid transparent;
+            border-top-color: #666666;
+            position: absolute;
+            right: 10px;
+            top: 14px;
+          }
+          .select:hover {
+            border-color: #ff6633;
+            box-shadow: 0 0 3px #ff6633;
+          }
+          .select:hover .option_all{
+            display: block;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .point_out_window_bottom {
+        display: flex;
+        justify-content: space-between;
+      }
+      .affirm {
+        background-color: #2c9dfc;
+      }
+      .cancel {
+        background-color: #999999;
+      }
+    }
+    .point_out_window2 {
+      width: 450px;
+      height: 270px;
+      border-radius: 8px;
+      background-color: #fff;
+      padding: 30px;
+      margin: 30vh auto;
+      display: flex;
+      flex-direction: column;
+      // visibility: hidden;
+      display: none;
+      justify-content: space-between;
+      h4 {
+        font-size: 16px;
+        color: #333333;
+        text-align: center;
+        font-weight: 500;
+      }
+      p {
+        font-size: 14px;
+        color: #333333;
+        margin-top: 30px;
+      }
+      .confirm {
+        background-color: #2c9dfc;
+        display: block;
+        margin: 0 auto;
+        margin-top: 150px;
+      }
+    }
+}
+//!点击提示信息
+.black_veil1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.16);
+  z-index: 990;
+  display: none;
+  .point_out_window3 {
+    width: 450px;
+    height: 270px;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 30px;
+    margin: 30vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .h4 {
+      font-size: 16px;
+      color: #f50909;
+      text-align: center;
+      font-weight: 500;
+    }
+    p {
+      font-size: 14px;
+      color: #333333;
+      margin-top: 30px;
+    }
+    .confirm1 {
+      background-color: #2c9dfc;
+      display: block;
+      margin: 0 auto;
+      margin-top: 150px;
+    }
+    button {
+      width: 80px;
+      height: 32px;
+      border-radius: 4px;
+      color: white;
+      outline: none;
+      border: none;
+    }
+  }
+} 

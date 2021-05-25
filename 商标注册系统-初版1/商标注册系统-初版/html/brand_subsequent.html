@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务中心-商标后续</title>
+    <link rel="stylesheet" href="../css/brand_subsequent.css" />
+  </head>
+  <body>
+    <!-- 单条删除 -->
+    <div class="mb-allbox batch-del" id="del-cover">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p id="del-pls"></p>
+        <div class="batch-del-btnbox">
+          <button class="batch-del-on" id="batchon">确认</button>
+          <button class="batch-del-off" id="batchoff">取消</button>
+        </div>
+      </div>
+    </div>
+    <!-- 整体布局 -->
+    <div class="box">
+      <!-- header -->
+      <div class="header">
+        <ul>
+          <!-- logo -->
+          <li class="logobox">
+            <a href="../center.html">
+              <h1 class="logo">
+                <img src="../img/logo_01.png" />
+                <img src="../img/logo_02.png" />
+              </h1>
+            </a>
+          </li>
+          <!-- 顶部菜单,show表示当前菜单项  -->
+          <li class="show"><a href="brand_subsequent.html">业务中心</a></li>
+          <li><a href="audit_active.html">我的业务</a></li>
+          <!-- 顶部右侧客户头像 -->
+          <li class="userbox">
+            <i>
+              <a href="javascript:;"
+                ><span class="user"></span>欢迎您<img
+                  src="../img/user.png"
+                  alt=""
+              /></a>
+              <ul class="header_userinfor">
+                <li><a href="brand_subsequent.html">基本信息</a></li>
+                <li><a href="brand_password.html">密码管理</a></li>
+                <li><a href="../index.html">退出登录</a></li>
+              </ul>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!-- left -->
+      <div class="left">
+        <ul>
+          <!-- 客户项,show表示当前选择项 -->
+          <li class="userPort">
+            <a href="brand_password.html">
+              <span>
+                <img src="../img/user.png" alt=" " />
+                <i class="user" style="font-weight: normal"></i>
+              </span>
+            </a>
+          </li>
+          <!-- 其它项 -->
+          <li>
+            <a href="brand_register_step1.html">
+              <i
+                style="
+                  background: url(../img/brand_01.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              商标注册
+            </a>
+          </li>
+          <li class="show">
+            <a href="brand_subsequent.html">
+              <i
+                style="
+                  background: url(../img/brand_02_show.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              商标后续
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i
+                style="
+                  background: url(../img/brand_03.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              马德里申请
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- right -->
+      <div class="right">
+        <!-- right--提示文字 -->
+        <div class="right-info">
+          <i></i>
+          必须 “完善个人信息”
+          才能申请业务，完善信息需点击右上角头像进行完善个人信息
+        </div>
+        <!-- right--数据表格 -->
+        <div class="tabbox">
+          <div class="serial">
+            <div class="sernumber">
+              <p>业务序号</p>
+            </div>
+            <div class="businesstype">
+              <p>业务名称</p>
+            </div>
+            <div class="status">
+              <p>申请须知</p>
+            </div>
+            <div class="operate">
+              <p>业务申请</p>
+            </div>
+          </div>
+        </div>
+        <!-- right--分页 -->
+        <div class="pagebox">
+          <div class="page-bg">
+            <ul class="page">
+              <li>共<i class="page-t">5</i>页</li>
+              <li>
+                <div class="page-items">
+                  <span class="page-eve">每页10条</span> <i></i>
+                  <p class="page-el">
+                    <a href="javascript:;" class="page-w">每页10条</a>
+                    <a href="javascript:;" class="page-e">每页20条</a>
+                    <a href="javascript:;" class="page-r">每页50条</a>
+                    <a href="javascript:;" class="page-q">每页100条</a>
+                  </p>
+                </div>
+              </li>
+              <li class="pagebtn btn-a">&#171;</li>
+              <li class="pagebtn pagel">&lt;</li>
+              <li class="pagebtn num">1</li>
+              <li class="pagebtn pager">&gt;</li>
+              <li class="pagebtn btn-b">&#187;</li>
+              <li>
+                跳转
+                <input
+                  type="text"
+                  placeholder="确认回车"
+                  class="page-num"
+                  onkeypress="addpagenumdown()"
+                />
+                页
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 温馨提示 -->
+    <div class="mb-allbox sweet-plac">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p>
+          您的个人信息不够完整，请完成个人信息，再进行申请，如有疑问请联系客服人员：028-69000891
+          或者 028- 69000892
+        </p>
+        <a href="brand_subsequent_apply.html">确认</a>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/brand_subsequent.js"></script>
+    <script src="../js/user.js" type="module"></script>
+  </body>
+</html>

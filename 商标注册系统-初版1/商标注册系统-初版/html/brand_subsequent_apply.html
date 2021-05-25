@@ -1,0 +1,183 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-05 17:40:46
+ * @lastEditTime: 2021-05-12 17:10 PM
+ * @lastAuthor: LUOCAN
+ * @Description: In User Settings Edit
+ * @FilePath: \成都商标注册系统\html\brand_subsequent_apply.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务中心-商标后续</title>
+    <link rel="stylesheet" href="../css/brand_subsequent_apply.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 整体布局 -->
+    <div class="box">
+      <!-- header -->
+      <div class="header">
+        <ul>
+          <!-- logo -->
+          <li class="logobox">
+            <a href="../center.html">
+              <h1 class="logo">
+                <img src="../img/logo_01.png" />
+                <img src="../img/logo_02.png" />
+              </h1>
+            </a>
+          </li>
+          <!-- 顶部菜单,show表示当前菜单项  -->
+          <li class="show"><a href="brand_subsequent.html">业务中心</a></li>
+          <li><a href="audit_active.html">我的业务</a></li>
+          <!-- 顶部右侧客户头像 -->
+          <li class="userbox">
+            <i>
+              <a href="javascript:;"
+                ><span class="user"></span>欢迎您<img
+                  src="../img/user.png"
+                  alt=""
+              /></a>
+              <ul class="header_userinfor">
+                <li><a href="brand_subsequent.html">基本信息</a></li>
+                <li><a href="brand_password.html">密码管理</a></li>
+                <li><a href="../index.html">退出登录</a></li>
+              </ul>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!-- left -->
+      <div class="left">
+        <ul>
+          <!-- 客户项,show表示当前选择项 -->
+          <li class="userPort">
+            <a href="brand_password.html">
+              <span>
+                <img src="../img/user.png" alt=" " />
+                <i class="user" style="font-weight: normal"></i>
+              </span>
+            </a>
+          </li>
+          <!-- 其它项 -->
+          <li>
+            <a href="brand_register_step1.html">
+              <i
+                style="
+                  background: url(../img/brand_01.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              商标注册
+            </a>
+          </li>
+          <li class="show">
+            <a href="brand_subsequent.html">
+              <i
+                style="
+                  background: url(../img/brand_02_show.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              商标后续
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i
+                style="
+                  background: url(../img/brand_03.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              马德里申请
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- right -->
+      <div class="right">
+        <!-- right--提示文字 -->
+        <div class="right-info">
+          <i></i>
+          请完善个人资料 ，选择证件类型并上传图片后点击下一步查看并补全基本信息
+        </div>
+        <!-- 中间部分 -->
+        <div class="center">
+          <div class="loction">当前位置 ： 首页 > 个人信息</div>
+          <!-- 步骤框外部盒子 -->
+          <div class="step">
+            <!-- 圆的外框 -->
+            <div class="step-top df jb">
+              <!-- 圆1 -->
+              <div class="step-radius one">1</div>
+              <!-- 横线 -->
+              <div class="step-line"></div>
+              <!-- 圆2 -->
+              <div class="step-radius two">2</div>
+            </div>
+
+            <div class="step-bom df jb">
+              <!-- 文本步骤一外框 -->
+              <div class="step-text-one">
+                <p>步骤一</p>
+                <p>请上传相关文件</p>
+              </div>
+              <!-- 文本步骤二外框 -->
+              <div class="step-text-two">
+                <p>步骤二</p>
+                <p>审核补全个人信息</p>
+              </div>
+            </div>
+          </div>
+          <!-- 中间身份证外框 -->
+          <div class="center-cer">
+            <div class="but">
+              <p>
+                <span>*</span>选择需要上传的证件：
+                <select>
+                  <option hidden="hidden">证件类型</option>
+                  <option>身份证</option>
+                </select>
+              </p>
+              <!-- 黑色三角形 -->
+              <div class="triangle"></div>
+            </div>
+            <!-- 证件照片框 -->
+            <div class="certificate">
+              <p><span>*</span>证件照片:</p>
+              <div class="certer-bor">
+                <input type="file" value="＋" class="bor-ipt" />
+                <div class="bor-w"></div>
+                <div class="bor-h"></div>
+                <div class="sc">上传图像</div>
+              </div>
+              <!-- 身份证图片框 -->
+              <div class="pic-box df ja">
+                <div class="box-text">示例图：</div>
+                <!-- 身份证SVG图片 -->
+                <div class="box-identity">
+                  <img src="../img/brand_subsequent_apply_01.png" />
+                </div>
+                <!-- svg营业制造图片 -->
+                <div class="box-business">
+                  <img src="../img/brand_subsequent_apply_02.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="brand_subsequent_apply_02.html">
+            <div class="footer">下一步</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="../js/user.js" type="module"></script>
+    <!-- <script src="../font/随机颜色插件/随机边框颜色+背景颜色.js"></script> -->
+  </body>
+</html>

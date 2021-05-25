@@ -1,0 +1,209 @@
+* {
+  user-select: none;
+}
+// 整体样式结构
+.box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  .header {
+    height: 80px;
+  }
+  .left {
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    top: 80px;
+    bottom: 0;
+  }
+  .right {
+    height: 100%;
+    margin-left: 200px;
+    background: rgb(247, 247, 247);
+  }
+}
+// header
+.header {
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.4);
+  li {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    margin-right: 38px;
+    float: left;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #333;
+      font-size: 20px;
+      box-sizing: border-box;
+    }
+  }
+  li.show a {
+    font-weight: bold;
+    color: #013d87;
+    border-bottom: 3px solid;
+    border-color: currentColor;
+  }
+  li.logobox {
+    width: auto;
+    .logo {
+      height: 40px;
+      margin-top: 20px;
+      img {
+        float: left;
+      }
+      img:nth-child(1) {
+        height: 40px;
+        width: 40px;
+      }
+      img:nth-child(2) {
+        height: 32px;
+        margin-top: 4px;
+      }
+    }
+  }
+  li.userbox {
+    width: auto;
+    float: right;
+    position: relative;
+    i {
+      display: block;
+      height: 50px;
+      margin-top: 15px;
+      line-height: 50px;
+      font-size: 20px;
+      img {
+        width: 50px;
+        height: 50px;
+        margin-left: 12px;
+      }
+      .header_userinfor {
+        height: 120px;
+        width: 120px;
+        list-style: none;
+        display: none;
+        background-color: white;
+        position: absolute;
+        right: 10px;
+        top: 75px;
+        padding-left: 0;
+        z-index: 999;
+        li {
+          height: 40px;
+          box-sizing: border-box;
+          width: 120px;
+          border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+          color: #aaaaaa;
+          text-align: center;
+          line-height: 40px;
+          a {
+            text-decoration: none;
+            color: #aaa;
+            display: block;
+            width: 100%;
+            height: 100%;
+            font-size: 16px;
+          }
+        }
+        li:hover a {
+          color: #fff;
+        }
+        li:nth-of-type(3) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+  .userbox:hover .header_userinfor {
+    display: block;
+  }
+  .header_userinfor li:hover {
+    background-color: #013d87;
+  }
+}
+
+// left
+.left {
+  li {
+    border-bottom: 1px solid #d9d9d9;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  li.userPort {
+    overflow: hidden;
+    height: 92px;
+    font-size: 20px;
+    a {
+      color: #333;
+      display: block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      span {
+        display: block;
+        height: 40px;
+        text-align: center;
+        margin-top: 26px;
+        line-height: 40px;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  li:not(.userPort) {
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    border-left: 4px solid #fff;
+    position: relative;
+    a {
+      color: #747774;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      box-sizing: border-box;
+    }
+    i {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+      margin-right: 10px;
+    }
+    span {
+      position: absolute;
+      right: 6px;
+      top: 19px;
+      background: #ff5542;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 10px;
+      display: none;
+    }
+    &.show {
+      background: rgba(142, 183, 233, 0.4);
+      border-left: 4px solid rgba(1, 61, 135, 0.5);
+    }
+    &.show a {
+      color: #013d87;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+// right

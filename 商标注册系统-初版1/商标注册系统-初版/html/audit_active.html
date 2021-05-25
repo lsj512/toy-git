@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>我的业务-审核中</title>
+    <link rel="stylesheet" href="../css/audit_active.css" />
+    <link rel="stylesheet" href="../css/audit_active.css.map" />
+  </head>
+  <body>
+    <!-- 整体布局 -->
+    <div class="box">
+      <!-- header -->
+      <div class="header">
+        <ul>
+          <!-- logo -->
+          <li class="logobox">
+            <a href="../center.html" name="logoa"> 
+              <h1 class="logo">
+                <img src="../img/logo_01.png" />
+                <img src="../img/logo_02.png" />
+              </h1>
+            </a>
+          </li>
+          <!-- 顶部菜单,show表示当前菜单项  -->
+          <li><a href="brand_subsequent.html" name="buscentera">业务中心</a></li>
+          <li class="show"><a href="audit_active.html" name="mybusa" >我的业务</a></li>
+          <!-- 顶部右侧客户头像 -->
+          <li class="userbox">
+            <i>
+              <a href="javascript:;" name="wela">
+                <span class="user"></span>欢迎您
+                <img src="../img/user.png" alt=""
+              /></a>
+              <ul class="header_userinfor">
+                <li><a href="brand_subsequent.html" name="essen-ina">基本信息</a></li>
+                <li><a href="brand_password.html" name="passa">密码管理</a></li>
+                <li><a href="../index.html" name="exita">退出登录</a></li>
+              </ul>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!-- left -->
+      <div class="left">
+        <ul>
+          <!-- 客户项,show表示当前选择项 -->
+          <li class="userPort">
+            <a href="brand_password.html" name="showa">
+              <span>
+                <img src="../img/user1.png" alt=" " />
+                <i class="user" style="font-weight: normal"></i>
+              </span>
+            </a>
+          </li>
+          <!-- 其它项 -->
+          <li class="show">
+            <a href="audit_active.html" name="mba">
+              <i
+                style="
+                  background: url(../img/audit_active_show.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核中
+              <span id="mb-num">0</span>
+            </a>
+          </li>
+          <li>
+            <a href="audit_success.html" name="ausua">
+              <i
+                style="
+                  background: url(../img/audit_success.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核成功
+              <span>2</span>
+            </a>
+          </li>
+          <li>
+            <a href="audit_fail.html" name="aufia">
+              <i
+                style="
+                  background: url(../img/audit_fail.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              审核失败
+              <span>2</span>
+            </a>
+          </li>
+          <li>
+            <a href="audit_appointment_active.html" name="au-ap-aca">
+              <i
+                style="
+                  background: url(../img/audit_appointment_active.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              预约成功
+              <span>2</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- right -->
+      <div class="right" id="right">
+        <!-- right--提示文字 -->
+        <div class="right-info" id="r-info">
+          <i></i>
+          若审核已通过，可点击 “审核成功选项卡” 去预约相关业务
+        </div>
+        <!-- right--数据表格 -->
+        <div class="tabbox" id="tbody">
+          <div class="serial">
+            <div class="check">
+              <input type="checkbox" class="gouxuan" id="allche" />
+            </div>
+            <div class="sernumber">
+              <p>序号</p>
+            </div>
+            <div class="oddnum">
+              <p>单号</p>
+            </div>
+            <div class="applicantType">
+              <p>申请人类型</p>
+            </div>
+            <div class="appliName">
+              <p>申请人姓名</p>
+            </div>
+            <div class="businesstype">
+              <p>业务类型</p>
+            </div>
+            <div class="status">
+              <p>审核状态</p>
+            </div>
+            <div class="operate">
+              <p>操作</p>
+            </div>
+          </div>
+        </div>
+        <!-- right--分页 -->
+        <div class="pagebox" id="pabox">
+          <div class="page-bg">
+            <div class="page-del" id="chedel">删除</div>
+            <div class="page-del thoroughly" id="alldel">彻底删除</div>
+            <ul class="page">
+              <li>共<i id="allpage"></i>页</li>
+              <li>
+                <div class="page-items" id="pa-ite">
+                  <span id="xs">每页50条</span> <i id="sum"></i>
+                  <p id="select">
+                    <a href="javascript:;" id="selone" name="selt">每页10条</a>
+                    <a href="javascript:;" id="seltwo" name="selm">每页20条</a>
+                    <a href="javascript:;" id="selthree" name="selb">每页50条</a>
+                  </p>
+                </div>
+              </li>
+              <li class="pagebtn pages">&#171;</li>
+              <li class="pagebtn pageu">&lt;</li>
+              <li class="pagebtn num">1</li>
+              <li class="pagebtn pagen">&gt;</li>
+              <li class="pagebtn pagel">&#187;</li>
+              <li>
+                跳转
+                <input
+                  type="text"
+                  placeholder="确认回车"
+                  class="page-num"
+                  value=""
+                  onkeypress="getenterkey()"
+                />
+                页
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- 详情页 -->
+      </div>
+    </div>
+
+    <!-- 批量删除 -->
+    <div class="mb-allbox batch-del" id="del-cover">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p id="del-pls">确定批量删除数据吗？</p>
+        <div class="batch-del-btnbox">
+          <button class="batch-del-on" id="batchon">确认</button>
+          <button class="batch-del-off" id="batchoff">取消</button>
+        </div>
+      </div>
+    </div>
+    <div class="mb-allbox batch-del" id="del-covere">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p id="del-pls">确定批量删除数据吗？</p>
+        <div class="batch-del-btnbox">
+          <button class="batch-del-on" id="batchone">确认</button>
+          <button class="batch-del-off" id="batchoffe">取消</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-allbox batch-del" id="fenye-cover">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p id="del-plse">输入的数据不能大于总页数或者小于1！</p>
+        <div class="batch-del-btnbox" style="display: flex; justify-content: center;">
+          <button class="batch-del-on" id="fenye-on">确认</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 蒙版--温馨提示 -->
+    <div class="mb-allbox active-detail-plac" id="mb-allcover">
+      <div class="mb-box">
+        <h1>温馨提示</h1>
+        <p>
+          正在审核信息，工作人员将在3-5日内返回审核结果，若审核通过，您即可办理预约业务。
+        </p>
+        <button id="mb-oder">确认</button>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../js/audit_active.js"></script>
+  <script src="../js/user.js" type="module"></script>
+</html>

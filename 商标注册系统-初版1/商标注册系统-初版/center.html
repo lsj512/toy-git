@@ -1,0 +1,99 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-05 18:25:32
+ * @lastEditTime: 2021-05-14 15:26 PM
+ * @lastAuthor: Kate-sy
+ * @Description: In User Settings Edit
+ * @FilePath: \成都商标注册系统\center.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务中心</title>
+    <link rel="stylesheet" href="css/center.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header_wrap">
+          <div class="header_wrap_left">
+            <div class="header_wrap_left_logo"></div>
+            <div class="header_service_center_title">
+              <a href="html/brand_subsequent.html">业务中心</a>
+            </div>
+            <div class="header_my_business">
+              <a href="html/audit_active.html">我的业务</a>
+            </div>
+          </div>
+          <div class="header_wrap_right">
+            <div class="header_welcome_title">
+              <span class="user"></span>欢迎您
+            </div>
+            <div class="header_portrait_icon">
+              <ul class="header_userinfor">
+                <li><a href="html/brand_subsequent.html">基本信息</a></li>
+                <li><a href="html/brand_password.html">密码管理</a></li>
+                <li><a href="index.html">退出登录</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="content">
+          <div class="wrap">
+            <a href="html/brand_register_step1.html" class="registration">
+              <div class="registration_content">
+                <div class="registration_icon"></div>
+                <div class="registration_title">
+                  <div class="registration_main_title">商标注册</div>
+                  <div class="registration_subheader">
+                    <div class="span" id="loop" >商标注册须知</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="html/brand_subsequent.html" class="follow_up">
+              <div class="follow_up_content">
+                <div class="follow_up_icon"></div>
+                <div class="follow_up_title">商标后续</div>
+              </div>
+            </a>
+            <div class="madrid_application">
+              <div class="madrid_application_content">
+                <div class="madrid_application_icon"></div>
+                <div class="madrid_application_title">马德里申请</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="basic_information">
+          咨询电话：028-69000891 / 028-69000892 <br />
+          地址：成都市天府大道南段1632号，天府新区政务服务中心一楼
+        </div>
+        <div class="copy_right">
+          Copyright&#169; 成都商标服务 All rights
+          reserved.&nbsp;&nbsp;ICP:蜀ICP备16003750号@Privacy policy About
+        </div>
+      </footer>
+    </div>
+    <script>
+         //TODO 点击商标注册须知跳转
+         let alink = document.querySelector("#loop");
+      alink.onclick = function(e){
+        e.preventDefault();
+        event.stopPropagation();
+        console.log(11);
+         location.href = "./html/brand_subsequent_application.html";
+      }
+    </script>
+    <script src="./js/user.js" type="module">
+    </script>
+  </body>
+</html>

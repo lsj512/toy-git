@@ -1,0 +1,265 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-05-05 17:40:46
+ * @lastEditTime: 2021-05-12 17:10 PM
+ * @lastAuthor: LUOCAN
+ * @Description: In User Settings Edit
+ * @FilePath: \成都商标注册系统\html\brand_subsequent_apply.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>业务中心-商标后续</title>
+    <link rel="stylesheet" href="../css/brand_subsequent_apply_02.css" />
+  </head>
+
+  <body>
+    <div class="alert">
+      <div class="alert-text">提示：</div>
+      <div class="alert-tx">账号应由字母数字或下划线组成</div>
+    </div>
+    <!-- 整体布局 -->
+    <div class="box">
+      <!-- header -->
+      <div class="header">
+        <ul>
+          <!-- logo -->
+          <li class="logobox">
+            <a href="../center.html">
+              <h1 class="logo">
+                <img src="../img/logo_01.png" />
+                <img src="../img/logo_02.png" />
+              </h1>
+            </a>
+          </li>
+          <!-- 顶部菜单,show表示当前菜单项  -->
+          <li class="show"><a href="brand_subsequent.html">业务中心</a></li>
+          <li><a href="audit_active.html">我的业务</a></li>
+          <!-- 顶部右侧客户头像 -->
+          <li class="userbox">
+            <i>
+              <a href="javascript:;"
+                ><span class="user"></span>欢迎您<img
+                  src="../img/user.png"
+                  alt=""
+              /></a>
+              <ul class="header_userinfor">
+                <li><a href="brand_subsequent.html">基本信息</a></li>
+                <li><a href="brand_password.html">密码管理</a></li>
+                <li><a href="../index.html">退出登录</a></li>
+              </ul>
+            </i>
+          </li>
+        </ul>
+      </div>
+      <!-- left -->
+      <div class="left">
+        <ul>
+          <!-- 客户项,show表示当前选择项 -->
+          <li class="userPort">
+            <a href="brand_subsequent.html">
+              <span>
+                <img src="../img/user.png" alt=" " />
+                <i class="user" style="font-weight: normal"></i>
+              </span>
+            </a>
+          </li>
+          <!-- 其它项 -->
+          <li>
+            <a href="brand_register_step1.html">
+              <i
+                style="
+                  background: url(../img/brand_01.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              商标注册
+            </a>
+          </li>
+          <li class="show">
+            <a href="brand_subsequent.html">
+              <i
+                style="
+                  background: url(../img/brand_02_show.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              商标后续
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i
+                style="
+                  background: url(../img/brand_03.png) no-repeat;
+                  background-size: 100% 100%;
+                "
+              ></i>
+              马德里申请
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- right -->
+      <div class="right">
+        <!-- right--提示文字 -->
+        <div class="right-info">
+          <i></i>
+          请完善个人资料 ，选择证件类型并上传图片后点击下一步查看并补全基本信息
+        </div>
+        <!-- 中间部分 -->
+        <div class="center">
+          <div class="loction">
+            当前位置 ：<a
+              href="../html/brand_subsequent_apply.html"
+              name="apply" class="subapply"
+            >
+              首页</a
+            >
+            > 个人信息
+          </div>
+          <!-- 步骤框外部盒子 -->
+          <div class="step">
+            <!-- 圆的外框 -->
+            <div class="step-top df ja">
+              <!-- 圆1 -->
+              <div class="step-radius one">1</div>
+              <!-- 横线 -->
+              <div class="step-line"></div>
+              <!-- 圆2 -->
+              <div class="step-radius two">2</div>
+            </div>
+
+            <div class="step-bom df jb">
+              <!-- 文本步骤一外框 -->
+              <div class="step-text-one">
+                <p>步骤一</p>
+                <p>请上传相关文件</p>
+              </div>
+              <!-- 文本步骤二外框 -->
+              <div class="step-text-two">
+                <p>步骤二</p>
+                <p>审核补全个人信息</p>
+              </div>
+            </div>
+          </div>
+          <!-- 中部 -->
+          <div class="center-cer">
+            <!-- 中部内容框 -->
+            <div class="cer-ipt">
+              <!-- 姓名 -->
+              <div class="ipt df ja">
+                <p class="ipt-name"><span>*</span>姓名 ：</p>
+                <div class="one">
+                  <input
+                    type="text"
+                    placeholder="请输入您的姓名"
+                    style="color: #333"
+                    class="input-one inputFinish"
+                  />
+                  <span class="user-prompt">请输入您的姓名，示例：张三</span>
+                </div>
+              </div>
+              <!-- 身份证号码 -->
+              <div class="ipt df ja">
+                <p class="ipt-sfznum"><span>*</span>证件号码 ：</p>
+                <div class="one">
+                  <input
+                    type="text"
+                    placeholder="请输入证件号码"
+                    style="color: #333"
+                    class="input-two inputFinish"
+                  />
+                  <span class="user-id">请输入您的身份证号码</span>
+                </div>
+              </div>
+              <!-- 邮政编码 -->
+              <div class="ipt df ja">
+                <p class="ipt-yznum"><span>*</span>邮政编码 ：</p>
+                <div class="one">
+                  <input
+                    type="number"
+                    placeholder="请输入邮政编码"
+                    style="color: #333"
+                    class="input-three inputFinish"
+                  />
+                  <span class="postal-id">请输入邮政编码，示例：610000</span>
+                </div>
+              </div>
+              <!-- 地址 -->
+              <div class="ipt df ja">
+                <p class="ipt-address"><span>*</span>地址 ：</p>
+                <div class="one">
+                  <input
+                    type="text"
+                    placeholder="请输入您的地址"
+                    style="color: #333"
+                    class="input-four inputFinish"
+                  />
+                  <span class="address"
+                    >请输入您的所在地，示例：**省**市**区**街**号</span
+                  >
+                </div>
+              </div>
+              <!-- 账号 -->
+              <div class="ipt df ja">
+                <p class="ipt-zh"><span>*</span>账号 ：</p>
+                <div class="one">
+                  <input
+                    type="text"
+                    placeholder="请输入申请/展出日期"
+                    style="color: #333"
+                    class="input-five inputFinish"
+                  />
+                  <span class="username"
+                    >请设置您的账号，不与他人重复。建议 ：6个字符
+                    字母+数字</span
+                  >
+                </div>
+              </div>
+              <!-- 密保问题 -->
+              <div class="ipt df ja">
+                <p class="ipt-question"><span>*</span>密保问题 ：</p>
+                <div class="one">
+                  <select class="input-six">
+                    <option class="security">请选择您的密保问题</option>
+                    <option class="security">1+1=？</option>
+                    <option class="security">我的基友是？</option>
+                    <option class="security">我是男的吗</option>
+                  </select>
+                  <span>请选择您的密保问题，方便找回您账号</span>
+                  <!-- 黑色小三角 -->
+                  <div class="triangle"></div>
+                </div>
+              </div>
+              <!-- 密保答案 -->
+              <div class="ipt df ja">
+                <p class="ipt-daan"><span>*</span>密保答案 ：</p>
+                <div class="one">
+                  <input
+                    type="text"
+                    placeholder="请输入您的密保答案"
+                    style="color: #333"
+                    class="input-seven inputFinish"
+                  />
+                  <span class="guard">请设置上述密保问题的答案</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 底部 (按钮) -->
+          <!-- <a href="brand_subsequent.html"> -->
+          <div class="footer">完成</div>
+          <!-- </a> -->
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/brand_subsequent_apply_02.js"></script>
+    <script src="../js/user.js" type="module"></script>
+    <!-- <script src="../font/随机颜色插件/随机边框颜色+背景颜色.js"></script> -->
+  </body>
+</html>
